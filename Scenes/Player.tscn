@@ -2,5 +2,13 @@
 
 [ext_resource path="res://Resources/Shaders/PaletteShader.tres" type="Material" id=1]
 
-[node name="Player" type="Node2D"]
+[node name="Player" type="KinematicBody2D"]
 material = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
