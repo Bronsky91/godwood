@@ -11,18 +11,21 @@ func _process(delta):
 func _on_Clock_timeout():
 	add_time(1)
 	update_ui()
+	var current_time = get_time() % 86400
+	if current_time / 3600 == 3: # Time is 3am
+		new_day()
 
-func add_time(value) -> void:
-	var new_time: int = value + time
+func add_time(value: int) -> void:
+	var new_time: int = value + time 
 	set_time(new_time)
 
-func set_time(new_time) -> void:
+func set_time(new_time: int) -> void:
 	time = new_time
 	
 func get_time() -> int:
 	return time
 	
-func get_time_formatted(seconds) -> String:
+func get_time_formatted(seconds: int) -> String:
 	var days:int = seconds / 86400
 	seconds %= 86400
 	var hour: int = seconds / 3600
@@ -38,6 +41,10 @@ func get_time_formatted(seconds) -> String:
 	var minutes:int  = seconds / 60
 	var formatted_time: String = "%d %02d:%02d %s" % [days, hourShow, minutes, meridiem]
 	return formatted_time
+	
+func new_day() -> void:
+	var current_hour = get_time() / 3600
+	add_time((24-(current_hour-6)) * 3600)
 	
 func update_ui() -> void:
 	get_parent().get_node("Label").text = get_time_formatted(get_time())

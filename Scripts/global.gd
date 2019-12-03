@@ -22,7 +22,7 @@ func load_time() -> int:
 	var save_time: File = File.new()
 	var new_game = !save_time.file_exists("user://time.save")
 	if new_game:
-		return 21600 # 6am
+		return 3600 * 6 # 6am
 	save_time.open("user://time.save", File.READ)
 	var text: String = save_time.get_as_text()
 	var data: Dictionary = parse_json(text)
