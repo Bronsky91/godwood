@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Resources/Shaders/PaletteShader.tres" type="Material" id=1]
+[ext_resource path="res://Scenes/PlayerSprites.tscn" type="PackedScene" id=2]
 
 [node name="Player" type="KinematicBody2D"]
 material = ExtResource( 1 )
@@ -11,36 +12,6 @@ material = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 
-[node name="Accessory1" type="Sprite" parent="."]
+[node name="PlayerSprites" parent="." instance=ExtResource( 2 )]
 
-[node name="Accessory2" type="Sprite" parent="."]
-
-[node name="Accessory3" type="Sprite" parent="."]
-
-[node name="Arms" type="Sprite" parent="."]
-
-[node name="BottomA" type="Sprite" parent="."]
-
-[node name="BottomB" type="Sprite" parent="."]
-
-[node name="Eyes" type="Sprite" parent="."]
-
-[node name="HairA" type="Sprite" parent="."]
-
-[node name="HairB" type="Sprite" parent="."]
-
-[node name="HairC" type="Sprite" parent="."]
-
-[node name="HairD" type="Sprite" parent="."]
-
-[node name="Head" type="Sprite" parent="."]
-
-[node name="JacketA" type="Sprite" parent="."]
-
-[node name="JacketB" type="Sprite" parent="."]
-
-[node name="Shoes" type="Sprite" parent="."]
-
-[node name="TopA" type="Sprite" parent="."]
-
-[node name="TopB" type="Sprite" parent="."]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]

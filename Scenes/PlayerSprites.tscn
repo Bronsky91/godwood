@@ -1,0 +1,37 @@
+[gd_scene format=2]
+
+[node name="PlayerSprites" type="Node2D"]
+
+[node name="Accessory1" type="Sprite" parent="."]
+
+[node name="Accessory2" type="Sprite" parent="."]
+
+[node name="Accessory3" type="Sprite" parent="."]
+
+[node name="Arms" type="Sprite" parent="."]
+
+[node name="BottomA" type="Sprite" parent="."]
+
+[node name="BottomB" type="Sprite" parent="."]
+
+[node name="Eyes" type="Sprite" parent="."]
+
+[node name="HairA" type="Sprite" parent="."]
+
+[node name="HairB" type="Sprite" parent="."]
+
+[node name="HairC" type="Sprite" parent="."]
+
+[node name="HairD" type="Sprite" parent="."]
+
+[node name="Head" type="Sprite" parent="."]
+
+[node name="JacketA" type="Sprite" parent="."]
+
+[node name="JacketB" type="Sprite" parent="."]
+
+[node name="Shoes" type="Sprite" parent="."]
+
+[node name="TopA" type="Sprite" parent="."]
+
+[node name="TopB" type="Sprite" parent="."]

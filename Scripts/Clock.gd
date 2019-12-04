@@ -51,13 +51,6 @@ func new_day() -> void:
 		add_time(((24-(current_hour-6)) * 3600) - minutes * 60)
 	else:
 		add_time(((6-current_hour) * 3600) - minutes * 60)
-	#seconds %= 3600
-	#var current_min = seconds / 60
-	#var six_am = (24-(current_hour-6)) * 3600
-	#print(six_am)
-	#var min_difference = current_min)
-	#print(sixty_min)
-	#set_time(get_time() + six_am - current_min)
 	
 func update_ui() -> void:
 	get_parent().get_node("Label").text = get_time_formatted(get_time())
