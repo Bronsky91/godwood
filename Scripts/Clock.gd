@@ -12,7 +12,7 @@ func _on_Clock_timeout():
 	add_time(1)
 	update_ui()
 	var current_time = get_time() % 86400
-	if current_time == 3900: # Time is 3am
+	if current_time / 3600 == 3: # Time is 3am
 		new_day()
 
 func add_time(value: int) -> void:
@@ -45,10 +45,12 @@ func get_time_formatted(seconds: int) -> String:
 func new_day() -> void:
 	var seconds = get_time()
 	var current_hour = seconds / 3600
+	seconds %= 3600
+	var minutes:int  = seconds / 60
 	if current_hour >= 6:
-		add_time((24-(current_hour-6)) * 3600)
+		add_time(((24-(current_hour-6)) * 3600) - minutes * 60)
 	else:
-		add_time((6-current_hour) * 3600)
+		add_time(((6-current_hour) * 3600) - minutes * 60)
 	#seconds %= 3600
 	#var current_min = seconds / 60
 	#var six_am = (24-(current_hour-6)) * 3600
