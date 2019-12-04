@@ -1,19 +1,21 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://Resources/Shaders/PaletteSwap.shader" type="Shader" id=1]
 [ext_resource path="res://Assets/Character/Female/AvThn/Accessory 3/Female_AvThn_Accessory3_Idle_001.png" type="Texture" id=2]
 [ext_resource path="res://Assets/Character/Female/AvThn/Arms/Female_AvThn_Arms_Idle.png" type="Texture" id=3]
 [ext_resource path="res://Assets/Character/Female/AvThn/Body/Female_AvThn_Body_Idle.png" type="Texture" id=4]
-[ext_resource path="res://Assets/Character/Female/AvThn/Bottom A/Female_AvThn_BottomA_Idle_001.png" type="Texture" id=5]
-[ext_resource path="res://Assets/Character/Female/AvThn/Bottom B/Female_AvThn_BottomB_Idle_001.png" type="Texture" id=6]
-[ext_resource path="res://Assets/Character/Female/AvThn/Eyes/Female_AvThn_Eyes_Idle_003.png" type="Texture" id=7]
-[ext_resource path="res://Assets/Character/Female/AvThn/Hair A/Female_AvThn_HairA_Idle_001.png" type="Texture" id=8]
-[ext_resource path="res://Assets/Character/Female/AvThn/Hair B/Female_AvThn_HairB_Idle_001.png" type="Texture" id=9]
-[ext_resource path="res://Assets/Character/Female/AvThn/Hair C/Female_AvThn_HairC_Idle_001.png" type="Texture" id=10]
-[ext_resource path="res://Assets/Character/Female/AvThn/Head/Female_AvThn_Head_Idle.png" type="Texture" id=11]
-[ext_resource path="res://Assets/Character/Female/AvThn/Shoes/Female_AvThn_Shoes_Idle_001.png" type="Texture" id=12]
-[ext_resource path="res://Assets/Character/Female/AvThn/Top A/Female_AvThn_TopA_Idle_001.png" type="Texture" id=13]
-[ext_resource path="res://Assets/Character/Female/AvThn/Top B/Female_AvThn_TopB_Idle_001.png" type="Texture" id=14]
+[ext_resource path="res://Assets/Palettes/Bottom/Bottomcolor_000.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Palettes/Bottom/Bottomcolor_001.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Character/Female/AvThn/Bottom A/Female_AvThn_BottomA_Idle_001.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Character/Female/AvThn/Bottom B/Female_AvThn_BottomB_Idle_001.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Character/Female/AvThn/Eyes/Female_AvThn_Eyes_Idle_003.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Character/Female/AvThn/Hair A/Female_AvThn_HairA_Idle_001.png" type="Texture" id=10]
+[ext_resource path="res://Assets/Character/Female/AvThn/Hair B/Female_AvThn_HairB_Idle_001.png" type="Texture" id=11]
+[ext_resource path="res://Assets/Character/Female/AvThn/Hair C/Female_AvThn_HairC_Idle_001.png" type="Texture" id=12]
+[ext_resource path="res://Assets/Character/Female/AvThn/Head/Female_AvThn_Head_Idle.png" type="Texture" id=13]
+[ext_resource path="res://Assets/Character/Female/AvThn/Shoes/Female_AvThn_Shoes_Idle_001.png" type="Texture" id=14]
+[ext_resource path="res://Assets/Character/Female/AvThn/Top A/Female_AvThn_TopA_Idle_001.png" type="Texture" id=15]
+[ext_resource path="res://Assets/Character/Female/AvThn/Top B/Female_AvThn_TopB_Idle_001.png" type="Texture" id=16]
 
 [sub_resource type="ShaderMaterial" id=1]
 shader = ExtResource( 1 )
@@ -22,6 +24,16 @@ shader = ExtResource( 1 )
 
 [sub_resource type="ShaderMaterial" id=3]
 shader = SubResource( 2 )
+
+[sub_resource type="ShaderMaterial" id=4]
+shader = ExtResource( 1 )
+shader_param/palette_swap = ExtResource( 6 )
+shader_param/greyscale_palette = ExtResource( 5 )
+
+[sub_resource type="ShaderMaterial" id=5]
+shader = ExtResource( 1 )
+shader_param/palette_swap = ExtResource( 6 )
+shader_param/greyscale_palette = ExtResource( 5 )
 
 [node name="PlayerSprites" type="Node2D"]
 
@@ -56,7 +68,6 @@ hframes = 4
 frame = 12
 
 [node name="Body" type="Sprite" parent="."]
-material = SubResource( 3 )
 z_index = 20
 texture = ExtResource( 4 )
 vframes = 4
@@ -64,23 +75,24 @@ hframes = 4
 frame = 12
 
 [node name="BottomA" type="Sprite" parent="."]
-material = SubResource( 3 )
+material = SubResource( 4 )
 z_index = 30
-texture = ExtResource( 5 )
+texture = ExtResource( 7 )
 vframes = 4
 hframes = 4
 frame = 12
 
 [node name="BottomB" type="Sprite" parent="."]
+material = SubResource( 5 )
 z_index = 60
-texture = ExtResource( 6 )
+texture = ExtResource( 8 )
 vframes = 4
 hframes = 4
 frame = 12
 
 [node name="Eyes" type="Sprite" parent="."]
 z_index = 120
-texture = ExtResource( 7 )
+texture = ExtResource( 9 )
 vframes = 4
 hframes = 4
 frame = 12
@@ -88,7 +100,7 @@ frame = 12
 [node name="HairA" type="Sprite" parent="."]
 material = SubResource( 3 )
 z_index = 140
-texture = ExtResource( 8 )
+texture = ExtResource( 10 )
 vframes = 4
 hframes = 4
 frame = 12
@@ -96,7 +108,7 @@ frame = 12
 [node name="HairB" type="Sprite" parent="."]
 material = SubResource( 3 )
 z_index = 10
-texture = ExtResource( 9 )
+texture = ExtResource( 11 )
 vframes = 4
 hframes = 4
 frame = 12
@@ -104,7 +116,7 @@ frame = 12
 [node name="HairC" type="Sprite" parent="."]
 material = SubResource( 3 )
 z_index = 160
-texture = ExtResource( 10 )
+texture = ExtResource( 12 )
 vframes = 4
 hframes = 4
 frame = 12
@@ -119,7 +131,7 @@ frame = 12
 [node name="Head" type="Sprite" parent="."]
 material = SubResource( 3 )
 z_index = 110
-texture = ExtResource( 11 )
+texture = ExtResource( 13 )
 vframes = 4
 hframes = 4
 frame = 12
@@ -141,15 +153,14 @@ frame = 12
 [node name="Shoes" type="Sprite" parent="."]
 material = SubResource( 3 )
 z_index = 40
-texture = ExtResource( 12 )
+texture = ExtResource( 14 )
 vframes = 4
 hframes = 4
 frame = 12
 
 [node name="TopA" type="Sprite" parent="."]
-material = SubResource( 3 )
 z_index = 50
-texture = ExtResource( 13 )
+texture = ExtResource( 15 )
 vframes = 4
 hframes = 4
 frame = 12
@@ -157,7 +168,7 @@ frame = 12
 [node name="TopB" type="Sprite" parent="."]
 material = SubResource( 3 )
 z_index = 90
-texture = ExtResource( 14 )
+texture = ExtResource( 16 )
 vframes = 4
 hframes = 4
 frame = 12
