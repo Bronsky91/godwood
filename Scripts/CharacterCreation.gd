@@ -53,8 +53,11 @@ func create_random_character():
 	var folders = g.files_in_dir(folder_path)
 	for folder in folders:
 		var random_asset = random_asset(folder_path+"/"+folder)
-		if folder == "Hair A" and "Hair" in random_asset and "000" in random_asset:
-			continue
+		if "000" in random_asset:
+			if folder == "Hair A" and "Hair" in random_asset:
+				continue
+			if "Top" in folder or "Bottom" or folder:
+				continue
 		player_sprite[folder].set_texture(load(random_asset))
 
 func _on_GenderButton_button_up(_gender):
