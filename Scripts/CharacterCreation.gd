@@ -46,6 +46,8 @@ func set_sprite_texture(sprite: Sprite, options: Dictionary):
 	
 func random_asset(folder: String):
 	var files = g.files_in_dir(folder, "Idle")
+	if len(files) == 0:
+		return
 	randomize()
 	var random_index = randi() % len(files)
 	return folder+"/"+files[random_index]
