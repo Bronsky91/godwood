@@ -26,6 +26,8 @@ var farm_name: String
 var gender: String
 var body: String
 
+var current_animation = 0
+
 func _ready():
 	create_random_character()
 	$PlayerSprites/AnimationPlayer.play("idle_front")
@@ -53,10 +55,10 @@ func create_random_character():
 	var folders = g.files_in_dir(folder_path)
 	for folder in folders:
 		var random_asset = random_asset(folder_path+"/"+folder)
-		if "000" in random_asset:
-			if folder == "Hair A" and "Hair" in random_asset:
+		if "000" in random_asset: # Prevent some empty sprite sheets
+			if folder == "Hair A" and "Hair" in random_asset: # If main hair is bald, leave rest of hair
 				continue
-			if "Top" in folder or "Bottom" or folder:
+			if "Top" in folder or "Bottom" or folder: # If no top or no bottom was returned, dont set the texture
 				continue
 		player_sprite[folder].set_texture(load(random_asset))
 
@@ -66,3 +68,10 @@ func _on_GenderButton_button_up(_gender):
 
 func _on_Random_button_up():
 	create_random_character()
+
+
+func _on_Turn_button_up(direction):
+	var animations = ['idle_front', 'idle_right', 'idle_back', 'idle_left']
+	current_animation += direction
+	$PlayerSprites/AnimationPlayer.play(animations[current_animation])
+	

@@ -30,7 +30,6 @@ func load_time() -> int:
 	return data.time
 	
 func files_in_dir(path: String, keyword: String = "") -> int:
-	print(path)
 	var files = []
 	var dir = Directory.new()
 	dir.open(path)

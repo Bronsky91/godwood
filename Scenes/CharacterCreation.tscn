@@ -455,10 +455,10 @@ margin_bottom = 464.6
 text = "Random"
 
 [node name="TurnLeft" type="Button" parent="."]
-margin_left = 228.0
-margin_top = 413.25
-margin_right = 296.0
-margin_bottom = 433.25
+margin_left = 229.9
+margin_top = 414.2
+margin_right = 297.9
+margin_bottom = 434.2
 text = "Turn Left"
 
 [node name="TurnRight" type="Button" parent="."]
@@ -470,3 +470,5 @@ text = "Turn Right"
 [connection signal="button_up" from="MaleButton" to="." method="_on_GenderButton_button_up" binds= [ "Male" ]]
 [connection signal="button_up" from="FemaleButton" to="." method="_on_GenderButton_button_up" binds= [ "Female" ]]
 [connection signal="button_up" from="Random" to="." method="_on_Random_button_up"]
+[connection signal="button_up" from="TurnLeft" to="." method="_on_Turn_button_up" binds= [ -1 ]]
+[connection signal="button_up" from="TurnRight" to="." method="_on_Turn_button_up" binds= [ 1 ]]
