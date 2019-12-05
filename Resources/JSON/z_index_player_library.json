@@ -1,0 +1,14 @@
+{
+	"Accessory1": {
+		"front": 150,
+		"right": 170,
+		"back": 150,
+		"left": 170
+	},
+	"Accessory2": {
+		"front": 130,
+		"right": 30,
+		"back": 20,
+		"left": 30
+    }
+}

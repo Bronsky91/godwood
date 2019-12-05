@@ -69,7 +69,6 @@ func _on_GenderButton_button_up(_gender):
 func _on_Random_button_up():
 	create_random_character()
 
-
 func _on_Turn_button_up(direction):
 	var animations = ['idle_front', 'idle_right', 'idle_back', 'idle_left']
 	current_animation += direction
