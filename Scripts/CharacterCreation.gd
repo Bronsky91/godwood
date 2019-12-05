@@ -57,6 +57,8 @@ func create_random_character():
 	var folders = g.files_in_dir(folder_path)
 	for folder in folders:
 		var random_asset = random_asset(folder_path+"/"+folder)
+		if random_asset == null: # No assets in the folder yet continue to next folder
+			continue
 		if "000" in random_asset: # Prevent some empty sprite sheets
 			if folder == "Hair A" and "Hair" in random_asset: # If main hair is bald, leave rest of hair
 				continue
