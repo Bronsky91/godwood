@@ -10,5 +10,35 @@
 		"right": 30,
 		"back": 20,
 		"left": 30
+    },
+    "Accessory3": {
+        "front": 180,
+		"right": 80,
+		"back": 80,
+		"left": 80
+    },
+    "Arms": {
+        "front": 70,
+		"right": 130,
+		"back": 30,
+		"left": 130
+    },
+    "Body": {
+        "front": 20,
+		"right": 60,
+		"back": 70,
+		"left": 60
+    },
+    "Bottom A": {
+        "front": 30,
+		"right": 90,
+		"back": 80,
+		"left": 90
+    },
+    "Bottom B": {
+        "front": 60,
+		"right": 120,
+		"back": 110,
+		"left": 120
     }
 }
