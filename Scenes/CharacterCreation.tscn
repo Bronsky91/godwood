@@ -128,10 +128,10 @@ text = "Right"
 
 [node name="HairBLabel" type="Label" parent="."]
 editor/display_folded = true
-margin_left = 86.1688
-margin_top = 279.342
-margin_right = 147.169
-margin_bottom = 293.342
+margin_left = 86.0
+margin_top = 279.95
+margin_right = 147.0
+margin_bottom = 293.95
 text = "Hair B"
 align = 1
 
@@ -151,9 +151,9 @@ text = "Right"
 
 [node name="HairCLabel" type="Label" parent="."]
 editor/display_folded = true
-margin_left = 86.1688
+margin_left = 87.1187
 margin_top = 309.342
-margin_right = 147.169
+margin_right = 148.119
 margin_bottom = 323.342
 text = "Hair C"
 align = 1
@@ -174,10 +174,10 @@ text = "Right"
 
 [node name="EyesLabel" type="Label" parent="."]
 editor/display_folded = true
-margin_left = 82.4614
-margin_top = 187.518
-margin_right = 143.461
-margin_bottom = 201.518
+margin_left = 84.3614
+margin_top = 186.568
+margin_right = 145.361
+margin_bottom = 200.568
 text = "Eyes"
 align = 1
 
@@ -243,9 +243,9 @@ text = "Right"
 
 [node name="PantsLabel" type="Label" parent="."]
 editor/display_folded = true
-margin_left = 469.363
+margin_left = 471.263
 margin_top = 97.2806
-margin_right = 532.363
+margin_right = 534.263
 margin_bottom = 111.281
 text = "Pants"
 align = 1
@@ -266,10 +266,10 @@ text = "Right"
 
 [node name="PantsColorLabel" type="Label" parent="."]
 editor/display_folded = true
-margin_left = 471.078
-margin_top = 124.717
-margin_right = 543.078
-margin_bottom = 138.717
+margin_left = 470.128
+margin_top = 126.617
+margin_right = 542.128
+margin_bottom = 140.617
 text = "Pants Color"
 align = 1
 
@@ -289,10 +289,10 @@ text = "Right"
 
 [node name="ShirtLabel" type="Label" parent="."]
 editor/display_folded = true
-margin_left = 467.233
-margin_top = 156.675
-margin_right = 539.233
-margin_bottom = 170.675
+margin_left = 464.383
+margin_top = 155.725
+margin_right = 536.383
+margin_bottom = 169.725
 text = "Shirt"
 align = 1
 
@@ -311,11 +311,10 @@ margin_bottom = 17.1411
 text = "Right"
 
 [node name="ShirtColorLabel" type="Label" parent="."]
-editor/display_folded = true
-margin_left = 468.09
-margin_top = 184.111
-margin_right = 540.09
-margin_bottom = 198.111
+margin_left = 465.241
+margin_top = 187.911
+margin_right = 537.241
+margin_bottom = 201.911
 text = "Shirt Color"
 align = 1
 
@@ -335,10 +334,10 @@ text = "Right"
 
 [node name="Accessory1Label" type="Label" parent="."]
 editor/display_folded = true
-margin_left = 468.09
-margin_top = 214.119
-margin_right = 541.09
-margin_bottom = 228.119
+margin_left = 465.24
+margin_top = 219.819
+margin_right = 538.24
+margin_bottom = 233.819
 text = "Accessory1"
 align = 1
 
@@ -358,10 +357,10 @@ text = "Right"
 
 [node name="Accessory2Label" type="Label" parent="."]
 editor/display_folded = true
-margin_left = 468.948
-margin_top = 250.129
-margin_right = 541.948
-margin_bottom = 264.129
+margin_left = 466.098
+margin_top = 252.029
+margin_right = 539.098
+margin_bottom = 266.029
 text = "Accessory2"
 align = 1
 
@@ -381,10 +380,10 @@ text = "Right"
 
 [node name="Accessory3Label" type="Label" parent="."]
 editor/display_folded = true
-margin_left = 470.663
-margin_top = 289.568
-margin_right = 543.663
-margin_bottom = 303.568
+margin_left = 466.863
+margin_top = 284.818
+margin_right = 539.863
+margin_bottom = 298.818
 text = "Accessory3"
 align = 1
 
@@ -404,10 +403,10 @@ text = "Right"
 
 [node name="ShoesLabel" type="Label" parent="."]
 editor/display_folded = true
-margin_left = 472.377
-margin_top = 323.863
-margin_right = 544.377
-margin_bottom = 337.863
+margin_left = 468.577
+margin_top = 319.113
+margin_right = 540.577
+margin_bottom = 333.113
 text = "Shoes"
 align = 1
 
@@ -427,10 +426,10 @@ text = "Right"
 
 [node name="ShoesColorLabel" type="Label" parent="."]
 editor/display_folded = true
-margin_left = 472.377
-margin_top = 357.3
-margin_right = 547.377
-margin_bottom = 371.3
+margin_left = 468.577
+margin_top = 352.55
+margin_right = 543.577
+margin_bottom = 366.55
 text = "Shoes Color"
 align = 1
 
@@ -468,3 +467,6 @@ margin_top = 414.2
 margin_right = 424.65
 margin_bottom = 434.2
 text = "Turn Right"
+[connection signal="button_up" from="MaleButton" to="." method="_on_GenderButton_button_up" binds= [ "Male" ]]
+[connection signal="button_up" from="FemaleButton" to="." method="_on_GenderButton_button_up" binds= [ "Female" ]]
+[connection signal="button_up" from="Random" to="." method="_on_Random_button_up"]

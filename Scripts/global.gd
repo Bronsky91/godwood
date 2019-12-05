@@ -28,3 +28,20 @@ func load_time() -> int:
 	var data: Dictionary = parse_json(text)
 	save_time.close()
 	return data.time
+	
+func files_in_dir(path: String, keyword: String = "") -> int:
+	print(path)
+	var files = []
+	var dir = Directory.new()
+	dir.open(path)
+	dir.list_dir_begin()
+	while true:
+		var file = dir.get_next()
+		if file == "":
+			break
+		elif keyword != "" and file.find(keyword) == -1:
+			continue
+		elif not file.begins_with(".") and not file.ends_with(".import"):
+			files.append(file)
+	dir.list_dir_end()
+	return files
