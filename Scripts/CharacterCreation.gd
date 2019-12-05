@@ -22,7 +22,7 @@ onready var player_sprite = {
 }
 
 func _ready():
-	pass
+	$PlayerSprites/AnimationPlayer.play("idle_front")
 
 func _process(delta):
 	pass
