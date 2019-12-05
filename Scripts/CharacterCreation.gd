@@ -73,5 +73,7 @@ func _on_Random_button_up():
 func _on_Turn_button_up(direction):
 	var animations = ['idle_front', 'idle_right', 'idle_back', 'idle_left']
 	current_animation += direction
+	if current_animation == 4 or current_animation == -4:
+		current_animation = 0
 	$PlayerSprites/AnimationPlayer.play(animations[current_animation])
 	
