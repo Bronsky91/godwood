@@ -61,15 +61,15 @@
     },
     "HairC": {
         "front": 160,
-		"right": 70,
+		"right": 180,
 		"back": 60,
-		"left": 70
+		"left": 180
     },
     "HairD": {
         "front": 170,
-		"right": 180,
+		"right": 190,
 		"back": 170,
-		"left": 180
+		"left": 190
     },
     "Head": {
         "front": 110,
