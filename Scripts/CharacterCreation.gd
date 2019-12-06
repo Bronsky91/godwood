@@ -102,7 +102,7 @@ func create_random_character() -> void:
 		var random_sprite = random_asset(sprite_folder_path+"/"+folder, "Idle")
 		if random_sprite == "": # No assets in the folder yet continue to next folder
 			continue
-		if "000" in random_sprite: # Prevent some empty sprite sheets
+		if "000" in random_sprite and not "Accessory" in random_sprite: # Prevent some empty sprite sheets
 			if folder == "Hair A" and "Hair" in random_sprite: # If main hair is bald, leave rest of hair
 				continue
 			if "Top" in folder or "Bottom" or folder: # If no top or no bottom was returned, dont set the texture
