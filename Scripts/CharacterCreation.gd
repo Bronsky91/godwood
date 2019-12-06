@@ -1,6 +1,6 @@
 extends Node2D
 
-onready var player_sprite = {
+onready var player_sprite: Dictionary = {
 	'Accessory1': $PlayerSprites/Accessory1,
 	'Accessory2': $PlayerSprites/Accessory2,
 	'Accessory3': $PlayerSprites/Accessory3,
@@ -21,6 +21,33 @@ onready var player_sprite = {
 	'TopB': $PlayerSprites/TopB
 }
 
+onready var palette_sprite_dict: Dictionary = {
+	'Accessory1': [player_sprite['Accessory1']],
+	'Accessory2': [player_sprite['Accessory2']],
+	'Accessory3': [player_sprite['Accessory3']],
+	'Bottom': [
+		player_sprite['BottomA'], player_sprite['BottomB']
+	],
+	'Eye': [player_sprite['Eyes']],
+	'Hair': [
+		player_sprite['HairA'],
+		player_sprite['HairB'],
+		player_sprite['HairC'],
+		player_sprite['HairD']
+	],
+	'Shoe': [player_sprite['Shoes']],
+	'Skintone': [
+		player_sprite['Body'],
+		player_sprite['Arms'],
+		player_sprite['Head']
+	],
+	'Top': [
+		player_sprite['TopA'],
+		player_sprite['TopB']
+	]
+	# Jackets not implemented yet
+}
+
 var player_name: String
 var farm_name: String
 var gender: String
@@ -35,40 +62,64 @@ func _ready():
 func _process(delta):
 	pass
 
-func set_sprite_texture(sprite: Sprite, options: Dictionary):
+func set_sprite_texture(sprite: Sprite, options: Dictionary) -> void:
 	var texture_path = "res://Assets/Character/{gender}/{body}/{sprite_name}/{gender}_{body}_Idle{number}.png".format({
 		"gender": options.gender,
 		"body": options.body,
-		"sprite_name": options.sprite_name,
+		"sprite_name": sprite.name,
 		"number": "_"+str(options.number)
 	})
 	sprite.set_texture(load(texture_path))
 	
-func random_asset(folder: String):
-	var files = g.files_in_dir(folder, "Idle")
+func set_sprite_color(folder, sprite: Sprite, number: String) -> void:
+	var palette_path = "res://Assets/Palettes/{folder}/{folder}color_{number}.png".format({
+		"folder": folder,
+		"number": number
+	})
+	var gray_palette_path = "res://Assets/Palettes/{folder}/{folder}color_000.png".format({
+		"folder": folder
+	})
+	sprite.material.set_shader_param("palette_swap", load(palette_path))
+	sprite.material.set_shader_param("greyscale_palette", load(gray_palette_path))
+	
+func random_asset(folder: String, keyword: String = "") -> String:
+	var files: Array
+	files = g.files_in_dir(folder, keyword)
+	if keyword == "":
+		files = g.files_in_dir(folder)
 	if len(files) == 0:
-		return
+		return ""
 	randomize()
 	var random_index = randi() % len(files)
 	return folder+"/"+files[random_index]
 	
-func create_random_character():
-	var folder_path = "res://Assets/Character/{gender}/{body}".format({"gender": "Female", "body": "AvThn"})
-	var folders = g.files_in_dir(folder_path)
-	for folder in folders:
-		var random_asset = random_asset(folder_path+"/"+folder)
-		if random_asset == null: # No assets in the folder yet continue to next folder
+func create_random_character() -> void:
+	var sprite_folder_path = "res://Assets/Character/{gender}/{body}".format({"gender": "Female", "body": "AvThn"})
+	var palette_folder_path = "res://Assets/Palettes"
+	var sprite_folders = g.files_in_dir(sprite_folder_path)
+	var palette_folders = g.files_in_dir(palette_folder_path)
+	for folder in sprite_folders:
+		var random_sprite = random_asset(sprite_folder_path+"/"+folder, "Idle")
+		if random_sprite == "": # No assets in the folder yet continue to next folder
 			continue
-		if "000" in random_asset: # Prevent some empty sprite sheets
-			if folder == "Hair A" and "Hair" in random_asset: # If main hair is bald, leave rest of hair
+		if "000" in random_sprite: # Prevent some empty sprite sheets
+			if folder == "Hair A" and "Hair" in random_sprite: # If main hair is bald, leave rest of hair
 				continue
 			if "Top" in folder or "Bottom" or folder: # If no top or no bottom was returned, dont set the texture
 				continue
-		player_sprite[folder].set_texture(load(random_asset))
+		player_sprite[folder].set_texture(load(random_sprite))
+		print('texture_set')
+	for folder in palette_folders:
+		var random_color = random_asset(palette_folder_path+"/"+folder)
+		if random_color == null or "000" in random_color:
+			continue
+		for sprite in palette_sprite_dict[folder]:
+			set_sprite_color(folder, sprite, random_color.substr(len(random_color)-7, 3))
+
 
 func _on_GenderButton_button_up(_gender):
 	gender = _gender
-	set_sprite_texture(player_sprite.body, {"gender": gender, "body": body, "sprite_name": "Body", "number": ""})
+	set_sprite_texture(player_sprite.body, {"gender": gender, "body": body, "number": ""})
 
 func _on_Random_button_up():
 	create_random_character()

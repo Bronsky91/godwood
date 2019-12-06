@@ -15,7 +15,6 @@ func load_json(file_path: String) -> Dictionary:
 	return JSON.parse(text).result
 
 func set_z_indices(direction):
-	print(direction)
 	for sprite in get_children():
 		if sprite.name == "AnimationPlayer":
 			continue

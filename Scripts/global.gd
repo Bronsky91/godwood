@@ -29,7 +29,7 @@ func load_time() -> int:
 	save_time.close()
 	return data.time
 	
-func files_in_dir(path: String, keyword: String = "") -> int:
+func files_in_dir(path: String, keyword: String = "") -> Array:
 	var files = []
 	var dir = Directory.new()
 	dir.open(path)

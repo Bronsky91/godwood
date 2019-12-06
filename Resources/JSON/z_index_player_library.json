@@ -106,12 +106,6 @@
 		"right": 150,
 		"back": 130,
 		"left": 150
-    },
-    "Tools": {
-        "front": 200,
-		"right": 200,
-		"back": 200,
-		"left": 200
     }
 
 }
