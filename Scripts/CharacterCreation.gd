@@ -110,7 +110,7 @@ func create_random_character() -> void:
 		player_sprite[folder].set_texture(load(random_sprite))
 	for folder in palette_folders:
 		var random_color = random_asset(palette_folder_path+"/"+folder)
-		if random_color == null or "000" in random_color:
+		if random_color == "" or "000" in random_color:
 			continue
 		for sprite in palette_sprite_dict[folder]:
 			set_sprite_color(folder, sprite, random_color.substr(len(random_color)-7, 3))
