@@ -2,21 +2,21 @@
 
 [ext_resource path="res://Scenes/PlayerSprites.gd" type="Script" id=1]
 [ext_resource path="res://Resources/Shaders/PaletteSwap.shader" type="Shader" id=2]
-[ext_resource path="res://Assets/Character/Female/AvThn/Accessory 3/Female_AvThn_Accessory3_Idle_001.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Character/Female/AvThn/Accessory3/Female_AvThn_Accessory3_Idle_001.png" type="Texture" id=3]
 [ext_resource path="res://Assets/Character/Female/AvThn/Arms/Female_AvThn_Arms_Idle.png" type="Texture" id=4]
 [ext_resource path="res://Assets/Character/Female/AvThn/Body/Female_AvThn_Body_Idle.png" type="Texture" id=5]
 [ext_resource path="res://Assets/Palettes/Bottom/Bottomcolor_000.png" type="Texture" id=6]
 [ext_resource path="res://Assets/Palettes/Bottom/Bottomcolor_001.png" type="Texture" id=7]
-[ext_resource path="res://Assets/Character/Female/AvThn/Bottom A/Female_AvThn_BottomA_Idle_001.png" type="Texture" id=8]
-[ext_resource path="res://Assets/Character/Female/AvThn/Bottom B/Female_AvThn_BottomB_Idle_001.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Character/Female/AvThn/BottomA/Female_AvThn_BottomA_Idle_001.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Character/Female/AvThn/BottomB/Female_AvThn_BottomB_Idle_001.png" type="Texture" id=9]
 [ext_resource path="res://Assets/Character/Female/AvThn/Eyes/Female_AvThn_Eyes_Idle_003.png" type="Texture" id=10]
-[ext_resource path="res://Assets/Character/Female/AvThn/Hair A/Female_AvThn_HairA_Idle_001.png" type="Texture" id=11]
-[ext_resource path="res://Assets/Character/Female/AvThn/Hair B/Female_AvThn_HairB_Idle_001.png" type="Texture" id=12]
-[ext_resource path="res://Assets/Character/Female/AvThn/Hair C/Female_AvThn_HairC_Idle_001.png" type="Texture" id=13]
+[ext_resource path="res://Assets/Character/Female/AvThn/HairA/Female_AvThn_HairA_Idle_001.png" type="Texture" id=11]
+[ext_resource path="res://Assets/Character/Female/AvThn/HairB/Female_AvThn_HairB_Idle_001.png" type="Texture" id=12]
+[ext_resource path="res://Assets/Character/Female/AvThn/HairC/Female_AvThn_HairC_Idle_001.png" type="Texture" id=13]
 [ext_resource path="res://Assets/Character/Female/AvThn/Head/Female_AvThn_Head_Idle.png" type="Texture" id=14]
 [ext_resource path="res://Assets/Character/Female/AvThn/Shoes/Female_AvThn_Shoes_Idle_001.png" type="Texture" id=15]
-[ext_resource path="res://Assets/Character/Female/AvThn/Top A/Female_AvThn_TopA_Idle_001.png" type="Texture" id=16]
-[ext_resource path="res://Assets/Character/Female/AvThn/Top B/Female_AvThn_TopB_Idle_001.png" type="Texture" id=17]
+[ext_resource path="res://Assets/Character/Female/AvThn/TopA/Female_AvThn_TopA_Idle_001.png" type="Texture" id=16]
+[ext_resource path="res://Assets/Character/Female/AvThn/TopB/Female_AvThn_TopB_Idle_001.png" type="Texture" id=17]
 [ext_resource path="res://Resources/Animations/idle_back.tres" type="Animation" id=18]
 [ext_resource path="res://Resources/Animations/idle_front.tres" type="Animation" id=19]
 [ext_resource path="res://Resources/Animations/idle_left.tres" type="Animation" id=20]
@@ -178,6 +178,8 @@ texture = ExtResource( 17 )
 vframes = 4
 hframes = 4
 frame = 12
+
+[node name="Tools" type="Sprite" parent="."]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/idle_back = ExtResource( 18 )

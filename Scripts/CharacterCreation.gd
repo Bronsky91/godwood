@@ -1,24 +1,24 @@
 extends Node2D
 
 onready var player_sprite = {
-	'Accessory 1': $PlayerSprites/Accessory1,
-	'Accessory 2': $PlayerSprites/Accessory2,
-	'Accessory 3': $PlayerSprites/Accessory3,
+	'Accessory1': $PlayerSprites/Accessory1,
+	'Accessory2': $PlayerSprites/Accessory2,
+	'Accessory3': $PlayerSprites/Accessory3,
 	'Arms': $PlayerSprites/Arms,
 	'Body': $PlayerSprites/Body,
-	'Bottom A': $PlayerSprites/BottomA,
-	'Bottom B': $PlayerSprites/BottomB,
+	'BottomA': $PlayerSprites/BottomA,
+	'BottomB': $PlayerSprites/BottomB,
 	'Eyes': $PlayerSprites/Eyes,
-	'Hair A': $PlayerSprites/HairA,
-	'Hair B': $PlayerSprites/HairB,
-	'Hair C': $PlayerSprites/HairC,
-	'Hair D': $PlayerSprites/HairD,
+	'HairA': $PlayerSprites/HairA,
+	'HairB': $PlayerSprites/HairB,
+	'HairC': $PlayerSprites/HairC,
+	'HairD': $PlayerSprites/HairD,
 	'Head': $PlayerSprites/Head,
-	'Jacket A': $PlayerSprites/JacketA,
-	'Jacket B': $PlayerSprites/JacketB,
+	'JacketA': $PlayerSprites/JacketA,
+	'JacketB': $PlayerSprites/JacketB,
 	'Shoes': $PlayerSprites/Shoes,
-	'Top A': $PlayerSprites/TopA,
-	'Top B': $PlayerSprites/TopB
+	'TopA': $PlayerSprites/TopA,
+	'TopB': $PlayerSprites/TopB
 }
 
 var player_name: String

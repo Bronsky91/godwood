@@ -29,16 +29,89 @@
 		"back": 70,
 		"left": 60
     },
-    "Bottom A": {
+    "BottomA": {
         "front": 30,
 		"right": 90,
 		"back": 80,
 		"left": 90
     },
-    "Bottom B": {
+    "BottomB": {
         "front": 60,
 		"right": 120,
 		"back": 110,
 		"left": 120
+    },
+    "Eyes": {
+        "front": 120,
+		"right": 20,
+		"back": 10,
+		"left": 20
+    },
+    "HairA": {
+        "front": 140,
+		"right": 40,
+		"back": 50,
+		"left": 40
+    },
+    "HairB": {
+        "front": 10,
+		"right": 50,
+		"back": 160,
+		"left": 50
+    },
+    "HairC": {
+        "front": 160,
+		"right": 70,
+		"back": 60,
+		"left": 70
+    },
+    "HairD": {
+        "front": 170,
+		"right": 180,
+		"back": 170,
+		"left": 180
+    },
+    "Head": {
+        "front": 110,
+		"right": 10,
+		"back": 40,
+		"left": 10
+    },
+    "JacketA": {
+        "front": 80,
+		"right": 140,
+		"back": 120,
+		"left": 140
+    },
+    "JacketB": {
+        "front": 100,
+		"right": 160,
+		"back": 140,
+		"left": 160
+    }, 
+    "Shoes": {
+        "front": 40,
+		"right": 100,
+		"back": 90,
+		"left": 100
+    },
+    "TopA": {
+        "front": 50,
+		"right": 110,
+		"back": 100,
+		"left": 110
+    },
+    "TopB": {
+        "front": 90,
+		"right": 150,
+		"back": 130,
+		"left": 150
+    },
+    "Tools": {
+        "front": 200,
+		"right": 200,
+		"back": 200,
+		"left": 200
     }
+
 }

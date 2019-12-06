@@ -15,8 +15,11 @@ func load_json(file_path: String) -> Dictionary:
 	return JSON.parse(text).result
 
 func set_z_indices(direction):
+	print(direction)
 	for sprite in get_children():
-		sprite.z_index = z_index_library[sprite][direction]
+		if sprite.name == "AnimationPlayer":
+			continue
+		sprite.z_index = z_index_library[sprite.name][direction]
 
 func _on_AnimationPlayer_animation_started(anim_name: String):
 	var direction = anim_name.split("_")[1]
