@@ -108,7 +108,6 @@ func create_random_character() -> void:
 			if "Top" in folder or "Bottom" or folder: # If no top or no bottom was returned, dont set the texture
 				continue
 		player_sprite[folder].set_texture(load(random_sprite))
-		print('texture_set')
 	for folder in palette_folders:
 		var random_color = random_asset(palette_folder_path+"/"+folder)
 		if random_color == null or "000" in random_color:
