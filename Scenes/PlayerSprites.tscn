@@ -40,7 +40,7 @@ shader = ExtResource( 2 )
 [sub_resource type="ShaderMaterial" id=6]
 shader = ExtResource( 2 )
 
-[sub_resource type="ShaderMaterial" id=19]
+[sub_resource type="ShaderMaterial" id=7]
 shader = ExtResource( 2 )
 
 [sub_resource type="ShaderMaterial" id=8]
@@ -86,14 +86,14 @@ material = SubResource( 1 )
 z_index = 150
 vframes = 4
 hframes = 4
-frame = 12
+frame = 4
 
 [node name="Accessory2" type="Sprite" parent="."]
 material = SubResource( 2 )
 z_index = 130
 vframes = 4
 hframes = 4
-frame = 12
+frame = 4
 
 [node name="Accessory3" type="Sprite" parent="."]
 material = SubResource( 3 )
@@ -101,7 +101,7 @@ z_index = 180
 texture = ExtResource( 3 )
 vframes = 4
 hframes = 4
-frame = 12
+frame = 4
 
 [node name="Arms" type="Sprite" parent="."]
 material = SubResource( 4 )
@@ -109,7 +109,7 @@ z_index = 70
 texture = ExtResource( 4 )
 vframes = 4
 hframes = 4
-frame = 12
+frame = 4
 
 [node name="Body" type="Sprite" parent="."]
 material = SubResource( 5 )
@@ -117,7 +117,7 @@ z_index = 20
 texture = ExtResource( 5 )
 vframes = 4
 hframes = 4
-frame = 12
+frame = 4
 
 [node name="BottomA" type="Sprite" parent="."]
 material = SubResource( 6 )
@@ -125,15 +125,15 @@ z_index = 30
 texture = ExtResource( 6 )
 vframes = 4
 hframes = 4
-frame = 12
+frame = 4
 
 [node name="BottomB" type="Sprite" parent="."]
-material = SubResource( 19 )
+material = SubResource( 7 )
 z_index = 60
 texture = ExtResource( 7 )
 vframes = 4
 hframes = 4
-frame = 12
+frame = 4
 
 [node name="Eyes" type="Sprite" parent="."]
 material = SubResource( 8 )
@@ -141,7 +141,7 @@ z_index = 120
 texture = ExtResource( 8 )
 vframes = 4
 hframes = 4
-frame = 12
+frame = 4
 
 [node name="HairA" type="Sprite" parent="."]
 material = SubResource( 9 )
@@ -149,7 +149,7 @@ z_index = 140
 texture = ExtResource( 9 )
 vframes = 4
 hframes = 4
-frame = 12
+frame = 4
 
 [node name="HairB" type="Sprite" parent="."]
 material = SubResource( 10 )
@@ -157,7 +157,7 @@ z_index = 10
 texture = ExtResource( 12 )
 vframes = 4
 hframes = 4
-frame = 12
+frame = 4
 
 [node name="HairC" type="Sprite" parent="."]
 material = SubResource( 11 )
@@ -165,14 +165,14 @@ z_index = 160
 texture = ExtResource( 13 )
 vframes = 4
 hframes = 4
-frame = 12
+frame = 4
 
 [node name="HairD" type="Sprite" parent="."]
 material = SubResource( 12 )
 z_index = 170
 vframes = 4
 hframes = 4
-frame = 12
+frame = 4
 
 [node name="Head" type="Sprite" parent="."]
 material = SubResource( 13 )
@@ -180,21 +180,21 @@ z_index = 110
 texture = ExtResource( 14 )
 vframes = 4
 hframes = 4
-frame = 12
+frame = 4
 
 [node name="JacketA" type="Sprite" parent="."]
 material = SubResource( 14 )
 z_index = 80
 vframes = 4
 hframes = 4
-frame = 12
+frame = 4
 
 [node name="JacketB" type="Sprite" parent="."]
 material = SubResource( 15 )
 z_index = 100
 vframes = 4
 hframes = 4
-frame = 12
+frame = 4
 
 [node name="Shoes" type="Sprite" parent="."]
 material = SubResource( 16 )
@@ -202,7 +202,7 @@ z_index = 40
 texture = ExtResource( 15 )
 vframes = 4
 hframes = 4
-frame = 12
+frame = 4
 
 [node name="TopA" type="Sprite" parent="."]
 material = SubResource( 17 )
@@ -210,7 +210,7 @@ z_index = 50
 texture = ExtResource( 16 )
 vframes = 4
 hframes = 4
-frame = 12
+frame = 4
 
 [node name="TopB" type="Sprite" parent="."]
 material = SubResource( 18 )
@@ -218,7 +218,7 @@ z_index = 90
 texture = ExtResource( 17 )
 vframes = 4
 hframes = 4
-frame = 12
+frame = 4
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/idle_back = ExtResource( 18 )
