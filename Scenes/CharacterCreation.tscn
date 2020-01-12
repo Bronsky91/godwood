@@ -95,14 +95,13 @@ margin_bottom = 15.7131
 text = "Left"
 
 [node name="Right" type="Button" parent="SkinToneLabel"]
-margin_left = 89.167
-margin_top = -4.19663
-margin_right = 133.167
-margin_bottom = 15.8034
+margin_left = 91.8816
+margin_top = -5.17299
+margin_right = 135.882
+margin_bottom = 14.8271
 text = "Right"
 
 [node name="HairALabel" type="Label" parent="."]
-editor/display_folded = true
 margin_left = 83.7393
 margin_top = 250.342
 margin_right = 144.739
@@ -194,7 +193,6 @@ margin_bottom = 16.6547
 text = "Right"
 
 [node name="HairColorLabel" type="Label" parent="."]
-editor/display_folded = true
 margin_left = 87.7409
 margin_top = 338.771
 margin_right = 150.741
@@ -211,13 +209,12 @@ text = "Left"
 
 [node name="Right" type="Button" parent="HairColorLabel"]
 margin_left = 91.0244
-margin_top = -4.55714
+margin_top = -3.74266
 margin_right = 135.025
-margin_bottom = 15.4429
+margin_bottom = 16.2574
 text = "Right"
 
 [node name="EyeColorLabel" type="Label" parent="."]
-editor/display_folded = true
 margin_left = 85.8411
 margin_top = 217.897
 margin_right = 148.841
@@ -226,10 +223,10 @@ text = "Eye Color"
 align = 1
 
 [node name="Left" type="Button" parent="EyeColorLabel"]
-margin_left = -50.0
-margin_top = -1.14415
-margin_right = -14.0
-margin_bottom = 18.8559
+margin_left = -50.9025
+margin_top = -2.04665
+margin_right = -14.9025
+margin_bottom = 17.9534
 text = "Left"
 
 [node name="Right" type="Button" parent="EyeColorLabel"]
@@ -263,7 +260,6 @@ margin_bottom = 16.2837
 text = "Right"
 
 [node name="PantsColorLabel" type="Label" parent="."]
-editor/display_folded = true
 margin_left = 470.128
 margin_top = 126.617
 margin_right = 542.128
@@ -286,7 +282,6 @@ margin_bottom = 16.2837
 text = "Right"
 
 [node name="ShirtLabel" type="Label" parent="."]
-editor/display_folded = true
 margin_left = 464.383
 margin_top = 155.725
 margin_right = 536.383
@@ -295,10 +290,10 @@ text = "Shirt"
 align = 1
 
 [node name="Left" type="Button" parent="ShirtLabel"]
-margin_left = -44.256
-margin_top = -2.00153
-margin_right = -8.256
-margin_bottom = 17.9985
+margin_left = -43.4415
+margin_top = -2.81603
+margin_right = -7.44154
+margin_bottom = 17.184
 text = "Left"
 
 [node name="Right" type="Button" parent="ShirtLabel"]
@@ -423,7 +418,6 @@ margin_bottom = 17.1411
 text = "Right"
 
 [node name="ShoesColorLabel" type="Label" parent="."]
-editor/display_folded = true
 margin_left = 468.577
 margin_top = 352.55
 margin_right = 543.577
@@ -471,6 +465,16 @@ text = "Turn Right"
 [connection signal="button_up" from="BodyLabel/Right" to="." method="_on_Sprite_Selection_button_up" binds= [ 1, "Body" ]]
 [connection signal="button_up" from="SkinToneLabel/Left" to="." method="_on_Color_Selection_button_up" binds= [ -1, "Skintone" ]]
 [connection signal="button_up" from="SkinToneLabel/Right" to="." method="_on_Color_Selection_button_up" binds= [ 1, "Skintone" ]]
+[connection signal="button_up" from="HairColorLabel/Left" to="." method="_on_Color_Selection_button_up" binds= [ -1, "Hair" ]]
+[connection signal="button_up" from="HairColorLabel/Right" to="." method="_on_Color_Selection_button_up" binds= [ 1, "Hair" ]]
+[connection signal="button_up" from="EyeColorLabel/Left" to="." method="_on_Color_Selection_button_up" binds= [ -1, "Eye" ]]
+[connection signal="button_up" from="EyeColorLabel/Right" to="." method="_on_Color_Selection_button_up" binds= [ 1, "Eye" ]]
+[connection signal="button_up" from="PantsColorLabel/Left" to="." method="_on_Color_Selection_button_up" binds= [ -1, "Bottom" ]]
+[connection signal="button_up" from="PantsColorLabel/Right" to="." method="_on_Color_Selection_button_up" binds= [ 1, "Bottom" ]]
+[connection signal="button_up" from="ShirtColorLabel/Left" to="." method="_on_Color_Selection_button_up" binds= [ -1, "Top" ]]
+[connection signal="button_up" from="ShirtColorLabel/Right" to="." method="_on_Color_Selection_button_up" binds= [ 1, "Top" ]]
+[connection signal="button_up" from="ShoesColorLabel/Left" to="." method="_on_Color_Selection_button_up" binds= [ -1, "Shoe" ]]
+[connection signal="button_up" from="ShoesColorLabel/Right" to="." method="_on_Color_Selection_button_up" binds= [ 1, "Shoe" ]]
 [connection signal="button_up" from="Random" to="." method="_on_Random_button_up"]
 [connection signal="button_up" from="TurnLeft" to="." method="_on_Turn_button_up" binds= [ -1 ]]
 [connection signal="button_up" from="TurnRight" to="." method="_on_Turn_button_up" binds= [ 1 ]]
