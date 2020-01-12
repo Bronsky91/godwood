@@ -58,7 +58,6 @@ group = ExtResource( 3 )
 text = "G"
 
 [node name="BodyLabel" type="Label" parent="."]
-editor/display_folded = true
 margin_left = 91.8818
 margin_top = 129.019
 margin_right = 133.882
@@ -81,7 +80,6 @@ margin_bottom = 17.7147
 text = "Right"
 
 [node name="SkinToneLabel" type="Label" parent="."]
-editor/display_folded = true
 margin_left = 84.3115
 margin_top = 160.898
 margin_right = 145.311
@@ -469,6 +467,10 @@ margin_bottom = 434.2
 text = "Turn Right"
 [connection signal="button_up" from="MaleButton" to="." method="_on_GenderButton_button_up" binds= [ "Male" ]]
 [connection signal="button_up" from="FemaleButton" to="." method="_on_GenderButton_button_up" binds= [ "Female" ]]
+[connection signal="button_up" from="BodyLabel/Left" to="." method="_on_Sprite_Selection_button_up" binds= [ "left", "Body" ]]
+[connection signal="button_up" from="BodyLabel/Right" to="." method="_on_Sprite_Selection_button_up" binds= [ "right", "Body" ]]
+[connection signal="button_up" from="SkinToneLabel/Left" to="." method="_on_Color_Selection_button_up" binds= [ -1, "Skintone" ]]
+[connection signal="button_up" from="SkinToneLabel/Right" to="." method="_on_Color_Selection_button_up" binds= [ 1, "Skinetone" ]]
 [connection signal="button_up" from="Random" to="." method="_on_Random_button_up"]
 [connection signal="button_up" from="TurnLeft" to="." method="_on_Turn_button_up" binds= [ -1 ]]
 [connection signal="button_up" from="TurnRight" to="." method="_on_Turn_button_up" binds= [ 1 ]]

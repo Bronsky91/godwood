@@ -48,6 +48,9 @@ onready var palette_sprite_dict: Dictionary = {
 	# Jackets not implemented yet
 }
 
+var pallete_sprite_state: Dictionary
+var sprite_state: Dictionary
+
 var player_name: String
 var farm_name: String
 var gender: String
@@ -70,6 +73,7 @@ func set_sprite_texture(sprite: Sprite, options: Dictionary) -> void:
 		"number": "_"+str(options.number)
 	})
 	sprite.set_texture(load(texture_path))
+	# TODO: Set sprite state with [folder] = number
 	
 func set_sprite_color(folder, sprite: Sprite, number: String) -> void:
 	var palette_path = "res://Assets/Palettes/{folder}/{folder}color_{number}.png".format({
@@ -81,6 +85,7 @@ func set_sprite_color(folder, sprite: Sprite, number: String) -> void:
 	})
 	sprite.material.set_shader_param("palette_swap", load(palette_path))
 	sprite.material.set_shader_param("greyscale_palette", load(gray_palette_path))
+	# TODO: Set sprite_pallete_state with [folder] = number
 	
 func random_asset(folder: String, keyword: String = "") -> String:
 	var files: Array
@@ -103,7 +108,7 @@ func create_random_character() -> void:
 		if random_sprite == "": # No assets in the folder yet continue to next folder
 			continue
 		if "000" in random_sprite and not "Accessory" in random_sprite: # Prevent some empty sprite sheets
-			if folder == "Hair A" and "Hair" in random_sprite: # If main hair is bald, leave rest of hair
+			if folder == "HairA" and "Hair" in random_sprite: # If main hair is bald, leave rest of hair
 				continue
 			if "Top" in folder or "Bottom" or folder: # If no top or no bottom was returned, dont set the texture
 				continue
@@ -114,7 +119,6 @@ func create_random_character() -> void:
 			continue
 		for sprite in palette_sprite_dict[folder]:
 			set_sprite_color(folder, sprite, random_color.substr(len(random_color)-7, 3))
-
 
 func _on_GenderButton_button_up(_gender):
 	gender = _gender
@@ -129,4 +133,11 @@ func _on_Turn_button_up(direction):
 	if current_animation == 4 or current_animation == -4:
 		current_animation = 0
 	$PlayerSprites/AnimationPlayer.play(animations[current_animation])
+	
+func _on_Sprite_Selection_button_up(direction: int, sprite: String):
+	pass # Replace with function body.
+
+func _on_Color_Selection_button_up(direction: int, palette_sprite: String):
+	var folder_path = "res://Assets/Palettes/"+palette_sprite
+	var files = g.files_in_dir(folder_path)
 	
