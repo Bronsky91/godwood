@@ -73,7 +73,7 @@ func set_sprite_texture(sprite: Sprite, options: Dictionary) -> void:
 		"number": "_"+str(options.number)
 	})
 	sprite.set_texture(load(texture_path))
-	# TODO: Set sprite state with [folder] = number
+	sprite_state[sprite.name] = options.number
 	
 func set_sprite_color(folder, sprite: Sprite, number: String) -> void:
 	var palette_path = "res://Assets/Palettes/{folder}/{folder}color_{number}.png".format({
@@ -85,7 +85,7 @@ func set_sprite_color(folder, sprite: Sprite, number: String) -> void:
 	})
 	sprite.material.set_shader_param("palette_swap", load(palette_path))
 	sprite.material.set_shader_param("greyscale_palette", load(gray_palette_path))
-	# TODO: Set sprite_pallete_state with [folder] = number
+	pallete_sprite_state[folder] = number
 	
 func random_asset(folder: String, keyword: String = "") -> String:
 	var files: Array
@@ -116,7 +116,7 @@ func create_random_character() -> void:
 	for folder in palette_folders:
 		var random_color = random_asset(palette_folder_path+"/"+folder)
 		if random_color == "" or "000" in random_color:
-			continue
+			random_color = random_color.replace("000", "001")
 		for sprite in palette_sprite_dict[folder]:
 			set_sprite_color(folder, sprite, random_color.substr(len(random_color)-7, 3))
 
@@ -136,8 +136,16 @@ func _on_Turn_button_up(direction):
 	
 func _on_Sprite_Selection_button_up(direction: int, sprite: String):
 	pass # Replace with function body.
+	print(sprite_state)
 
 func _on_Color_Selection_button_up(direction: int, palette_sprite: String):
 	var folder_path = "res://Assets/Palettes/"+palette_sprite
 	var files = g.files_in_dir(folder_path)
-	
+	var new_color = int(pallete_sprite_state[palette_sprite]) + direction
+	if new_color == 0 and direction == -1:
+		new_color = len(files) - 1
+	if new_color == len(files) and direction == 1:
+		new_color = 1
+	for sprite in palette_sprite_dict[palette_sprite]:
+		set_sprite_color(palette_sprite, sprite, str(new_color).pad_zeros(3))
+		print(pallete_sprite_state)
