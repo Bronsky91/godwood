@@ -53,8 +53,8 @@ var sprite_state: Dictionary
 
 var player_name: String
 var farm_name: String
-var gender: String
-var body: String
+var gender: String = "Female" # Temp hardcoded
+var body: String = "AvThn" # Temp hardcoded
 
 var current_animation = 0
 
@@ -65,15 +65,15 @@ func _ready():
 func _process(delta):
 	pass
 
-func set_sprite_texture(sprite: Sprite, options: Dictionary) -> void:
-	var texture_path = "res://Assets/Character/{gender}/{body}/{sprite_name}/{gender}_{body}_Idle{number}.png".format({
-		"gender": options.gender,
-		"body": options.body,
-		"sprite_name": sprite.name,
-		"number": "_"+str(options.number)
-	})
-	sprite.set_texture(load(texture_path))
-	sprite_state[sprite.name] = options.number
+func set_sprite_texture(sprite_name: String, texture_path: String) -> void:
+	#var texture_path = "res://Assets/Character/{gender}/{body}/{sprite_name}/{gender}_{body}_Idle{number}.png".format({
+	#	"gender": options.gender,
+	#	"body": options.body,
+	#	"sprite_name": options.name,
+	#	"number": "_"+str(options.number)
+	#})
+	player_sprite[sprite_name].set_texture(load(texture_path))
+	sprite_state[sprite_name] = texture_path
 	
 func set_sprite_color(folder, sprite: Sprite, number: String) -> void:
 	var palette_path = "res://Assets/Palettes/{folder}/{folder}color_{number}.png".format({
@@ -112,7 +112,8 @@ func create_random_character() -> void:
 				continue
 			if "Top" in folder or "Bottom" in folder: # If no top or no bottom was returned, dont set the texture
 				continue
-		player_sprite[folder].set_texture(load(random_sprite))
+		#player_sprite[folder].set_texture(load(random_sprite))
+		set_sprite_texture(folder, random_sprite)
 	for folder in palette_folders:
 		var random_color = random_asset(palette_folder_path+"/"+folder)
 		if random_color == "" or "000" in random_color:
@@ -122,7 +123,7 @@ func create_random_character() -> void:
 
 func _on_GenderButton_button_up(_gender):
 	gender = _gender
-	set_sprite_texture(player_sprite.body, {"gender": gender, "body": body, "number": ""})
+	#set_sprite_texture({"gender": gender, "body": body, "number": ""})
 
 func _on_Random_button_up():
 	create_random_character()
@@ -135,8 +136,22 @@ func _on_Turn_button_up(direction):
 	$PlayerSprites/AnimationPlayer.play(animations[current_animation])
 	
 func _on_Sprite_Selection_button_up(direction: int, sprite: String):
-	pass # Replace with function body.
-	print(sprite_state)
+	if not sprite == "Body":
+		var folder_path = "res://Assets/Character/"+gender+"/"+body+"/"+sprite
+		var files = g.files_in_dir(sprite_state[sprite].get_base_dir())
+		var file = sprite_state[sprite].split("/")[-1]
+		var current_index = files.find(file)
+		var new_index = current_index + direction
+		if new_index > len(files) - 1:
+			new_index = 0
+		if new_index == -1:
+			new_index = len(files) -1
+		var new_sprite_path = folder_path + files[new_index]
+		print(new_index)
+		print(files)
+		set_sprite_texture(sprite, new_sprite_path)
+		print(files)
+		# TODO: Files keeps going up a dir after each button click...
 
 func _on_Color_Selection_button_up(direction: int, palette_sprite: String):
 	var folder_path = "res://Assets/Palettes/"+palette_sprite
@@ -148,4 +163,3 @@ func _on_Color_Selection_button_up(direction: int, palette_sprite: String):
 		new_color = 1
 	for sprite in palette_sprite_dict[palette_sprite]:
 		set_sprite_color(palette_sprite, sprite, str(new_color).pad_zeros(3))
-		print(pallete_sprite_state)

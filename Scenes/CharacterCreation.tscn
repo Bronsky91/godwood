@@ -44,16 +44,14 @@ margin_left = 41.5705
 margin_top = 60.9919
 margin_right = 78.5705
 margin_bottom = 84.9919
-toggle_mode = true
 group = ExtResource( 3 )
 text = "B"
 
 [node name="FemaleButton" type="Button" parent="."]
-margin_left = 87.5705
+margin_left = 86.756
 margin_top = 60.9919
-margin_right = 125.57
+margin_right = 124.755
 margin_bottom = 84.9919
-toggle_mode = true
 group = ExtResource( 3 )
 text = "G"
 
@@ -170,7 +168,6 @@ margin_bottom = 16.5786
 text = "Right"
 
 [node name="EyesLabel" type="Label" parent="."]
-editor/display_folded = true
 margin_left = 84.3614
 margin_top = 186.568
 margin_right = 145.361
@@ -186,10 +183,10 @@ margin_bottom = 18.3694
 text = "Left"
 
 [node name="Right" type="Button" parent="EyesLabel"]
-margin_left = 92.8743
-margin_top = -3.34533
-margin_right = 136.874
-margin_bottom = 16.6547
+margin_left = 93.6888
+margin_top = -4.15984
+margin_right = 137.689
+margin_bottom = 15.8402
 text = "Right"
 
 [node name="HairColorLabel" type="Label" parent="."]
@@ -465,6 +462,8 @@ text = "Turn Right"
 [connection signal="button_up" from="BodyLabel/Right" to="." method="_on_Sprite_Selection_button_up" binds= [ 1, "Body" ]]
 [connection signal="button_up" from="SkinToneLabel/Left" to="." method="_on_Color_Selection_button_up" binds= [ -1, "Skintone" ]]
 [connection signal="button_up" from="SkinToneLabel/Right" to="." method="_on_Color_Selection_button_up" binds= [ 1, "Skintone" ]]
+[connection signal="button_up" from="EyesLabel/Left" to="." method="_on_Sprite_Selection_button_up" binds= [ -1, "Eyes" ]]
+[connection signal="button_up" from="EyesLabel/Right" to="." method="_on_Sprite_Selection_button_up" binds= [ 1, "Eyes" ]]
 [connection signal="button_up" from="HairColorLabel/Left" to="." method="_on_Color_Selection_button_up" binds= [ -1, "Hair" ]]
 [connection signal="button_up" from="HairColorLabel/Right" to="." method="_on_Color_Selection_button_up" binds= [ 1, "Hair" ]]
 [connection signal="button_up" from="EyeColorLabel/Left" to="." method="_on_Color_Selection_button_up" binds= [ -1, "Eye" ]]
