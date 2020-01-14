@@ -83,9 +83,6 @@ func set_sprite_color(folder, sprite: Sprite, number: String) -> void:
 	var gray_palette_path = "res://Assets/Palettes/{folder}/{folder}color_000.png".format({
 		"folder": folder
 	})
-	print(palette_path)
-	print(gray_palette_path)
-	print(sprite.name)
 	sprite.material.set_shader_param("palette_swap", load(palette_path))
 	sprite.material.set_shader_param("greyscale_palette", load(gray_palette_path))
 	pallete_sprite_state[folder] = number
@@ -113,7 +110,7 @@ func create_random_character() -> void:
 		if "000" in random_sprite and not "Accessory" in random_sprite: # Prevent some empty sprite sheets
 			if folder == "HairA" and "Hair" in random_sprite: # If main hair is bald, leave rest of hair
 				continue
-			if "Top" in folder or "Bottom" or folder: # If no top or no bottom was returned, dont set the texture
+			if "Top" in folder or "Bottom" in folder: # If no top or no bottom was returned, dont set the texture
 				continue
 		player_sprite[folder].set_texture(load(random_sprite))
 	for folder in palette_folders:
