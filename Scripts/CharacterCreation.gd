@@ -136,6 +136,7 @@ func _on_Turn_button_up(direction):
 	$PlayerSprites/AnimationPlayer.play(animations[current_animation])
 	
 func _on_Sprite_Selection_button_up(direction: int, sprite: String):
+	# TODO: Figure out how to select new a body
 	if not sprite == "Body":
 		var folder_path = "res://Assets/Character/"+gender+"/"+body+"/"+sprite+"/"
 		var files = g.files_in_dir(folder_path, "Idle")
