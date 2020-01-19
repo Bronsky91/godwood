@@ -342,10 +342,10 @@ margin_bottom = 17.1411
 text = "Right"
 
 [node name="Accessory2Label" type="Label" parent="."]
-margin_left = 464.469
-margin_top = 353.842
-margin_right = 537.469
-margin_bottom = 367.842
+margin_left = 462.025
+margin_top = 320.447
+margin_right = 535.025
+margin_bottom = 334.447
 text = "Accessory2"
 align = 1
 
@@ -365,9 +365,9 @@ text = "Right"
 
 [node name="Accessory3Label" type="Label" parent="."]
 margin_left = 463.605
-margin_top = 319.842
+margin_top = 352.422
 margin_right = 536.605
-margin_bottom = 333.842
+margin_bottom = 366.422
 text = "Accessory3"
 align = 1
 
@@ -473,6 +473,10 @@ text = "Turn Right"
 [connection signal="button_up" from="ShirtColorLabel/Right" to="." method="_on_Color_Selection_button_up" binds= [ 1, "Top" ]]
 [connection signal="button_up" from="Accessory1Label/Left" to="." method="_on_Sprite_Selection_button_up" binds= [ -1, "Accessory1" ]]
 [connection signal="button_up" from="Accessory1Label/Right" to="." method="_on_Sprite_Selection_button_up" binds= [ 1, "Accessory1" ]]
+[connection signal="button_up" from="Accessory2Label/Left" to="." method="_on_Sprite_Selection_button_up" binds= [ -1, "Accessory2" ]]
+[connection signal="button_up" from="Accessory2Label/Right" to="." method="_on_Sprite_Selection_button_up" binds= [ 1, "Accessory2" ]]
+[connection signal="button_up" from="Accessory3Label/Left" to="." method="_on_Sprite_Selection_button_up" binds= [ -1, "Accessory3" ]]
+[connection signal="button_up" from="Accessory3Label/Right" to="." method="_on_Sprite_Selection_button_up" binds= [ 1, "Accessory3" ]]
 [connection signal="button_up" from="ShoesLabel/Left" to="." method="_on_Sprite_Selection_button_up" binds= [ 1, "Shoes" ]]
 [connection signal="button_up" from="ShoesLabel/Right" to="." method="_on_Sprite_Selection_button_up" binds= [ 1, "Shoes" ]]
 [connection signal="button_up" from="ShoesColorLabel/Left" to="." method="_on_Color_Selection_button_up" binds= [ -1, "Shoe" ]]
