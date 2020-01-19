@@ -320,24 +320,24 @@ margin_bottom = 17.1411
 text = "Right"
 
 [node name="Accessory1Label" type="Label" parent="."]
-margin_left = 76.7213
-margin_top = 355.027
-margin_right = 149.721
-margin_bottom = 369.027
+margin_left = 82.4228
+margin_top = 354.212
+margin_right = 155.423
+margin_bottom = 368.212
 text = "Accessory1"
 align = 1
 
 [node name="Left" type="Button" parent="Accessory1Label"]
-margin_left = -44.256
-margin_top = -2.00153
-margin_right = -8.256
-margin_bottom = 17.9985
+margin_left = -49.9575
+margin_top = -1.18699
+margin_right = -13.9575
+margin_bottom = 18.813
 text = "Left"
 
 [node name="Right" type="Button" parent="Accessory1Label"]
-margin_left = 96.3537
+margin_left = 87.3941
 margin_top = -2.8589
-margin_right = 140.354
+margin_right = 131.394
 margin_bottom = 17.1411
 text = "Right"
 
@@ -386,7 +386,6 @@ margin_bottom = 17.1411
 text = "Right"
 
 [node name="ShoesLabel" type="Label" parent="."]
-editor/display_folded = true
 margin_left = 75.1713
 margin_top = 325.629
 margin_right = 147.171
@@ -472,6 +471,10 @@ text = "Turn Right"
 [connection signal="button_up" from="PantsColorLabel/Right" to="." method="_on_Color_Selection_button_up" binds= [ 1, "Bottom" ]]
 [connection signal="button_up" from="ShirtColorLabel/Left" to="." method="_on_Color_Selection_button_up" binds= [ -1, "Top" ]]
 [connection signal="button_up" from="ShirtColorLabel/Right" to="." method="_on_Color_Selection_button_up" binds= [ 1, "Top" ]]
+[connection signal="button_up" from="Accessory1Label/Left" to="." method="_on_Sprite_Selection_button_up" binds= [ -1, "Accessory1" ]]
+[connection signal="button_up" from="Accessory1Label/Right" to="." method="_on_Sprite_Selection_button_up" binds= [ 1, "Accessory1" ]]
+[connection signal="button_up" from="ShoesLabel/Left" to="." method="_on_Sprite_Selection_button_up" binds= [ 1, "Shoes" ]]
+[connection signal="button_up" from="ShoesLabel/Right" to="." method="_on_Sprite_Selection_button_up" binds= [ 1, "Shoes" ]]
 [connection signal="button_up" from="ShoesColorLabel/Left" to="." method="_on_Color_Selection_button_up" binds= [ -1, "Shoe" ]]
 [connection signal="button_up" from="ShoesColorLabel/Right" to="." method="_on_Color_Selection_button_up" binds= [ 1, "Shoe" ]]
 [connection signal="button_up" from="Random" to="." method="_on_Random_button_up"]
