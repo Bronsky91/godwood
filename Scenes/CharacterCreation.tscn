@@ -57,9 +57,9 @@ text = "G"
 
 [node name="BodyLabel" type="Label" parent="."]
 margin_left = 91.8818
-margin_top = 129.019
+margin_top = 124.132
 margin_right = 133.882
-margin_bottom = 143.019
+margin_bottom = 138.132
 text = "Body"
 align = 1
 
@@ -78,10 +78,10 @@ margin_bottom = 18.6172
 text = "Right"
 
 [node name="SkinToneLabel" type="Label" parent="."]
-margin_left = 84.3115
-margin_top = 160.898
-margin_right = 145.311
-margin_bottom = 174.898
+margin_left = 463.871
+margin_top = 121.802
+margin_right = 524.871
+margin_bottom = 135.802
 text = "Skin Tone"
 align = 1
 
@@ -100,41 +100,40 @@ margin_bottom = 14.8271
 text = "Right"
 
 [node name="HairALabel" type="Label" parent="."]
-margin_left = 83.7393
-margin_top = 250.342
-margin_right = 144.739
-margin_bottom = 264.342
+margin_left = 81.2958
+margin_top = 241.382
+margin_right = 142.295
+margin_bottom = 255.382
 text = "Hair A"
 align = 1
 
 [node name="Left" type="Button" parent="HairALabel"]
-margin_left = -46.5705
-margin_top = -3.42949
-margin_right = -10.5705
-margin_bottom = 16.5705
+margin_left = -51.4575
+margin_top = -4.244
+margin_right = -15.4575
+margin_bottom = 15.756
 text = "Left"
 
 [node name="Right" type="Button" parent="HairALabel"]
-margin_left = 90.8819
-margin_top = -6.859
-margin_right = 134.882
-margin_bottom = 13.141
+margin_left = 91.6964
+margin_top = -6.04449
+margin_right = 135.696
+margin_bottom = 13.9555
 text = "Right"
 
 [node name="HairBLabel" type="Label" parent="."]
-editor/display_folded = true
-margin_left = 86.0
-margin_top = 279.95
-margin_right = 147.0
-margin_bottom = 293.95
+margin_left = 81.9275
+margin_top = 269.361
+margin_right = 142.927
+margin_bottom = 283.361
 text = "Hair B"
 align = 1
 
 [node name="Left" type="Button" parent="HairBLabel"]
-margin_left = -50.0
-margin_top = -2.57213
-margin_right = -14.0
-margin_bottom = 17.4279
+margin_left = -50.8145
+margin_top = -1.75762
+margin_right = -14.8145
+margin_bottom = 18.2424
 text = "Left"
 
 [node name="Right" type="Button" parent="HairBLabel"]
@@ -145,19 +144,18 @@ margin_bottom = 16.5705
 text = "Right"
 
 [node name="HairCLabel" type="Label" parent="."]
-editor/display_folded = true
-margin_left = 87.1187
-margin_top = 309.342
-margin_right = 148.119
-margin_bottom = 323.342
+margin_left = 82.2316
+margin_top = 297.124
+margin_right = 143.232
+margin_bottom = 311.124
 text = "Hair C"
 align = 1
 
 [node name="Left" type="Button" parent="HairCLabel"]
 margin_left = -50.0
-margin_top = -0.849243
+margin_top = -1.66376
 margin_right = -14.0
-margin_bottom = 19.1508
+margin_bottom = 18.3363
 text = "Left"
 
 [node name="Right" type="Button" parent="HairCLabel"]
@@ -168,10 +166,10 @@ margin_bottom = 16.5786
 text = "Right"
 
 [node name="EyesLabel" type="Label" parent="."]
-margin_left = 84.3614
-margin_top = 186.568
-margin_right = 145.361
-margin_bottom = 200.568
+margin_left = 78.6599
+margin_top = 211.003
+margin_right = 139.659
+margin_bottom = 225.003
 text = "Eyes"
 align = 1
 
@@ -190,10 +188,10 @@ margin_bottom = 15.8402
 text = "Right"
 
 [node name="HairColorLabel" type="Label" parent="."]
-margin_left = 87.7409
-margin_top = 338.771
-margin_right = 150.741
-margin_bottom = 352.771
+margin_left = 467.3
+margin_top = 247.546
+margin_right = 530.3
+margin_bottom = 261.546
 text = "Hair Color"
 align = 1
 
@@ -212,10 +210,10 @@ margin_bottom = 16.2574
 text = "Right"
 
 [node name="EyeColorLabel" type="Label" parent="."]
-margin_left = 85.8411
-margin_top = 217.897
-margin_right = 148.841
-margin_bottom = 231.897
+margin_left = 471.102
+margin_top = 216.268
+margin_right = 534.102
+margin_bottom = 230.268
 text = "Eye Color"
 align = 1
 
@@ -234,11 +232,10 @@ margin_bottom = 16.2837
 text = "Right"
 
 [node name="PantsLabel" type="Label" parent="."]
-editor/display_folded = true
-margin_left = 471.263
-margin_top = 97.2806
-margin_right = 534.263
-margin_bottom = 111.281
+margin_left = 81.9298
+margin_top = 181.175
+margin_right = 144.93
+margin_bottom = 195.175
 text = "Pants"
 align = 1
 
@@ -250,25 +247,25 @@ margin_bottom = 17.9985
 text = "Left"
 
 [node name="Right" type="Button" parent="PantsLabel"]
-margin_left = 90.352
-margin_top = -3.71629
-margin_right = 134.352
-margin_bottom = 16.2837
+margin_left = 91.981
+margin_top = -2.90179
+margin_right = 135.981
+margin_bottom = 17.0982
 text = "Right"
 
 [node name="PantsColorLabel" type="Label" parent="."]
-margin_left = 470.128
-margin_top = 126.617
-margin_right = 542.128
-margin_bottom = 140.617
+margin_left = 466.87
+margin_top = 184.447
+margin_right = 538.87
+margin_bottom = 198.447
 text = "Pants Color"
 align = 1
 
 [node name="Left" type="Button" parent="PantsColorLabel"]
-margin_left = -50.0
-margin_top = -2.00153
-margin_right = -14.0
-margin_bottom = 17.9985
+margin_left = -49.1855
+margin_top = -1.18703
+margin_right = -13.1855
+margin_bottom = 18.813
 text = "Left"
 
 [node name="Right" type="Button" parent="PantsColorLabel"]
@@ -279,10 +276,10 @@ margin_bottom = 16.2837
 text = "Right"
 
 [node name="ShirtLabel" type="Label" parent="."]
-margin_left = 464.383
-margin_top = 155.725
-margin_right = 536.383
-margin_bottom = 169.725
+margin_left = 76.6788
+margin_top = 152.467
+margin_right = 148.679
+margin_bottom = 166.467
 text = "Shirt"
 align = 1
 
@@ -301,10 +298,10 @@ margin_bottom = 17.1411
 text = "Right"
 
 [node name="ShirtColorLabel" type="Label" parent="."]
-margin_left = 465.241
-margin_top = 187.911
-margin_right = 537.241
-margin_bottom = 201.911
+margin_left = 461.168
+margin_top = 151.258
+margin_right = 533.169
+margin_bottom = 165.258
 text = "Shirt Color"
 align = 1
 
@@ -323,11 +320,10 @@ margin_bottom = 17.1411
 text = "Right"
 
 [node name="Accessory1Label" type="Label" parent="."]
-editor/display_folded = true
-margin_left = 465.24
-margin_top = 219.819
-margin_right = 538.24
-margin_bottom = 233.819
+margin_left = 76.7213
+margin_top = 355.027
+margin_right = 149.721
+margin_bottom = 369.027
 text = "Accessory1"
 align = 1
 
@@ -346,11 +342,10 @@ margin_bottom = 17.1411
 text = "Right"
 
 [node name="Accessory2Label" type="Label" parent="."]
-editor/display_folded = true
-margin_left = 466.098
-margin_top = 252.029
-margin_right = 539.098
-margin_bottom = 266.029
+margin_left = 464.469
+margin_top = 353.842
+margin_right = 537.469
+margin_bottom = 367.842
 text = "Accessory2"
 align = 1
 
@@ -369,11 +364,10 @@ margin_bottom = 17.1411
 text = "Right"
 
 [node name="Accessory3Label" type="Label" parent="."]
-editor/display_folded = true
-margin_left = 466.863
-margin_top = 284.818
-margin_right = 539.863
-margin_bottom = 298.818
+margin_left = 463.605
+margin_top = 319.842
+margin_right = 536.605
+margin_bottom = 333.842
 text = "Accessory3"
 align = 1
 
@@ -393,10 +387,10 @@ text = "Right"
 
 [node name="ShoesLabel" type="Label" parent="."]
 editor/display_folded = true
-margin_left = 468.577
-margin_top = 319.113
-margin_right = 540.577
-margin_bottom = 333.113
+margin_left = 75.1713
+margin_top = 325.629
+margin_right = 147.171
+margin_bottom = 339.629
 text = "Shoes"
 align = 1
 
@@ -415,10 +409,10 @@ margin_bottom = 17.1411
 text = "Right"
 
 [node name="ShoesColorLabel" type="Label" parent="."]
-margin_left = 468.577
-margin_top = 352.55
-margin_right = 543.577
-margin_bottom = 366.55
+margin_left = 463.69
+margin_top = 284.132
+margin_right = 538.69
+margin_bottom = 298.132
 text = "Shoes Color"
 align = 1
 
@@ -462,6 +456,12 @@ text = "Turn Right"
 [connection signal="button_up" from="BodyLabel/Right" to="." method="_on_Sprite_Selection_button_up" binds= [ 1, "Body" ]]
 [connection signal="button_up" from="SkinToneLabel/Left" to="." method="_on_Color_Selection_button_up" binds= [ -1, "Skintone" ]]
 [connection signal="button_up" from="SkinToneLabel/Right" to="." method="_on_Color_Selection_button_up" binds= [ 1, "Skintone" ]]
+[connection signal="button_up" from="HairALabel/Left" to="." method="_on_Sprite_Selection_button_up" binds= [ -1.0, "HairA" ]]
+[connection signal="button_up" from="HairALabel/Right" to="." method="_on_Sprite_Selection_button_up" binds= [ 1, "HairA" ]]
+[connection signal="button_up" from="HairBLabel/Left" to="." method="_on_Sprite_Selection_button_up" binds= [ -1, "HairB" ]]
+[connection signal="button_up" from="HairBLabel/Right" to="." method="_on_Sprite_Selection_button_up" binds= [ 1, "HairB" ]]
+[connection signal="button_up" from="HairCLabel/Left" to="." method="_on_Sprite_Selection_button_up" binds= [ -1, "HairC" ]]
+[connection signal="button_up" from="HairCLabel/Right" to="." method="_on_Sprite_Selection_button_up" binds= [ 1, "HairC" ]]
 [connection signal="button_up" from="EyesLabel/Left" to="." method="_on_Sprite_Selection_button_up" binds= [ -1, "Eyes" ]]
 [connection signal="button_up" from="EyesLabel/Right" to="." method="_on_Sprite_Selection_button_up" binds= [ 1, "Eyes" ]]
 [connection signal="button_up" from="HairColorLabel/Left" to="." method="_on_Color_Selection_button_up" binds= [ -1, "Hair" ]]

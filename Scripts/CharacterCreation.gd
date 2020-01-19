@@ -140,6 +140,8 @@ func _on_Sprite_Selection_button_up(direction: int, sprite: String):
 	if not sprite == "Body":
 		var folder_path = "res://Assets/Character/"+gender+"/"+body+"/"+sprite+"/"
 		var files = g.files_in_dir(folder_path, "Idle")
+		print(sprite)
+		print(sprite_state[sprite])
 		var file = sprite_state[sprite].split("/")[-1]
 		var current_index = files.find(file)
 		var new_index = current_index + direction
@@ -148,10 +150,7 @@ func _on_Sprite_Selection_button_up(direction: int, sprite: String):
 		if new_index == -1:
 			new_index = len(files) -1
 		var new_sprite_path = folder_path + files[new_index]
-		print(new_sprite_path)
-		print(new_index)
 		set_sprite_texture(sprite, new_sprite_path)
-		# TODO: Files keeps going up a dir after each button click...
 
 func _on_Color_Selection_button_up(direction: int, palette_sprite: String):
 	var folder_path = "res://Assets/Palettes/"+palette_sprite
@@ -163,3 +162,7 @@ func _on_Color_Selection_button_up(direction: int, palette_sprite: String):
 		new_color = 1
 	for sprite in palette_sprite_dict[palette_sprite]:
 		set_sprite_color(palette_sprite, sprite, str(new_color).pad_zeros(3))
+
+
+func _on_Left_button_up(extra_arg_0, extra_arg_1):
+	pass # Replace with function body.
