@@ -45,3 +45,6 @@ func files_in_dir(path: String, keyword: String = "") -> Array:
 	dir.list_dir_end()
 	return files
 	
+func save_character(state: Dictionary):
+	pass
+	# TODO: pass in state dictionary of all the character deets
