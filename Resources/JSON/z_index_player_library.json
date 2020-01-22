@@ -19,9 +19,9 @@
     },
     "Arms": {
         "front": 70,
-		"right": 130,
+		"right": 140,
 		"back": 30,
-		"left": 130
+		"left": 140
     },
     "Body": {
         "front": 20,
@@ -79,9 +79,9 @@
     },
     "JacketA": {
         "front": 80,
-		"right": 140,
+		"right": 130,
 		"back": 120,
-		"left": 140
+		"left": 130
     },
     "JacketB": {
         "front": 100,

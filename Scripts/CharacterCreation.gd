@@ -44,8 +44,11 @@ onready var palette_sprite_dict: Dictionary = {
 	'Top': [
 		player_sprite['TopA'],
 		player_sprite['TopB']
+	],
+	'Jacket': [
+		player_sprite['JacketA'],
+		player_sprite['JacketB']
 	]
-	# Jackets not implemented yet
 }
 
 var pallete_sprite_state: Dictionary
