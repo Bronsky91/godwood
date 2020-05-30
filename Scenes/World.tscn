@@ -29,5 +29,4 @@ position = Vector2( 313.881, 133.685 )
 
 [node name="Player" parent="YSort" instance=ExtResource( 4 )]
 position = Vector2( 470.253, 206.693 )
-z_index = -180
 [connection signal="timeout" from="Clock" to="Clock" method="_on_Clock_timeout"]

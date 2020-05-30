@@ -1,24 +1,24 @@
 extends Node2D
 
 onready var player_sprite: Dictionary = {
-	'Accessory1': $PlayerSprites/Accessory1,
-	'Accessory2': $PlayerSprites/Accessory2,
-	'Accessory3': $PlayerSprites/Accessory3,
-	'Arms': $PlayerSprites/Arms,
-	'Body': $PlayerSprites/Body,
-	'BottomA': $PlayerSprites/BottomA,
-	'BottomB': $PlayerSprites/BottomB,
-	'Eyes': $PlayerSprites/Eyes,
-	'HairA': $PlayerSprites/HairA,
-	'HairB': $PlayerSprites/HairB,
-	'HairC': $PlayerSprites/HairC,
-	'HairD': $PlayerSprites/HairD,
-	'Head': $PlayerSprites/Head,
-	'JacketA': $PlayerSprites/JacketA,
-	'JacketB': $PlayerSprites/JacketB,
-	'Shoes': $PlayerSprites/Shoes,
-	'TopA': $PlayerSprites/TopA,
-	'TopB': $PlayerSprites/TopB
+	'Accessory1': $PlayerSprites/SpriteHolder/Accessory1,
+	'Accessory2': $PlayerSprites/SpriteHolder/Accessory2,
+	'Accessory3': $PlayerSprites/SpriteHolder/Accessory3,
+	'Arms': $PlayerSprites/SpriteHolder/Arms,
+	'Body': $PlayerSprites/SpriteHolder/Body,
+	'BottomA': $PlayerSprites/SpriteHolder/BottomA,
+	'BottomB': $PlayerSprites/SpriteHolder/BottomB,
+	'Eyes': $PlayerSprites/SpriteHolder/Eyes,
+	'HairA': $PlayerSprites/SpriteHolder/HairA,
+	'HairB': $PlayerSprites/SpriteHolder/HairB,
+	'HairC': $PlayerSprites/SpriteHolder/HairC,
+	'HairD': $PlayerSprites/SpriteHolder/HairD,
+	'Head': $PlayerSprites/SpriteHolder/Head,
+	'JacketA': $PlayerSprites/SpriteHolder/JacketA,
+	'JacketB': $PlayerSprites/SpriteHolder/JacketB,
+	'Shoes': $PlayerSprites/SpriteHolder/Shoes,
+	'TopA': $PlayerSprites/SpriteHolder/TopA,
+	'TopB': $PlayerSprites/SpriteHolder/TopB
 }
 
 onready var palette_sprite_dict: Dictionary = {

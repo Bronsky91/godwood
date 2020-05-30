@@ -6,7 +6,7 @@ length = 3.5
 loop = true
 step = 0.25
 tracks/0/type = "value"
-tracks/0/path = NodePath("Body:frame")
+tracks/0/path = NodePath("SpriteHolder/Body:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -18,7 +18,7 @@ tracks/0/keys = {
 "values": [ 12, 13, 14, 15 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("Arms:frame")
+tracks/1/path = NodePath("SpriteHolder/Arms:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -30,7 +30,7 @@ tracks/1/keys = {
 "values": [ 12, 13, 14, 15 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("Accessory1:frame")
+tracks/2/path = NodePath("SpriteHolder/Accessory1:frame")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -42,7 +42,7 @@ tracks/2/keys = {
 "values": [ 12, 13, 14, 15 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("Accessory2:frame")
+tracks/3/path = NodePath("SpriteHolder/Accessory2:frame")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -54,7 +54,7 @@ tracks/3/keys = {
 "values": [ 12, 13, 14, 15 ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("Accessory3:frame")
+tracks/4/path = NodePath("SpriteHolder/Accessory3:frame")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -66,7 +66,7 @@ tracks/4/keys = {
 "values": [ 12, 13, 14, 15 ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("BottomA:frame")
+tracks/5/path = NodePath("SpriteHolder/BottomA:frame")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
@@ -78,7 +78,7 @@ tracks/5/keys = {
 "values": [ 12, 13, 14, 15 ]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("BottomB:frame")
+tracks/6/path = NodePath("SpriteHolder/BottomB:frame")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/imported = false
@@ -90,7 +90,7 @@ tracks/6/keys = {
 "values": [ 12, 13, 14, 15 ]
 }
 tracks/7/type = "value"
-tracks/7/path = NodePath("Eyes:frame")
+tracks/7/path = NodePath("SpriteHolder/Eyes:frame")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/imported = false
@@ -102,7 +102,7 @@ tracks/7/keys = {
 "values": [ 12, 13, 14, 15 ]
 }
 tracks/8/type = "value"
-tracks/8/path = NodePath("HairA:frame")
+tracks/8/path = NodePath("SpriteHolder/HairA:frame")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/imported = false
@@ -114,7 +114,7 @@ tracks/8/keys = {
 "values": [ 12, 13, 14, 15 ]
 }
 tracks/9/type = "value"
-tracks/9/path = NodePath("HairB:frame")
+tracks/9/path = NodePath("SpriteHolder/HairB:frame")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/imported = false
@@ -126,7 +126,7 @@ tracks/9/keys = {
 "values": [ 12, 13, 14, 15 ]
 }
 tracks/10/type = "value"
-tracks/10/path = NodePath("HairC:frame")
+tracks/10/path = NodePath("SpriteHolder/HairC:frame")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/imported = false
@@ -138,7 +138,7 @@ tracks/10/keys = {
 "values": [ 12, 13, 14, 15 ]
 }
 tracks/11/type = "value"
-tracks/11/path = NodePath("HairD:frame")
+tracks/11/path = NodePath("SpriteHolder/HairD:frame")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/imported = false
@@ -150,7 +150,7 @@ tracks/11/keys = {
 "values": [ 12, 13, 14, 15 ]
 }
 tracks/12/type = "value"
-tracks/12/path = NodePath("Head:frame")
+tracks/12/path = NodePath("SpriteHolder/Head:frame")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/imported = false
@@ -162,7 +162,7 @@ tracks/12/keys = {
 "values": [ 12, 13, 14, 15 ]
 }
 tracks/13/type = "value"
-tracks/13/path = NodePath("JacketA:frame")
+tracks/13/path = NodePath("SpriteHolder/JacketA:frame")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/imported = false
@@ -174,7 +174,7 @@ tracks/13/keys = {
 "values": [ 12, 13, 14, 15 ]
 }
 tracks/14/type = "value"
-tracks/14/path = NodePath("JacketB:frame")
+tracks/14/path = NodePath("SpriteHolder/JacketB:frame")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/imported = false
@@ -186,7 +186,7 @@ tracks/14/keys = {
 "values": [ 12, 13, 14, 15 ]
 }
 tracks/15/type = "value"
-tracks/15/path = NodePath("Shoes:frame")
+tracks/15/path = NodePath("SpriteHolder/Shoes:frame")
 tracks/15/interp = 1
 tracks/15/loop_wrap = true
 tracks/15/imported = false
@@ -198,7 +198,7 @@ tracks/15/keys = {
 "values": [ 12, 13, 14, 15 ]
 }
 tracks/16/type = "value"
-tracks/16/path = NodePath("TopA:frame")
+tracks/16/path = NodePath("SpriteHolder/TopA:frame")
 tracks/16/interp = 1
 tracks/16/loop_wrap = true
 tracks/16/imported = false
@@ -210,7 +210,7 @@ tracks/16/keys = {
 "values": [ 12, 13, 14, 15 ]
 }
 tracks/17/type = "value"
-tracks/17/path = NodePath("TopB:frame")
+tracks/17/path = NodePath("SpriteHolder/TopB:frame")
 tracks/17/interp = 1
 tracks/17/loop_wrap = true
 tracks/17/imported = false
