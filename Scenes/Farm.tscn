@@ -1,3 +1,18 @@
-[gd_scene format=2]
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Assets/Environment/Farmhouse_Stairs_001.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Environment/Farmhouse_Door_001.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Environment/Farmhouse_001.png" type="Texture" id=3]
 
 [node name="Farm" type="Node2D"]
+
+[node name="Farmhouse_001" type="Sprite" parent="."]
+texture = ExtResource( 3 )
+
+[node name="Farmhouse_Door_001" type="Sprite" parent="."]
+position = Vector2( -1.16019, 47.5754 )
+texture = ExtResource( 2 )
+
+[node name="Farmhouse_Stairs_001" type="Sprite" parent="."]
+position = Vector2( -2.16019, 96.4745 )
+texture = ExtResource( 1 )

@@ -45,6 +45,28 @@ func files_in_dir(path: String, keyword: String = "") -> Array:
 	dir.list_dir_end()
 	return files
 	
-func save_character(state: Dictionary):
-	pass
+func save_character(state: Dictionary, slot: String):
 	# TODO: pass in state dictionary of all the character deets
+	# TODO: If there is no current character slot, make a new one and save
+	# TODO: Include farm/world state
+	var f: File = File.new()
+	f.open("user://character-"+slot+".save", File.READ)
+	var json: JSONParseResult = JSON.parse(f.get_as_text())
+	f.close()
+	var data: Dictionary = json.result
+	data = {
+	#	character: state
+	}
+	# Save
+	f = File.new()
+	f.open("user://character-"+slot+".save", File.WRITE)
+	f.store_string(JSON.print(data, "  ", true))
+	f.close()
+	
+func load_character(slot) -> Dictionary:
+	var character_slot: File = File.new()
+	character_slot.open("user://character-"+slot+".save", File.READ)
+	var text: String = character_slot.get_as_text()
+	var data: Dictionary = parse_json(text)
+	character_slot.close()
+	return data.character

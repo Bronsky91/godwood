@@ -1,6 +1,6 @@
 [gd_scene load_steps=42 format=2]
 
-[ext_resource path="res://Scenes/PlayerSprites.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/PlayerSprites.gd" type="Script" id=1]
 [ext_resource path="res://Resources/Shaders/PaletteSwap.shader" type="Shader" id=2]
 [ext_resource path="res://Assets/Character/Female/AvThn/Accessory3/Female_AvThn_Accessory3_Idle_001.png" type="Texture" id=3]
 [ext_resource path="res://Assets/Character/Female/AvThn/Arms/Female_AvThn_Arms_Idle.png" type="Texture" id=4]
@@ -23,6 +23,7 @@
 [ext_resource path="res://Resources/Animations/idle_front.tres" type="Animation" id=21]
 [ext_resource path="res://Resources/Animations/idle_left.tres" type="Animation" id=22]
 [ext_resource path="res://Resources/Animations/idle_right.tres" type="Animation" id=23]
+
 
 [sub_resource type="ShaderMaterial" id=1]
 shader = ExtResource( 2 )
