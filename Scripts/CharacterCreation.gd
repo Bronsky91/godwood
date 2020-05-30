@@ -165,3 +165,8 @@ func _on_Color_Selection_button_up(direction: int, palette_sprite: String):
 		new_color = 1
 	for sprite in palette_sprite_dict[palette_sprite]:
 		set_sprite_color(palette_sprite, sprite, str(new_color).pad_zeros(3))
+
+
+func _on_Save_button_up():
+	pass
+	# Saves Character state in new slot

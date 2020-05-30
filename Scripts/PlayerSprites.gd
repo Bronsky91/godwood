@@ -4,6 +4,7 @@ var z_index_library: Dictionary
 
 func _ready():
 	z_index_library = load_json("res://Resources/JSON/z_index_player_library.json")
+	# Load character state
 
 func _process(delta):
 	pass

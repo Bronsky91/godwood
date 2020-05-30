@@ -447,6 +447,16 @@ margin_top = 414.2
 margin_right = 424.65
 margin_bottom = 434.2
 text = "Turn Right"
+
+[node name="Save" type="Button" parent="."]
+margin_left = 529.999
+margin_top = 444.999
+margin_right = 570.999
+margin_bottom = 464.999
+text = "Save"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="button_up" from="MaleButton" to="." method="_on_GenderButton_button_up" binds= [ "Male" ]]
 [connection signal="button_up" from="FemaleButton" to="." method="_on_GenderButton_button_up" binds= [ "Female" ]]
 [connection signal="button_up" from="BodyLabel/Left" to="." method="_on_Sprite_Selection_button_up" binds= [ -1, "Body" ]]
@@ -482,3 +492,4 @@ text = "Turn Right"
 [connection signal="button_up" from="Random" to="." method="_on_Random_button_up"]
 [connection signal="button_up" from="TurnLeft" to="." method="_on_Turn_button_up" binds= [ -1 ]]
 [connection signal="button_up" from="TurnRight" to="." method="_on_Turn_button_up" binds= [ 1 ]]
+[connection signal="button_up" from="Save" to="." method="_on_Save_button_up"]
