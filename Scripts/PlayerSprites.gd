@@ -16,17 +16,17 @@ func load_json(file_path: String) -> Dictionary:
 	var text = file.get_as_text()
 	return JSON.parse(text).result
 
-func set_z_indices(direction):
+func set_node_indices(direction):
+	# Sort the sprites in proper draw order based on direction
 	for sprite in $SpriteHolder.get_children():
-		if sprite.name == "AnimationPlayer":
-			continue
-		print(sprite.name)
-		print(sprite.get_index())
-		print(z_index_library[sprite.name][direction]-1)
-		$SpriteHolder.move_child(sprite, z_index_library[sprite.name][direction]-1)
-		print(sprite.get_index())
+		var new_sprite_index = z_index_library[sprite.name][direction]-1
+		$SpriteHolder.move_child(sprite, new_sprite_index)
+	# Resort if any are out of place from the first sorting
+	for sprite in $SpriteHolder.get_children():
+		var new_sprite_index = z_index_library[sprite.name][direction]-1
+		if new_sprite_index != sprite.get_index():
+			$SpriteHolder.move_child(sprite, new_sprite_index)
 
 func _on_AnimationPlayer_animation_started(anim_name: String):
 	var direction = anim_name.split("_")[1]
-	set_z_indices(direction)
-	set_z_indices(direction)
+	set_node_indices(direction)
