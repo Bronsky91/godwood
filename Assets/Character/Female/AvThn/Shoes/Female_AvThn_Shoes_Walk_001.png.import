@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Male_AvThn_Walk_Body.png-a87e2f22a019865b37fac749515a17d4.stex"
+path="res://.import/Female_AvThn_Shoes_Walk_001.png-dee218d51dc8415912ccdf0d8b20bdaf.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Character/Male/AvThn/Body/Male_AvThn_Walk_Body.png"
-dest_files=[ "res://.import/Male_AvThn_Walk_Body.png-a87e2f22a019865b37fac749515a17d4.stex" ]
+source_file="res://Assets/Character/Female/AvThn/Shoes/Female_AvThn_Shoes_Walk_001.png"
+dest_files=[ "res://.import/Female_AvThn_Shoes_Walk_001.png-dee218d51dc8415912ccdf0d8b20bdaf.stex" ]
 
 [params]
 

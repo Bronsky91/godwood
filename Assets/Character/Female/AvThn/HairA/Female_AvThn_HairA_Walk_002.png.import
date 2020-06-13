@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Male_AvThn_Walk_Head.png-daa0e0e4c4c81095d30ce6a7cf2a6e06.stex"
+path="res://.import/Female_AvThn_HairA_Walk_002.png-0ebdf282a773f30a3bf3360914f6105d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Character/Male/AvThn/Head/Male_AvThn_Walk_Head.png"
-dest_files=[ "res://.import/Male_AvThn_Walk_Head.png-daa0e0e4c4c81095d30ce6a7cf2a6e06.stex" ]
+source_file="res://Assets/Character/Female/AvThn/HairA/Female_AvThn_HairA_Walk_002.png"
+dest_files=[ "res://.import/Female_AvThn_HairA_Walk_002.png-0ebdf282a773f30a3bf3360914f6105d.stex" ]
 
 [params]
 
