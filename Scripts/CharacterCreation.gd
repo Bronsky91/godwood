@@ -102,7 +102,7 @@ func random_asset(folder: String, keyword: String = "") -> String:
 	return folder+"/"+files[random_index]
 	
 func create_random_character() -> void:
-	var sprite_folder_path = "res://Assets/Character/{gender}/{body}".format({"gender": "Female", "body": "AvThn"})
+	var sprite_folder_path = "res://Assets/Character/{gender}/{body}".format({"gender": gender, "body": body})
 	var palette_folder_path = "res://Assets/Palettes"
 	var sprite_folders = g.files_in_dir(sprite_folder_path)
 	var palette_folders = g.files_in_dir(palette_folder_path)
@@ -126,7 +126,7 @@ func create_random_character() -> void:
 
 func _on_GenderButton_button_up(_gender):
 	gender = _gender
-	#set_sprite_texture({"gender": gender, "body": body, "number": ""})
+	create_random_character()
 
 func _on_Random_button_up():
 	create_random_character()
