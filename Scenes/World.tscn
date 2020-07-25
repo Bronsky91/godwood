@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scripts/World.gd" type="Script" id=1]
 [ext_resource path="res://Scripts/Clock.gd" type="Script" id=2]
 [ext_resource path="res://Scenes/Farm.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/FarmGround.tscn" type="PackedScene" id=5]
 
 [node name="World" type="Node2D"]
 script = ExtResource( 1 )
@@ -22,11 +23,15 @@ wait_time = 0.01
 autostart = true
 script = ExtResource( 2 )
 
+[node name="Ground" parent="." instance=ExtResource( 5 )]
+position = Vector2( 345.804, 68.3868 )
+
 [node name="YSort" type="YSort" parent="."]
+position = Vector2( 0, 0.814514 )
 
 [node name="Farm" parent="YSort" instance=ExtResource( 3 )]
-position = Vector2( 313.881, 133.685 )
+position = Vector2( 341.442, 88.0893 )
 
 [node name="Player" parent="YSort" instance=ExtResource( 4 )]
-position = Vector2( 470.253, 206.693 )
+position = Vector2( 187.098, 168.518 )
 [connection signal="timeout" from="Clock" to="Clock" method="_on_Clock_timeout"]
