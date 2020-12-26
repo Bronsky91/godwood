@@ -143,8 +143,6 @@ func _on_Sprite_Selection_button_up(direction: int, sprite: String):
 	if not sprite == "Body":
 		var folder_path = "res://Assets/Character/"+gender+"/"+body+"/"+sprite+"/"
 		var files = g.files_in_dir(folder_path, "Idle")
-		print(sprite)
-		print(sprite_state[sprite])
 		var file = sprite_state[sprite].split("/")[-1]
 		var current_index = files.find(file)
 		var new_index = current_index + direction

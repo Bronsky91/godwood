@@ -6,18 +6,31 @@
 script = ExtResource( 1 )
 
 [node name="Button" type="Button" parent="."]
-margin_left = 360.877
-margin_top = 299.902
-margin_right = 429.877
-margin_bottom = 333.902
-text = "Load"
+margin_left = 282.325
+margin_top = 227.593
+margin_right = 351.325
+margin_bottom = 261.593
+text = "Create"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Button2" type="Button" parent="."]
-margin_left = 213.125
-margin_top = 299.292
-margin_right = 281.125
-margin_bottom = 331.292
-text = "New"
+margin_left = 284.394
+margin_top = 292.529
+margin_right = 352.394
+margin_bottom = 324.529
+text = "View"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button3" type="Button" parent="."]
+margin_left = 287.515
+margin_top = 345.591
+margin_right = 355.515
+margin_bottom = 377.591
+text = "Exit"
+__meta__ = {
+"_edit_use_anchors_": false
+}
