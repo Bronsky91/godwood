@@ -29,4 +29,17 @@ position = Vector2( 313.881, 133.685 )
 
 [node name="Player" parent="YSort" instance=ExtResource( 4 )]
 position = Vector2( 470.253, 206.693 )
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="Leave" type="Button" parent="UI"]
+margin_left = 531.623
+margin_top = 8.7979
+margin_right = 632.623
+margin_bottom = 37.7979
+text = "Leave Farm"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="timeout" from="Clock" to="Clock" method="_on_Clock_timeout"]
+[connection signal="button_up" from="UI/Leave" to="." method="_on_Leave_button_up"]

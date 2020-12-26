@@ -7,3 +7,7 @@ func _ready():
 
 func _process(delta):
 	pass
+
+
+func _on_Leave_button_up():
+	get_tree().change_scene("res://Scenes/Menu.tscn")

@@ -9,7 +9,3 @@
 
 [node name="CharacterCreation" parent="." instance=ExtResource( 2 )]
 visible = false
-
-[node name="New" type="Node2D" parent="."]
-
-[node name="Load" type="Node2D" parent="."]

@@ -168,3 +168,8 @@ func _on_Color_Selection_button_up(direction: int, palette_sprite: String):
 func _on_Save_button_up():
 	pass
 	# Saves Character state in new slot
+
+
+func _on_Back_button_up():
+	hide()
+	get_node('../Main').show()

@@ -449,11 +449,21 @@ margin_bottom = 434.2
 text = "Turn Right"
 
 [node name="Save" type="Button" parent="."]
-margin_left = 529.999
-margin_top = 444.999
-margin_right = 570.999
-margin_bottom = 464.999
+margin_left = 558.062
+margin_top = 441.339
+margin_right = 599.062
+margin_bottom = 461.339
 text = "Save"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Back" type="Button" parent="."]
+margin_left = 482.373
+margin_top = 440.567
+margin_right = 524.373
+margin_bottom = 460.567
+text = "Back"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -493,3 +503,4 @@ __meta__ = {
 [connection signal="button_up" from="TurnLeft" to="." method="_on_Turn_button_up" binds= [ -1 ]]
 [connection signal="button_up" from="TurnRight" to="." method="_on_Turn_button_up" binds= [ 1 ]]
 [connection signal="button_up" from="Save" to="." method="_on_Save_button_up"]
+[connection signal="button_up" from="Back" to="." method="_on_Back_button_up"]
