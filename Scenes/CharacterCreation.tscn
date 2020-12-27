@@ -23,6 +23,9 @@ margin_left = 99.4
 margin_top = -4.0
 margin_right = 221.4
 margin_bottom = 20.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="FarmNameLabel" type="Label" parent="."]
 margin_left = 352.37
@@ -54,12 +57,16 @@ group = ExtResource( 3 )
 text = "G"
 
 [node name="BodyLabel" type="Label" parent="."]
+visible = false
 margin_left = 91.8818
 margin_top = 124.132
 margin_right = 133.882
 margin_bottom = 138.132
 text = "Body"
 align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Left" type="Button" parent="BodyLabel"]
 margin_left = -56.0016
@@ -67,6 +74,9 @@ margin_top = -2.14262
 margin_right = -20.0016
 margin_bottom = 17.8574
 text = "Left"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Right" type="Button" parent="BodyLabel"]
 margin_left = 81.1736
@@ -74,6 +84,9 @@ margin_top = -1.38276
 margin_right = 125.174
 margin_bottom = 18.6172
 text = "Right"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="SkinToneLabel" type="Label" parent="."]
 margin_left = 463.871
@@ -104,6 +117,9 @@ margin_right = 142.295
 margin_bottom = 255.382
 text = "Hair A"
 align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Left" type="Button" parent="HairALabel"]
 margin_left = -51.4575
@@ -111,6 +127,9 @@ margin_top = -4.244
 margin_right = -15.4575
 margin_bottom = 15.756
 text = "Left"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Right" type="Button" parent="HairALabel"]
 margin_left = 91.6964
@@ -118,6 +137,9 @@ margin_top = -6.04449
 margin_right = 135.696
 margin_bottom = 13.9555
 text = "Right"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="HairBLabel" type="Label" parent="."]
 margin_left = 81.9275
@@ -126,6 +148,9 @@ margin_right = 142.927
 margin_bottom = 283.361
 text = "Hair B"
 align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Left" type="Button" parent="HairBLabel"]
 margin_left = -50.8145
@@ -133,6 +158,9 @@ margin_top = -1.75762
 margin_right = -14.8145
 margin_bottom = 18.2424
 text = "Left"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Right" type="Button" parent="HairBLabel"]
 margin_left = 90.0244
@@ -140,6 +168,9 @@ margin_top = -3.4295
 margin_right = 134.024
 margin_bottom = 16.5705
 text = "Right"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="HairCLabel" type="Label" parent="."]
 margin_left = 82.2316
@@ -148,6 +179,9 @@ margin_right = 143.232
 margin_bottom = 311.124
 text = "Hair C"
 align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Left" type="Button" parent="HairCLabel"]
 margin_left = -50.0
@@ -155,6 +189,9 @@ margin_top = -1.66376
 margin_right = -14.0
 margin_bottom = 18.3363
 text = "Left"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Right" type="Button" parent="HairCLabel"]
 margin_left = 90.8817
@@ -162,6 +199,9 @@ margin_top = -3.42137
 margin_right = 134.882
 margin_bottom = 16.5786
 text = "Right"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="EyesLabel" type="Label" parent="."]
 margin_left = 78.6599
@@ -170,6 +210,9 @@ margin_right = 139.659
 margin_bottom = 225.003
 text = "Eyes"
 align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Left" type="Button" parent="EyesLabel"]
 margin_left = -48.2852
@@ -236,12 +279,15 @@ margin_bottom = 16.2837
 text = "Right"
 
 [node name="PantsLabel" type="Label" parent="."]
-margin_left = 81.9298
-margin_top = 181.175
-margin_right = 144.93
-margin_bottom = 195.175
+margin_left = 78.9298
+margin_top = 155.175
+margin_right = 141.93
+margin_bottom = 169.175
 text = "Pants"
 align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Left" type="Button" parent="PantsLabel"]
 margin_left = -50.0
@@ -249,12 +295,46 @@ margin_top = -2.00153
 margin_right = -14.0
 margin_bottom = 17.9985
 text = "Left"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Right" type="Button" parent="PantsLabel"]
 margin_left = 91.981
 margin_top = -2.90179
 margin_right = 135.981
 margin_bottom = 17.0982
+text = "Right"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PantsBLabel" type="Label" parent="."]
+margin_left = 78.9298
+margin_top = 182.175
+margin_right = 141.93
+margin_bottom = 196.175
+text = "Belt"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Left" type="Button" parent="PantsBLabel"]
+margin_left = -50.0
+margin_top = -2.00153
+margin_right = -14.0
+margin_bottom = 17.9985
+text = "Left"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Right" type="Button" parent="PantsBLabel"]
+margin_left = 91.981
+margin_top = -1.90179
+margin_right = 135.981
+margin_bottom = 18.0982
 text = "Right"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -286,12 +366,15 @@ margin_bottom = 16.2837
 text = "Right"
 
 [node name="ShirtLabel" type="Label" parent="."]
-margin_left = 76.6788
-margin_top = 152.467
-margin_right = 148.679
-margin_bottom = 166.467
+margin_left = 73.6788
+margin_top = 126.467
+margin_right = 145.679
+margin_bottom = 140.467
 text = "Shirt"
 align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Left" type="Button" parent="ShirtLabel"]
 margin_left = -43.4415
@@ -299,6 +382,9 @@ margin_top = -2.81603
 margin_right = -7.44154
 margin_bottom = 17.184
 text = "Left"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Right" type="Button" parent="ShirtLabel"]
 margin_left = 96.3537
@@ -306,6 +392,9 @@ margin_top = -2.8589
 margin_right = 140.354
 margin_bottom = 17.1411
 text = "Right"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="ShirtColorLabel" type="Label" parent="."]
 margin_left = 461.168
@@ -336,6 +425,9 @@ margin_right = 155.423
 margin_bottom = 368.212
 text = "Accessory1"
 align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Left" type="Button" parent="Accessory1Label"]
 margin_left = -49.9575
@@ -343,6 +435,9 @@ margin_top = -1.18699
 margin_right = -13.9575
 margin_bottom = 18.813
 text = "Left"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Right" type="Button" parent="Accessory1Label"]
 margin_left = 87.3941
@@ -350,6 +445,9 @@ margin_top = -2.8589
 margin_right = 131.394
 margin_bottom = 17.1411
 text = "Right"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Accessory2Label" type="Label" parent="."]
 margin_left = 462.025
@@ -402,6 +500,9 @@ margin_right = 147.171
 margin_bottom = 339.629
 text = "Shoes"
 align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Left" type="Button" parent="ShoesLabel"]
 margin_left = -44.256
@@ -409,6 +510,9 @@ margin_top = -2.00153
 margin_right = -8.256
 margin_bottom = 17.9985
 text = "Left"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Right" type="Button" parent="ShoesLabel"]
 margin_left = 96.3537
@@ -416,6 +520,9 @@ margin_top = -2.8589
 margin_right = 140.354
 margin_bottom = 17.1411
 text = "Right"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="ShoesColorLabel" type="Label" parent="."]
 margin_left = 463.69

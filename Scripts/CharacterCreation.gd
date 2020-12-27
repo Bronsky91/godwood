@@ -63,6 +63,7 @@ var current_animation = 0
 
 func _ready():
 	create_random_character()
+	print(pallete_sprite_state)
 	$PlayerSprites/AnimationPlayer.play("idle_front")
 	
 func _process(delta):
@@ -74,21 +75,6 @@ func load_character_from_save():
 func set_sprite_texture(sprite_name: String, texture_path: String) -> void:
 	player_sprite[sprite_name].set_texture(load(texture_path))
 	sprite_state[sprite_name] = texture_path
-	
-func set_sprite_color(folder, sprite: Sprite, number: String) -> void:
-	var palette_path = "res://Assets/Palettes/{folder}/{folder}color_{number}.png".format({
-		"folder": folder,
-		"number": number
-	})
-	var gray_palette_path = "res://Assets/Palettes/{folder}/{folder}color_000.png".format({
-		"folder": folder
-	})
-	if folder == 'Bottom':
-		print(palette_path)
-		print(gray_palette_path)
-	sprite.material.set_shader_param("palette_swap", load(palette_path))
-	sprite.material.set_shader_param("greyscale_palette", load(gray_palette_path))
-	pallete_sprite_state[folder] = number
 	
 func random_asset(folder: String, keyword: String = "") -> String:
 	var files: Array
@@ -121,7 +107,9 @@ func create_random_character() -> void:
 		if random_color == "" or "000" in random_color:
 			random_color = random_color.replace("000", "001")
 		for sprite in palette_sprite_dict[folder]:
-			set_sprite_color(folder, sprite, random_color.substr(len(random_color)-7, 3))
+			var color_num = random_color.substr(len(random_color)-7, 3)
+			g.set_sprite_color(folder, sprite, color_num)
+			pallete_sprite_state[folder] = color_num
 
 func _on_GenderButton_button_up(_gender):
 	gender = _gender
@@ -140,7 +128,6 @@ func _on_Turn_button_up(direction):
 func _on_Sprite_Selection_button_up(direction: int, sprite: String):
 	# TODO: Figure out how to select new a body
 	if not sprite == "Body":
-		print(sprite_state)
 		var folder_path = "res://Assets/Character/"+gender+"/"+body+"/"+sprite+"/"
 		var files = g.files_in_dir(folder_path)
 		var file = sprite_state[sprite].split("/")[-1]
@@ -162,10 +149,15 @@ func _on_Color_Selection_button_up(direction: int, palette_sprite: String):
 	if new_color == len(files) and direction == 1:
 		new_color = 1
 	for sprite in palette_sprite_dict[palette_sprite]:
-		set_sprite_color(palette_sprite, sprite, str(new_color).pad_zeros(3))
+		var color_num = str(new_color).pad_zeros(3)
+		g.set_sprite_color(palette_sprite, sprite, color_num)
+		pallete_sprite_state[palette_sprite] = color_num
 
 func _on_Save_button_up():
-	g.save_dress_up_character(sprite_state)
+	var player_name = $NameLabel/Name.text
+	g.save_dress_up_character(sprite_state, pallete_sprite_state, player_name)
+	hide()
+	get_node('../Main').show()
 
 func _on_Back_button_up():
 	hide()

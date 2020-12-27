@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-export (int) var speed = 100
+export (int) var speed = 75
 
 onready var animation_player = get_node("PlayerSprites/AnimationPlayer")
 onready var nav = get_node('../..')
@@ -49,7 +49,7 @@ func get_input():
 	
 	
 func _physics_process(delta):
-		# Calculate the movement distance for this frame
+	# Calculate the movement distance for this frame
 	var distance_to_walk = speed * delta
 	# Move the character along the path until he has run out of movement or the path ends
 	while distance_to_walk > 0 and path.size() > 0:
@@ -85,8 +85,6 @@ func play_stopped_animation():
 
 func _on_ChangePosTimer_timeout():
 	move_position()
-	print(farm.available_positions)
-
 
 func get_random_position():
 	var positions = farm.available_positions

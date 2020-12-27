@@ -31,11 +31,20 @@ position = Vector2( 320.422, 111.301 )
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="Leave" type="Button" parent="UI"]
-margin_left = 531.623
-margin_top = 8.7979
-margin_right = 632.623
-margin_bottom = 37.7979
+margin_left = 526.904
+margin_top = 11.6295
+margin_right = 627.904
+margin_bottom = 40.6295
 text = "Leave Farm"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI"]
+margin_left = 531.888
+margin_top = 53.1684
+margin_right = 632.888
+margin_bottom = 456.168
 __meta__ = {
 "_edit_use_anchors_": false
 }
