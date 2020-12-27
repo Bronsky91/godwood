@@ -1,9 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Scripts/World.gd" type="Script" id=1]
 [ext_resource path="res://Scripts/Clock.gd" type="Script" id=2]
 [ext_resource path="res://Scenes/Farm.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=4]
 
 [node name="World" type="Node2D"]
 script = ExtResource( 1 )
@@ -22,13 +21,12 @@ __meta__ = {
 wait_time = 0.01
 script = ExtResource( 2 )
 
-[node name="YSort" type="YSort" parent="."]
+[node name="Navigation2D" type="Navigation2D" parent="."]
 
-[node name="Farm" parent="YSort" instance=ExtResource( 3 )]
-position = Vector2( 313.881, 133.685 )
+[node name="YSort" type="YSort" parent="Navigation2D"]
 
-[node name="Player" parent="YSort" instance=ExtResource( 4 )]
-position = Vector2( 470.253, 206.693 )
+[node name="Farm" parent="Navigation2D/YSort" instance=ExtResource( 3 )]
+position = Vector2( 320.422, 111.301 )
 
 [node name="UI" type="CanvasLayer" parent="."]
 
