@@ -9,7 +9,8 @@
 [node name="World" type="Node2D"]
 script = ExtResource( 1 )
 
-[node name="Label" type="Label" parent="."]
+[node name="Time Label" type="Label" parent="."]
+visible = false
 margin_left = 19.0
 margin_top = 19.0
 margin_right = 132.0
@@ -20,7 +21,6 @@ __meta__ = {
 
 [node name="Clock" type="Timer" parent="."]
 wait_time = 0.01
-autostart = true
 script = ExtResource( 2 )
 
 [node name="Ground" parent="." instance=ExtResource( 5 )]
@@ -33,5 +33,18 @@ position = Vector2( 0, 0.814514 )
 position = Vector2( 341.442, 88.0893 )
 
 [node name="Player" parent="YSort" instance=ExtResource( 4 )]
-position = Vector2( 187.098, 168.518 )
+position = Vector2( 470.253, 206.693 )
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="Leave" type="Button" parent="UI"]
+margin_left = 531.623
+margin_top = 8.7979
+margin_right = 632.623
+margin_bottom = 37.7979
+text = "Leave Farm"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="timeout" from="Clock" to="Clock" method="_on_Clock_timeout"]
+[connection signal="button_up" from="UI/Leave" to="." method="_on_Leave_button_up"]

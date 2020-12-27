@@ -67,6 +67,9 @@ func _ready():
 	
 func _process(delta):
 	pass
+	
+func load_character_from_save():
+	pass
 
 func set_sprite_texture(sprite_name: String, texture_path: String) -> void:
 	#var texture_path = "res://Assets/Character/{gender}/{body}/{sprite_name}/{gender}_{body}_Idle{number}.png".format({
@@ -143,8 +146,6 @@ func _on_Sprite_Selection_button_up(direction: int, sprite: String):
 	if not sprite == "Body":
 		var folder_path = "res://Assets/Character/"+gender+"/"+body+"/"+sprite+"/"
 		var files = g.files_in_dir(folder_path, "Idle")
-		print(sprite)
-		print(sprite_state[sprite])
 		var file = sprite_state[sprite].split("/")[-1]
 		var current_index = files.find(file)
 		var new_index = current_index + direction
@@ -166,7 +167,9 @@ func _on_Color_Selection_button_up(direction: int, palette_sprite: String):
 	for sprite in palette_sprite_dict[palette_sprite]:
 		set_sprite_color(palette_sprite, sprite, str(new_color).pad_zeros(3))
 
-
 func _on_Save_button_up():
-	pass
-	# Saves Character state in new slot
+	g.save_dress_up_character(sprite_state)
+
+func _on_Back_button_up():
+	hide()
+	get_node('../Main').show()
