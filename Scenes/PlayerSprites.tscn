@@ -92,121 +92,121 @@ material = SubResource( 1 )
 texture = ExtResource( 5 )
 vframes = 4
 hframes = 4
-frame = 12
+frame = 4
 
 [node name="Body" type="Sprite" parent="SpriteHolder"]
 material = SubResource( 2 )
 texture = ExtResource( 8 )
 vframes = 4
 hframes = 4
-frame = 12
+frame = 4
 
 [node name="BottomA" type="Sprite" parent="SpriteHolder"]
 material = SubResource( 3 )
 texture = ExtResource( 9 )
 vframes = 4
 hframes = 4
-frame = 12
+frame = 4
 
 [node name="Shoes" type="Sprite" parent="SpriteHolder"]
 material = SubResource( 4 )
 texture = ExtResource( 10 )
 vframes = 4
 hframes = 4
-frame = 12
+frame = 4
 
 [node name="TopA" type="Sprite" parent="SpriteHolder"]
 material = SubResource( 5 )
 texture = ExtResource( 11 )
 vframes = 4
 hframes = 4
-frame = 12
+frame = 4
 
 [node name="BottomB" type="Sprite" parent="SpriteHolder"]
 material = SubResource( 6 )
 texture = ExtResource( 12 )
 vframes = 4
 hframes = 4
-frame = 12
+frame = 4
 
 [node name="Arms" type="Sprite" parent="SpriteHolder"]
 material = SubResource( 7 )
 texture = ExtResource( 13 )
 vframes = 4
 hframes = 4
-frame = 12
+frame = 4
 
 [node name="JacketA" type="Sprite" parent="SpriteHolder"]
 material = SubResource( 8 )
 vframes = 4
 hframes = 4
-frame = 12
+frame = 4
 
 [node name="TopB" type="Sprite" parent="SpriteHolder"]
 material = SubResource( 9 )
 texture = ExtResource( 14 )
 vframes = 4
 hframes = 4
-frame = 12
+frame = 4
 
 [node name="JacketB" type="Sprite" parent="SpriteHolder"]
 material = SubResource( 10 )
 vframes = 4
 hframes = 4
-frame = 12
+frame = 4
 
 [node name="Head" type="Sprite" parent="SpriteHolder"]
 material = SubResource( 11 )
 texture = ExtResource( 15 )
 vframes = 4
 hframes = 4
-frame = 12
+frame = 4
 
 [node name="Eyes" type="Sprite" parent="SpriteHolder"]
 material = SubResource( 12 )
 texture = ExtResource( 16 )
 vframes = 4
 hframes = 4
-frame = 12
+frame = 4
 
 [node name="Accessory2" type="Sprite" parent="SpriteHolder"]
 material = SubResource( 13 )
 vframes = 4
 hframes = 4
-frame = 12
+frame = 4
 
 [node name="HairA" type="Sprite" parent="SpriteHolder"]
 material = SubResource( 14 )
 texture = ExtResource( 17 )
 vframes = 4
 hframes = 4
-frame = 12
+frame = 4
 
 [node name="Accessory1" type="Sprite" parent="SpriteHolder"]
 material = SubResource( 15 )
 vframes = 4
 hframes = 4
-frame = 12
+frame = 4
 
 [node name="HairC" type="Sprite" parent="SpriteHolder"]
 material = SubResource( 16 )
 texture = ExtResource( 18 )
 vframes = 4
 hframes = 4
-frame = 12
+frame = 4
 
 [node name="HairD" type="Sprite" parent="SpriteHolder"]
 material = SubResource( 17 )
 vframes = 4
 hframes = 4
-frame = 12
+frame = 4
 
 [node name="Accessory3" type="Sprite" parent="SpriteHolder"]
 material = SubResource( 18 )
 texture = ExtResource( 19 )
 vframes = 4
 hframes = 4
-frame = 12
+frame = 4
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/idle_back = ExtResource( 20 )
