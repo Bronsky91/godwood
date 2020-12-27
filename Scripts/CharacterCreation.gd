@@ -83,6 +83,9 @@ func set_sprite_color(folder, sprite: Sprite, number: String) -> void:
 	var gray_palette_path = "res://Assets/Palettes/{folder}/{folder}color_000.png".format({
 		"folder": folder
 	})
+	if folder == 'Bottom':
+		print(palette_path)
+		print(gray_palette_path)
 	sprite.material.set_shader_param("palette_swap", load(palette_path))
 	sprite.material.set_shader_param("greyscale_palette", load(gray_palette_path))
 	pallete_sprite_state[folder] = number
@@ -137,6 +140,7 @@ func _on_Turn_button_up(direction):
 func _on_Sprite_Selection_button_up(direction: int, sprite: String):
 	# TODO: Figure out how to select new a body
 	if not sprite == "Body":
+		print(sprite_state)
 		var folder_path = "res://Assets/Character/"+gender+"/"+body+"/"+sprite+"/"
 		var files = g.files_in_dir(folder_path)
 		var file = sprite_state[sprite].split("/")[-1]

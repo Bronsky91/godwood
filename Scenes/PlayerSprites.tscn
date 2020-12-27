@@ -1049,7 +1049,6 @@ material = SubResource( 12 )
 texture = ExtResource( 16 )
 vframes = 10
 hframes = 8
-frame = 4
 
 [node name="Accessory2" type="Sprite" parent="SpriteHolder"]
 material = SubResource( 13 )

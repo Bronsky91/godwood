@@ -177,13 +177,19 @@ margin_top = -1.63062
 margin_right = -12.2852
 margin_bottom = 18.3694
 text = "Left"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Right" type="Button" parent="EyesLabel"]
-margin_left = 93.6888
+margin_left = 94.6888
 margin_top = -4.15984
-margin_right = 137.689
+margin_right = 138.689
 margin_bottom = 15.8402
 text = "Right"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="HairColorLabel" type="Label" parent="."]
 margin_left = 467.3
@@ -250,6 +256,9 @@ margin_top = -2.90179
 margin_right = 135.981
 margin_bottom = 17.0982
 text = "Right"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="PantsColorLabel" type="Label" parent="."]
 margin_left = 466.87
@@ -265,6 +274,9 @@ margin_top = -1.18703
 margin_right = -13.1855
 margin_bottom = 18.813
 text = "Left"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Right" type="Button" parent="PantsColorLabel"]
 margin_left = 88.6373
