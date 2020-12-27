@@ -72,12 +72,6 @@ func load_character_from_save():
 	pass
 
 func set_sprite_texture(sprite_name: String, texture_path: String) -> void:
-	#var texture_path = "res://Assets/Character/{gender}/{body}/{sprite_name}/{gender}_{body}_Idle{number}.png".format({
-	#	"gender": options.gender,
-	#	"body": options.body,
-	#	"sprite_name": options.name,
-	#	"number": "_"+str(options.number)
-	#})
 	player_sprite[sprite_name].set_texture(load(texture_path))
 	sprite_state[sprite_name] = texture_path
 	
@@ -110,7 +104,7 @@ func create_random_character() -> void:
 	var sprite_folders = g.files_in_dir(sprite_folder_path)
 	var palette_folders = g.files_in_dir(palette_folder_path)
 	for folder in sprite_folders:
-		var random_sprite = random_asset(sprite_folder_path+"/"+folder, "Idle")
+		var random_sprite = random_asset(sprite_folder_path+"/"+folder)
 		if random_sprite == "": # No assets in the folder yet continue to next folder
 			continue
 		if "000" in random_sprite and not "Accessory" in random_sprite: # Prevent some empty sprite sheets
@@ -118,7 +112,6 @@ func create_random_character() -> void:
 				continue
 			if "Top" in folder or "Bottom" in folder: # If no top or no bottom was returned, dont set the texture
 				continue
-		#player_sprite[folder].set_texture(load(random_sprite))
 		set_sprite_texture(folder, random_sprite)
 	for folder in palette_folders:
 		var random_color = random_asset(palette_folder_path+"/"+folder)
@@ -145,7 +138,7 @@ func _on_Sprite_Selection_button_up(direction: int, sprite: String):
 	# TODO: Figure out how to select new a body
 	if not sprite == "Body":
 		var folder_path = "res://Assets/Character/"+gender+"/"+body+"/"+sprite+"/"
-		var files = g.files_in_dir(folder_path, "Idle")
+		var files = g.files_in_dir(folder_path)
 		var file = sprite_state[sprite].split("/")[-1]
 		var current_index = files.find(file)
 		var new_index = current_index + direction

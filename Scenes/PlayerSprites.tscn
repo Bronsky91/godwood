@@ -82,7 +82,7 @@ shader = ExtResource( 2 )
 [sub_resource type="ShaderMaterial" id=18]
 shader = ExtResource( 2 )
 
-[sub_resource type="Animation" id=20]
+[sub_resource type="Animation" id=19]
 resource_name = "walk_back"
 length = 0.8
 loop = true
@@ -303,7 +303,7 @@ tracks/17/keys = {
 "values": [ 24, 25, 26, 27, 28, 29, 30, 31 ]
 }
 
-[sub_resource type="Animation" id=22]
+[sub_resource type="Animation" id=20]
 resource_name = "walk_front"
 length = 0.8
 loop = true
@@ -524,8 +524,7 @@ tracks/17/keys = {
 "values": [ 40, 41, 42, 43, 44, 45, 46, 47 ]
 }
 
-[sub_resource type="Animation" id=19]
-resource_name = "walk_left"
+[sub_resource type="Animation" id=21]
 length = 0.8
 loop = true
 tracks/0/type = "value"
@@ -745,8 +744,7 @@ tracks/17/keys = {
 "values": [ 16, 17, 18, 19, 20, 21, 22, 23 ]
 }
 
-[sub_resource type="Animation" id=21]
-resource_name = "walk_right"
+[sub_resource type="Animation" id=22]
 length = 0.8
 loop = true
 tracks/0/type = "value"
@@ -1097,8 +1095,8 @@ anims/idle_back = ExtResource( 20 )
 anims/idle_front = ExtResource( 21 )
 anims/idle_left = ExtResource( 22 )
 anims/idle_right = ExtResource( 23 )
-anims/walk_back = SubResource( 20 )
-anims/walk_front = SubResource( 22 )
-anims/walk_left = SubResource( 19 )
-anims/walk_right = SubResource( 21 )
+anims/walk_back = SubResource( 19 )
+anims/walk_front = SubResource( 20 )
+anims/walk_left = SubResource( 21 )
+anims/walk_right = SubResource( 22 )
 [connection signal="animation_started" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_started"]
