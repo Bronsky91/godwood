@@ -6,6 +6,7 @@
 [node name="Menu" type="Node2D"]
 
 [node name="Main" parent="." instance=ExtResource( 1 )]
+position = Vector2( -0.8909, -0.8909 )
 
 [node name="CharacterCreation" parent="." instance=ExtResource( 2 )]
 visible = false
