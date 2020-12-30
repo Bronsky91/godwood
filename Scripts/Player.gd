@@ -32,6 +32,7 @@ signal direction_change
 func _ready():
 	connect("direction_change", self, '_on_direction_change')
 	move_position()
+	$Name.text = p_name
 
 func get_input():
 	## Not being used in Dress Up
