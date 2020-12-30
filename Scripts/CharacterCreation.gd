@@ -154,6 +154,10 @@ func _on_Color_Selection_button_up(direction: int, palette_sprite: String):
 func _on_Save_button_up():
 	var player_name = $NameLabel/Name.text
 	if player_name == "":
+		$NameLabel/Error.text = "Name is Required"
+		$NameLabel/Error.show()
+	elif g.character_name_exists(player_name):
+		$NameLabel/Error.text = "Name is Taken"
 		$NameLabel/Error.show()
 	else:
 		g.save_dress_up_character(sprite_state, pallete_sprite_state, player_name)

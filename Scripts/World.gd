@@ -19,15 +19,23 @@ func _ready():
 		
 		var new_list_item = name_item_scene.instance()
 		new_list_item.get_node("Label").text = player.name
+		new_list_item.connect('mouse_entered', self, '_on_Item_entered', [player])
+		new_list_item.connect('mouse_exited', self, '_on_Item_exited', [player])
 		new_list_item.get_node("Button").connect('button_up', self, '_on_Bye_button_up', [player.name, new_list_item])
 		$UI/CharacterNames.add_child(new_list_item)
+
 
 func _process(delta):
 	pass
 
+func _on_Item_entered(p_name):
+	print('entered')
+	
+func _on_Item_exited(p_name):
+	print('exited')
+
 func _on_Leave_button_up():
 	get_tree().change_scene("res://Scenes/Menu.tscn")
-
 
 func _on_Bye_button_up(p_name, list_item):
 	g.remove_character_by_name(player_array, p_name)
