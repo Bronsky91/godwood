@@ -32,6 +32,7 @@ wait_time = 5.0
 autostart = true
 
 [node name="Name" type="Label" parent="."]
+visible = false
 margin_left = -37.8883
 margin_top = -29.0
 margin_right = 43.1117
