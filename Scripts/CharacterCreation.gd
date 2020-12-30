@@ -62,8 +62,6 @@ var body: String = "AvThn" # Temp hardcoded
 var current_animation = 0
 
 func _ready():
-	create_random_character()
-	print(pallete_sprite_state)
 	$PlayerSprites/AnimationPlayer.play("idle_front")
 	
 func _process(delta):
@@ -155,10 +153,18 @@ func _on_Color_Selection_button_up(direction: int, palette_sprite: String):
 
 func _on_Save_button_up():
 	var player_name = $NameLabel/Name.text
-	g.save_dress_up_character(sprite_state, pallete_sprite_state, player_name)
-	hide()
-	get_node('../Main').show()
+	if player_name == "":
+		$NameLabel/Error.show()
+	else:
+		g.save_dress_up_character(sprite_state, pallete_sprite_state, player_name)
+		hide()
+		get_node('../Main').show()
+
+func _on_Name_text_changed(new_text):
+	if new_text != "":
+		$NameLabel/Error.hide()
 
 func _on_Back_button_up():
 	hide()
 	get_node('../Main').show()
+

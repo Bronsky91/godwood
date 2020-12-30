@@ -13,6 +13,7 @@ var path: PoolVector2Array
 var stopped: bool = false
 var last_direction: Vector2 = Vector2.DOWN
 var current_pos: Position2D
+var p_name: String
 
 var animation_directions = {
 	Vector2.RIGHT: "right",

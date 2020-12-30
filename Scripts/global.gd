@@ -69,6 +69,13 @@ func load_dress_up_players():
 	var json = JSON.parse(f.get_as_text())
 	f.close()
 	var character_array: Array = json.result
+	## TEMP TO REMOVE NO NAMES
+	character_array = remove_characters_with_no_name(character_array)
+	f = File.new()
+	f.open("user://characters.save", File.WRITE)
+	f.store_string(JSON.print(character_array, "  ", true))
+	f.close()
+	##
 	return character_array
 	
 func load_player(parent_node: Node2D, player_name: String):
@@ -81,7 +88,10 @@ func load_player(parent_node: Node2D, player_name: String):
 	for part in parent_node.get_children():
 		if part.name == "JacketB":
 			continue
-		part.texture = load(player_character.sprite_state[part.name])
+		if part.name in player_character.sprite_state.keys():
+			part.texture = load(player_character.sprite_state[part.name])
+		else:
+			continue
 		var folder = get_palette_folder_name_from_sprite(part)
 		var number = player_character.palette_state[folder]
 		set_sprite_color(folder, part, number)
@@ -129,3 +139,18 @@ func find_character_by_name(character_array: Array, character_name: String):
 	for character in character_array:
 		if character.name == character_name:
 			return character
+
+func remove_characters_with_no_name(character_array: Array):
+	for character in character_array:
+		print(character.name)
+		if character.name == '':
+			character_array.erase(character)
+	return character_array
+
+func remove_character_by_name(character_array: Array, character_name: String):
+	var character_to_delete = find_character_by_name(character_array, character_name)
+	character_array.erase(character_to_delete)
+	var f = File.new()
+	f.open("user://characters.save", File.WRITE)
+	f.store_string(JSON.print(character_array, "  ", true))
+	f.close()

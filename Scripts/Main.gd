@@ -1,9 +1,6 @@
 extends Node2D
 
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+onready var character_create = get_node('../CharacterCreation')
 
 
 # Called when the node enters the scene tree for the first time.
@@ -17,6 +14,7 @@ func _ready():
 
 
 func _on_Create_button_up():
+	character_create.create_random_character()
 	hide()
 	get_node('../CharacterCreation').show()
 
