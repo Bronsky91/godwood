@@ -22,5 +22,6 @@ percent_visible = 2.5
 margin_left = 64.0
 margin_right = 100.0
 margin_bottom = 50.0
+mouse_filter = 1
 text = "Bye"
 align = 2
