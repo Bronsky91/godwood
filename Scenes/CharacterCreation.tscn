@@ -12,27 +12,46 @@ position = Vector2( 323.225, 228.823 )
 scale = Vector2( 4, 4 )
 
 [node name="NameLabel" type="Label" parent="."]
-margin_left = 43.0
-margin_top = 24.0
-margin_right = 85.0
-margin_bottom = 38.0
+margin_left = 237.0
+margin_top = 28.0
+margin_right = 279.0
+margin_bottom = 42.0
 text = "Name:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Name" type="LineEdit" parent="NameLabel"]
-margin_left = 99.4
+margin_left = 55.4
 margin_top = -4.0
-margin_right = 221.4
+margin_right = 177.4
 margin_bottom = 20.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Error" type="Label" parent="NameLabel"]
+visible = false
+margin_left = 57.0
+margin_top = 24.0
+margin_right = 171.0
+margin_bottom = 38.0
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+text = "Name is Required"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="FarmNameLabel" type="Label" parent="."]
+visible = false
 margin_left = 352.37
 margin_top = 24.2771
 margin_right = 430.37
 margin_bottom = 38.2771
 text = "Farm Name:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="FarmName" type="LineEdit" parent="FarmNameLabel"]
 margin_left = 100.4
@@ -586,6 +605,7 @@ text = "Back"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+[connection signal="text_changed" from="NameLabel/Name" to="." method="_on_Name_text_changed"]
 [connection signal="button_up" from="MaleButton" to="." method="_on_GenderButton_button_up" binds= [ "Male" ]]
 [connection signal="button_up" from="FemaleButton" to="." method="_on_GenderButton_button_up" binds= [ "Female" ]]
 [connection signal="button_up" from="BodyLabel/Left" to="." method="_on_Sprite_Selection_button_up" binds= [ -1, "Body" ]]

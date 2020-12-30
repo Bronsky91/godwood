@@ -1,0 +1,26 @@
+[gd_scene format=2]
+
+[node name="CharacterListItem" type="HBoxContainer"]
+anchor_right = 0.616
+anchor_bottom = 0.19
+margin_right = -294.24
+margin_bottom = -41.2
+custom_constants/separation = 10
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_top = 18.0
+margin_right = 54.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 54, 0 )
+autowrap = true
+percent_visible = 2.5
+
+[node name="Button" type="Button" parent="."]
+margin_left = 64.0
+margin_right = 100.0
+margin_bottom = 50.0
+text = "Bye"
+align = 2
