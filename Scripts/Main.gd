@@ -15,6 +15,7 @@ func _ready():
 
 func _on_Create_button_up():
 	character_create.create_random_character()
+	character_create.get_node('NameLabel/Name').text = ""
 	hide()
 	get_node('../CharacterCreation').show()
 
