@@ -1,36 +1,52 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Scripts/CharacterCreation.gd" type="Script" id=1]
-[ext_resource path="res://Scenes/PlayerSprites.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Resources/ButtonGroups/genderButtonGroup.tres" type="ButtonGroup" id=3]
+[ext_resource path="res://Resources/ButtonGroups/genderButtonGroup.tres" type="ButtonGroup" id=2]
+[ext_resource path="res://Scenes/PlayerSprites.tscn" type="PackedScene" id=3]
 
 [node name="CharacterCreation" type="Node2D"]
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 145.0, 165.756, 170.0, 190.767, 195.158, 215.844, 220.245, 240.491, 245.773, 265.578, 270.42, 290.666, 295.067, 315.313, 320.293, 398.225 ],
+"_edit_vertical_guides_": [ 420.0, 320.0, 520.0, 139.001, 127.286, 149.686 ]
+}
 
-[node name="PlayerSprites" parent="." instance=ExtResource( 2 )]
-position = Vector2( 323.225, 228.823 )
-scale = Vector2( 4, 4 )
+[node name="TabContainer" type="TabContainer" parent="."]
+margin_left = 252.0
+margin_top = 89.0
+margin_right = 617.0
+margin_bottom = 397.0
+tab_align = 0
 
-[node name="NameLabel" type="Label" parent="."]
-margin_left = 237.0
-margin_top = 28.0
-margin_right = 279.0
-margin_bottom = 42.0
+[node name="Character" type="Tabs" parent="TabContainer"]
+editor/display_folded = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+
+[node name="NameLabel" type="Label" parent="TabContainer/Character"]
+margin_left = 64.4753
+margin_top = 28.0816
+margin_right = 106.475
+margin_bottom = 42.0816
 text = "Name:"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Name" type="LineEdit" parent="NameLabel"]
-margin_left = 55.4
-margin_top = -4.0
-margin_right = 177.4
-margin_bottom = 20.0
+[node name="Name" type="LineEdit" parent="TabContainer/Character/NameLabel"]
+margin_left = 55.3018
+margin_top = -5.2605
+margin_right = 177.302
+margin_bottom = 18.7395
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Error" type="Label" parent="NameLabel"]
+[node name="Error" type="Label" parent="TabContainer/Character/NameLabel"]
 visible = false
 margin_left = 57.0
 margin_top = 24.0
@@ -42,528 +58,618 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="FarmNameLabel" type="Label" parent="."]
-visible = false
-margin_left = 352.37
-margin_top = 24.2771
-margin_right = 430.37
-margin_bottom = 38.2771
-text = "Farm Name:"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="SkinToneLabel" type="Label" parent="TabContainer/Character"]
+margin_left = 135.373
+margin_top = 128.085
+margin_right = 196.373
+margin_bottom = 142.085
+text = "Skin Tone"
+align = 1
 
-[node name="FarmName" type="LineEdit" parent="FarmNameLabel"]
-margin_left = 100.4
-margin_top = -5.0
-margin_right = 222.4
-margin_bottom = 19.0
+[node name="Left" type="Button" parent="TabContainer/Character/SkinToneLabel"]
+margin_left = -59.9649
+margin_top = -3.11892
+margin_right = -23.9648
+margin_bottom = 16.8811
+text = "Left"
 
-[node name="MaleButton" type="Button" parent="."]
-margin_left = 41.5705
-margin_top = 60.9919
-margin_right = 78.5705
-margin_bottom = 84.9919
-group = ExtResource( 3 )
-text = "B"
+[node name="Right" type="Button" parent="TabContainer/Character/SkinToneLabel"]
+margin_left = 72.3359
+margin_top = -2.61157
+margin_right = 116.336
+margin_bottom = 17.3885
+text = "Right"
 
-[node name="FemaleButton" type="Button" parent="."]
-margin_left = 86.756
-margin_top = 60.9919
-margin_right = 124.755
-margin_bottom = 84.9919
-group = ExtResource( 3 )
-text = "G"
-
-[node name="BodyLabel" type="Label" parent="."]
-visible = false
-margin_left = 91.8818
-margin_top = 124.132
-margin_right = 133.882
-margin_bottom = 138.132
+[node name="BodyLabel" type="Label" parent="TabContainer/Character"]
+margin_left = 142.369
+margin_top = 102.199
+margin_right = 184.37
+margin_bottom = 116.199
 text = "Body"
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Left" type="Button" parent="BodyLabel"]
-margin_left = -56.0016
-margin_top = -2.14262
-margin_right = -20.0016
-margin_bottom = 17.8574
+[node name="Left" type="Button" parent="TabContainer/Character/BodyLabel"]
+margin_left = -66.8052
+margin_top = -2.7266
+margin_right = -30.8052
+margin_bottom = 17.2734
 text = "Left"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Right" type="Button" parent="BodyLabel"]
-margin_left = 81.1736
-margin_top = -1.38276
-margin_right = 125.174
-margin_bottom = 18.6172
+[node name="Right" type="Button" parent="TabContainer/Character/BodyLabel"]
+margin_left = 64.9434
+margin_top = -2.8167
+margin_right = 108.944
+margin_bottom = 17.1833
 text = "Right"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="SkinToneLabel" type="Label" parent="."]
-margin_left = 463.871
-margin_top = 121.802
-margin_right = 524.871
-margin_bottom = 135.802
-text = "Skin Tone"
-align = 1
+[node name="FemaleButton" type="Button" parent="TabContainer/Character"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 264.144
+margin_top = 25.2544
+margin_right = -59.8564
+margin_bottom = -226.746
+group = ExtResource( 2 )
+text = "G"
 
-[node name="Left" type="Button" parent="SkinToneLabel"]
-margin_left = -48.2853
-margin_top = -4.28687
-margin_right = -12.2852
-margin_bottom = 15.7131
-text = "Left"
+[node name="MaleButton" type="Button" parent="TabContainer/Character"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 300.781
+margin_top = 25.2544
+margin_right = -23.219
+margin_bottom = -226.746
+group = ExtResource( 2 )
+text = "B"
 
-[node name="Right" type="Button" parent="SkinToneLabel"]
-margin_left = 91.8816
-margin_top = -5.17299
-margin_right = 135.882
-margin_bottom = 14.8271
-text = "Right"
+[node name="FarmNameLabel" type="Label" parent="TabContainer/Character"]
+margin_left = 28.3566
+margin_top = 52.8882
+margin_right = 106.357
+margin_bottom = 66.8882
+text = "Farm Name:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="HairALabel" type="Label" parent="."]
-margin_left = 81.2958
-margin_top = 241.382
-margin_right = 142.295
-margin_bottom = 255.382
+[node name="FarmName" type="LineEdit" parent="TabContainer/Character/FarmNameLabel"]
+margin_left = 90.6508
+margin_top = -5.0
+margin_right = 212.651
+margin_bottom = 19.0
+
+[node name="Head" type="Tabs" parent="TabContainer"]
+editor/display_folded = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -321.0
+margin_bottom = -252.0
+
+[node name="HairALabel" type="Label" parent="TabContainer/Head"]
+margin_left = 135.831
+margin_top = 27.4483
+margin_right = 196.83
+margin_bottom = 41.4483
 text = "Hair A"
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Left" type="Button" parent="HairALabel"]
-margin_left = -51.4575
-margin_top = -4.244
-margin_right = -15.4575
-margin_bottom = 15.756
+[node name="Left" type="Button" parent="TabContainer/Head/HairALabel"]
+margin_left = -60.4071
+margin_top = -1.60879
+margin_right = -24.4071
+margin_bottom = 18.3912
 text = "Left"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Right" type="Button" parent="HairALabel"]
-margin_left = 91.6964
-margin_top = -6.04449
-margin_right = 135.696
-margin_bottom = 13.9555
+[node name="Right" type="Button" parent="TabContainer/Head/HairALabel"]
+margin_left = 70.0
+margin_top = -4.244
+margin_right = 114.0
+margin_bottom = 15.756
 text = "Right"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="HairBLabel" type="Label" parent="."]
-margin_left = 81.9275
-margin_top = 269.361
-margin_right = 142.927
-margin_bottom = 283.361
+[node name="HairBLabel" type="Label" parent="TabContainer/Head"]
+margin_left = 135.824
+margin_top = 52.2476
+margin_right = 196.824
+margin_bottom = 66.2476
 text = "Hair B"
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Left" type="Button" parent="HairBLabel"]
-margin_left = -50.8145
-margin_top = -1.75762
-margin_right = -14.8145
-margin_bottom = 18.2424
+[node name="Left" type="Button" parent="TabContainer/Head/HairBLabel"]
+margin_left = -59.6728
+margin_top = -2.34159
+margin_right = -23.6728
+margin_bottom = 17.6584
 text = "Left"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Right" type="Button" parent="HairBLabel"]
-margin_left = 90.0244
+[node name="Right" type="Button" parent="TabContainer/Head/HairBLabel"]
+margin_left = 70.0
 margin_top = -3.4295
-margin_right = 134.024
+margin_right = 114.0
 margin_bottom = 16.5705
 text = "Right"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="HairCLabel" type="Label" parent="."]
-margin_left = 82.2316
-margin_top = 297.124
-margin_right = 143.232
-margin_bottom = 311.124
+[node name="HairCLabel" type="Label" parent="TabContainer/Head"]
+margin_left = 134.948
+margin_top = 77.8677
+margin_right = 195.949
+margin_bottom = 91.8677
 text = "Hair C"
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Left" type="Button" parent="HairCLabel"]
-margin_left = -50.0
-margin_top = -1.66376
-margin_right = -14.0
-margin_bottom = 18.3363
+[node name="Left" type="Button" parent="TabContainer/Head/HairCLabel"]
+margin_left = -58.5048
+margin_top = -3.70769
+margin_right = -22.5048
+margin_bottom = 16.2924
 text = "Left"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Right" type="Button" parent="HairCLabel"]
-margin_left = 90.8817
+[node name="Right" type="Button" parent="TabContainer/Head/HairCLabel"]
+margin_left = 70.876
 margin_top = -3.42137
-margin_right = 134.882
+margin_right = 114.876
 margin_bottom = 16.5786
 text = "Right"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="EyesLabel" type="Label" parent="."]
-margin_left = 78.6599
-margin_top = 211.003
-margin_right = 139.659
-margin_bottom = 225.003
+[node name="EyesLabel" type="Label" parent="TabContainer/Head"]
+margin_left = 135.824
+margin_top = 127.753
+margin_right = 196.823
+margin_bottom = 141.753
 text = "Eyes"
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Left" type="Button" parent="EyesLabel"]
-margin_left = -48.2852
-margin_top = -1.63062
-margin_right = -12.2852
-margin_bottom = 18.3694
+[node name="Left" type="Button" parent="TabContainer/Head/EyesLabel"]
+margin_left = -59.0888
+margin_top = -2.5066
+margin_right = -23.0888
+margin_bottom = 17.4934
 text = "Left"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Right" type="Button" parent="EyesLabel"]
-margin_left = 94.6888
-margin_top = -4.15984
-margin_right = 138.689
-margin_bottom = 15.8402
+[node name="Right" type="Button" parent="TabContainer/Head/EyesLabel"]
+margin_left = 70.876
+margin_top = -3.14113
+margin_right = 114.876
+margin_bottom = 16.8589
 text = "Right"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="HairColorLabel" type="Label" parent="."]
-margin_left = 467.3
-margin_top = 247.546
-margin_right = 530.3
-margin_bottom = 261.546
+[node name="HairColorLabel" type="Label" parent="TabContainer/Head"]
+margin_left = 135.824
+margin_top = 103.488
+margin_right = 198.824
+margin_bottom = 117.488
 text = "Hair Color"
 align = 1
 
-[node name="Left" type="Button" parent="HairColorLabel"]
-margin_left = -50.0
-margin_top = -1.12762
-margin_right = -14.0
-margin_bottom = 18.8724
+[node name="Left" type="Button" parent="TabContainer/Head/HairColorLabel"]
+margin_left = -59.6728
+margin_top = -4.04753
+margin_right = -23.6728
+margin_bottom = 15.9525
 text = "Left"
 
-[node name="Right" type="Button" parent="HairColorLabel"]
-margin_left = 91.0244
+[node name="Right" type="Button" parent="TabContainer/Head/HairColorLabel"]
+margin_left = 70.2919
 margin_top = -3.74266
-margin_right = 135.025
+margin_right = 114.293
 margin_bottom = 16.2574
 text = "Right"
 
-[node name="EyeColorLabel" type="Label" parent="."]
-margin_left = 471.102
-margin_top = 216.268
-margin_right = 534.102
-margin_bottom = 230.268
+[node name="EyeColorLabel" type="Label" parent="TabContainer/Head"]
+margin_left = 137.284
+margin_top = 152.831
+margin_right = 200.284
+margin_bottom = 166.831
 text = "Eye Color"
 align = 1
 
-[node name="Left" type="Button" parent="EyeColorLabel"]
-margin_left = -50.9025
-margin_top = -2.04665
-margin_right = -14.9025
-margin_bottom = 17.9534
+[node name="Left" type="Button" parent="TabContainer/Head/EyeColorLabel"]
+margin_left = -59.6728
+margin_top = -2.63063
+margin_right = -23.6728
+margin_bottom = 17.3694
 text = "Left"
 
-[node name="Right" type="Button" parent="EyeColorLabel"]
-margin_left = 90.352
-margin_top = -3.71628
-margin_right = 134.352
-margin_bottom = 16.2837
+[node name="Right" type="Button" parent="TabContainer/Head/EyeColorLabel"]
+margin_left = 70.292
+margin_top = -3.21463
+margin_right = 114.292
+margin_bottom = 16.7854
 text = "Right"
 
-[node name="PantsLabel" type="Label" parent="."]
-margin_left = 78.9298
-margin_top = 155.175
-margin_right = 141.93
-margin_bottom = 169.175
-text = "Pants"
-align = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="Top" type="Tabs" parent="TabContainer"]
+editor/display_folded = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -321.0
+margin_bottom = -252.0
 
-[node name="Left" type="Button" parent="PantsLabel"]
-margin_left = -50.0
-margin_top = -2.00153
-margin_right = -14.0
-margin_bottom = 17.9985
-text = "Left"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Right" type="Button" parent="PantsLabel"]
-margin_left = 91.981
-margin_top = -2.90179
-margin_right = 135.981
-margin_bottom = 17.0982
-text = "Right"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="PantsBLabel" type="Label" parent="."]
-margin_left = 78.9298
-margin_top = 182.175
-margin_right = 141.93
-margin_bottom = 196.175
-text = "Belt"
-align = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Left" type="Button" parent="PantsBLabel"]
-margin_left = -50.0
-margin_top = -2.00153
-margin_right = -14.0
-margin_bottom = 17.9985
-text = "Left"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Right" type="Button" parent="PantsBLabel"]
-margin_left = 91.981
-margin_top = -1.90179
-margin_right = 135.981
-margin_bottom = 18.0982
-text = "Right"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="PantsColorLabel" type="Label" parent="."]
-margin_left = 466.87
-margin_top = 184.447
-margin_right = 538.87
-margin_bottom = 198.447
-text = "Pants Color"
-align = 1
-
-[node name="Left" type="Button" parent="PantsColorLabel"]
-margin_left = -49.1855
-margin_top = -1.18703
-margin_right = -13.1855
-margin_bottom = 18.813
-text = "Left"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Right" type="Button" parent="PantsColorLabel"]
-margin_left = 88.6373
-margin_top = -3.71629
-margin_right = 132.638
-margin_bottom = 16.2837
-text = "Right"
-
-[node name="ShirtLabel" type="Label" parent="."]
-margin_left = 73.6788
-margin_top = 126.467
-margin_right = 145.679
-margin_bottom = 140.467
+[node name="ShirtLabel" type="Label" parent="TabContainer/Top"]
+margin_left = 128.177
+margin_top = 26.8814
+margin_right = 200.177
+margin_bottom = 40.8814
 text = "Shirt"
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Left" type="Button" parent="ShirtLabel"]
-margin_left = -43.4415
-margin_top = -2.81603
-margin_right = -7.44154
-margin_bottom = 17.184
+[node name="Left" type="Button" parent="TabContainer/Top/ShirtLabel"]
+margin_left = -52.5775
+margin_top = -1.89023
+margin_right = -16.5775
+margin_bottom = 18.1098
 text = "Left"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Right" type="Button" parent="ShirtLabel"]
-margin_left = 96.3537
-margin_top = -2.8589
-margin_right = 140.354
-margin_bottom = 17.1411
+[node name="Right" type="Button" parent="TabContainer/Top/ShirtLabel"]
+margin_left = 78.4494
+margin_top = -2.88035
+margin_right = 122.45
+margin_bottom = 17.1196
 text = "Right"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ShirtColorLabel" type="Label" parent="."]
-margin_left = 461.168
-margin_top = 151.258
-margin_right = 533.169
-margin_bottom = 165.258
+[node name="ShirtColorLabel" type="Label" parent="TabContainer/Top"]
+margin_left = 129.714
+margin_top = 76.2866
+margin_right = 201.715
+margin_bottom = 90.2866
 text = "Shirt Color"
 align = 1
 
-[node name="Left" type="Button" parent="ShirtColorLabel"]
-margin_left = -44.256
-margin_top = -2.00153
-margin_right = -8.256
-margin_bottom = 17.9985
+[node name="Left" type="Button" parent="TabContainer/Top/ShirtColorLabel"]
+margin_left = -54.957
+margin_top = -1.16736
+margin_right = -18.957
+margin_bottom = 18.8327
 text = "Left"
 
-[node name="Right" type="Button" parent="ShirtColorLabel"]
-margin_left = 96.3537
-margin_top = -2.8589
-margin_right = 140.354
-margin_bottom = 17.1411
+[node name="Right" type="Button" parent="TabContainer/Top/ShirtColorLabel"]
+margin_left = 77.0221
+margin_top = -1.33906
+margin_right = 121.022
+margin_bottom = 18.6609
 text = "Right"
 
-[node name="Accessory1Label" type="Label" parent="."]
-margin_left = 82.4228
-margin_top = 354.212
-margin_right = 155.423
-margin_bottom = 368.212
-text = "Accessory1"
+[node name="ShirtBLabel" type="Label" parent="TabContainer/Top"]
+margin_left = 131.092
+margin_top = 52.941
+margin_right = 203.092
+margin_bottom = 66.941
+text = "ShirtBLabel"
+
+[node name="JacketLabel" type="Label" parent="TabContainer/Top"]
+margin_left = 128.571
+margin_top = 102.888
+margin_right = 199.571
+margin_bottom = 116.888
+text = "JacketLabel"
+
+[node name="JacketBLabel" type="Label" parent="TabContainer/Top"]
+margin_left = 124.727
+margin_top = 128.098
+margin_right = 204.727
+margin_bottom = 142.098
+text = "JacketBLabel"
+
+[node name="JacketColorLabel" type="Label" parent="TabContainer/Top"]
+margin_left = 114.958
+margin_top = 153.277
+margin_right = 218.958
+margin_bottom = 167.277
+text = "JacketColorLabel"
+
+[node name="Bottom" type="Tabs" parent="TabContainer"]
+editor/display_folded = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -321.0
+margin_bottom = -252.0
+
+[node name="PantsLabel" type="Label" parent="TabContainer/Bottom"]
+margin_left = 130.464
+margin_top = 28.6765
+margin_right = 193.465
+margin_bottom = 42.6765
+text = "Pants"
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Left" type="Button" parent="Accessory1Label"]
-margin_left = -49.9575
-margin_top = -1.18699
-margin_right = -13.9575
-margin_bottom = 18.813
+[node name="Left" type="Button" parent="TabContainer/Bottom/PantsLabel"]
+margin_left = -54.9342
+margin_top = -4.24401
+margin_right = -18.9342
+margin_bottom = 15.756
 text = "Left"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Right" type="Button" parent="Accessory1Label"]
-margin_left = 87.3941
-margin_top = -2.8589
-margin_right = 131.394
-margin_bottom = 17.1411
+[node name="Right" type="Button" parent="TabContainer/Bottom/PantsLabel"]
+margin_left = 75.6988
+margin_top = -4.42288
+margin_right = 119.699
+margin_bottom = 15.5771
 text = "Right"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Accessory2Label" type="Label" parent="."]
-margin_left = 462.025
-margin_top = 320.447
-margin_right = 535.025
-margin_bottom = 334.447
-text = "Accessory2"
+[node name="PantsBLabel" type="Label" parent="TabContainer/Bottom"]
+margin_left = 126.922
+margin_top = 51.5292
+margin_right = 189.922
+margin_bottom = 65.5292
+text = "Belt"
 align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="Left" type="Button" parent="Accessory2Label"]
-margin_left = -44.256
+[node name="Left" type="Button" parent="TabContainer/Bottom/PantsBLabel"]
+margin_left = -52.0663
 margin_top = -2.00153
-margin_right = -8.256
+margin_right = -16.0663
 margin_bottom = 17.9985
 text = "Left"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="Right" type="Button" parent="Accessory2Label"]
-margin_left = 96.3537
-margin_top = -2.8589
-margin_right = 140.354
-margin_bottom = 17.1411
+[node name="Right" type="Button" parent="TabContainer/Bottom/PantsBLabel"]
+margin_left = 79.2837
+margin_top = -2.66255
+margin_right = 123.284
+margin_bottom = 17.3375
 text = "Right"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="Accessory3Label" type="Label" parent="."]
-margin_left = 463.605
-margin_top = 352.422
-margin_right = 536.605
-margin_bottom = 366.422
-text = "Accessory3"
+[node name="PantsColorLabel" type="Label" parent="TabContainer/Bottom"]
+margin_left = 125.882
+margin_top = 78.0902
+margin_right = 197.882
+margin_bottom = 92.0902
+text = "Pants Color"
 align = 1
 
-[node name="Left" type="Button" parent="Accessory3Label"]
-margin_left = -44.256
-margin_top = -2.00153
-margin_right = -8.256
-margin_bottom = 17.9985
+[node name="Left" type="Button" parent="TabContainer/Bottom/PantsColorLabel"]
+margin_left = -51.35
+margin_top = -3.42137
+margin_right = -15.35
+margin_bottom = 16.5787
 text = "Left"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="Right" type="Button" parent="Accessory3Label"]
-margin_left = 96.3537
-margin_top = -2.8589
-margin_right = 140.354
-margin_bottom = 17.1411
+[node name="Right" type="Button" parent="TabContainer/Bottom/PantsColorLabel"]
+margin_left = 80.0
+margin_top = -3.42137
+margin_right = 124.001
+margin_bottom = 16.5786
 text = "Right"
 
-[node name="ShoesLabel" type="Label" parent="."]
-margin_left = 75.1713
-margin_top = 325.629
-margin_right = 147.171
-margin_bottom = 339.629
+[node name="ShoesLabel" type="Label" parent="TabContainer/Bottom"]
+margin_left = 123.976
+margin_top = 102.642
+margin_right = 195.976
+margin_bottom = 116.642
 text = "Shoes"
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Left" type="Button" parent="ShoesLabel"]
-margin_left = -44.256
-margin_top = -2.00153
-margin_right = -8.256
-margin_bottom = 17.9985
+[node name="Left" type="Button" parent="TabContainer/Bottom/ShoesLabel"]
+margin_left = -48.5332
+margin_top = -3.57587
+margin_right = -12.5332
+margin_bottom = 16.4242
 text = "Left"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Right" type="Button" parent="ShoesLabel"]
-margin_left = 96.3537
-margin_top = -2.8589
-margin_right = 140.354
-margin_bottom = 17.1411
+[node name="Right" type="Button" parent="TabContainer/Bottom/ShoesLabel"]
+margin_left = 82.8168
+margin_top = -2.67927
+margin_right = 126.817
+margin_bottom = 17.3207
 text = "Right"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ShoesColorLabel" type="Label" parent="."]
-margin_left = 463.69
-margin_top = 284.132
-margin_right = 538.69
-margin_bottom = 298.132
+[node name="ShoesColorLabel" type="Label" parent="TabContainer/Bottom"]
+margin_left = 125.051
+margin_top = 128.871
+margin_right = 200.051
+margin_bottom = 142.871
 text = "Shoes Color"
 align = 1
 
-[node name="Left" type="Button" parent="ShoesColorLabel"]
-margin_left = -44.256
-margin_top = -2.00153
-margin_right = -8.256
-margin_bottom = 17.9985
+[node name="Left" type="Button" parent="TabContainer/Bottom/ShoesColorLabel"]
+margin_left = -50.1164
+margin_top = -3.87206
+margin_right = -14.1164
+margin_bottom = 16.128
 text = "Left"
 
-[node name="Right" type="Button" parent="ShoesColorLabel"]
-margin_left = 96.3537
+[node name="Right" type="Button" parent="TabContainer/Bottom/ShoesColorLabel"]
+margin_left = 82.0657
+margin_top = -3.59468
+margin_right = 126.066
+margin_bottom = 16.4053
+text = "Right"
+
+[node name="Acc" type="Tabs" parent="TabContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -321.0
+margin_bottom = -252.0
+
+[node name="Accessory1Label" type="Label" parent="TabContainer/Acc"]
+margin_left = 127.424
+margin_top = 27.386
+margin_right = 200.424
+margin_bottom = 41.386
+text = "Face"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Left" type="Button" parent="TabContainer/Acc/Accessory1Label"]
+margin_left = -52.201
+margin_top = -2.62092
+margin_right = -16.201
+margin_bottom = 17.3791
+text = "Left"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Right" type="Button" parent="TabContainer/Acc/Accessory1Label"]
+margin_left = 78.6344
+margin_top = -3.15089
+margin_right = 122.634
+margin_bottom = 16.8491
+text = "Right"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Accessory2Label" type="Label" parent="TabContainer/Acc"]
+margin_left = 121.77
+margin_top = 76.714
+margin_right = 194.77
+margin_bottom = 90.714
+text = "Neck"
+align = 1
+
+[node name="Left" type="Button" parent="TabContainer/Acc/Accessory2Label"]
+margin_left = -46.2999
+margin_top = -2.5855
+margin_right = -10.2999
+margin_bottom = 17.4145
+text = "Left"
+
+[node name="Right" type="Button" parent="TabContainer/Acc/Accessory2Label"]
+margin_left = 84.9661
 margin_top = -2.8589
-margin_right = 140.354
+margin_right = 128.966
 margin_bottom = 17.1411
 text = "Right"
+
+[node name="Accessory3Label" type="Label" parent="TabContainer/Acc"]
+margin_left = 120.033
+margin_top = 128.592
+margin_right = 193.033
+margin_bottom = 142.592
+text = "Head"
+align = 1
+
+[node name="Left" type="Button" parent="TabContainer/Acc/Accessory3Label"]
+margin_left = -44.84
+margin_top = -4.04548
+margin_right = -8.83998
+margin_bottom = 15.9546
+text = "Left"
+
+[node name="Right" type="Button" parent="TabContainer/Acc/Accessory3Label"]
+margin_left = 86.4261
+margin_top = -4.90285
+margin_right = 130.426
+margin_bottom = 15.0972
+text = "Right"
+
+[node name="Accessory1ColorLabel" type="Label" parent="TabContainer/Acc"]
+margin_left = 99.9247
+margin_top = 51.0846
+margin_right = 239.925
+margin_bottom = 65.0846
+text = "Accessory1ColorLabel"
+
+[node name="Accessory2ColorLabel" type="Label" parent="TabContainer/Acc"]
+margin_left = 97.2172
+margin_top = 102.613
+margin_right = 237.217
+margin_bottom = 116.613
+text = "Accessory2ColorLabel"
+
+[node name="Accesory3ColorLabel" type="Label" parent="TabContainer/Acc"]
+margin_left = 95.3066
+margin_top = 152.708
+margin_right = 228.307
+margin_bottom = 166.708
+text = "Accesory3ColorLabel"
+
+[node name="PlayerSprites" parent="." instance=ExtResource( 3 )]
+position = Vector2( 140.825, 249.723 )
+scale = Vector2( 4, 4 )
 
 [node name="Random" type="Button" parent="."]
 margin_left = 19.95
@@ -573,17 +679,17 @@ margin_bottom = 464.6
 text = "Random"
 
 [node name="TurnLeft" type="Button" parent="."]
-margin_left = 229.9
-margin_top = 414.2
-margin_right = 297.9
-margin_bottom = 434.2
+margin_left = 59.3481
+margin_top = 377.306
+margin_right = 127.348
+margin_bottom = 397.306
 text = "Turn Left"
 
 [node name="TurnRight" type="Button" parent="."]
-margin_left = 348.65
-margin_top = 414.2
-margin_right = 424.65
-margin_bottom = 434.2
+margin_left = 151.539
+margin_top = 376.762
+margin_right = 227.539
+margin_bottom = 396.762
 text = "Turn Right"
 
 [node name="Save" type="Button" parent="."]
@@ -605,39 +711,39 @@ text = "Back"
 __meta__ = {
 "_edit_use_anchors_": false
 }
-[connection signal="text_changed" from="NameLabel/Name" to="." method="_on_Name_text_changed"]
-[connection signal="button_up" from="MaleButton" to="." method="_on_GenderButton_button_up" binds= [ "Male" ]]
-[connection signal="button_up" from="FemaleButton" to="." method="_on_GenderButton_button_up" binds= [ "Female" ]]
-[connection signal="button_up" from="BodyLabel/Left" to="." method="_on_Sprite_Selection_button_up" binds= [ -1, "Body" ]]
-[connection signal="button_up" from="BodyLabel/Right" to="." method="_on_Sprite_Selection_button_up" binds= [ 1, "Body" ]]
-[connection signal="button_up" from="SkinToneLabel/Left" to="." method="_on_Color_Selection_button_up" binds= [ -1, "Skintone" ]]
-[connection signal="button_up" from="SkinToneLabel/Right" to="." method="_on_Color_Selection_button_up" binds= [ 1, "Skintone" ]]
-[connection signal="button_up" from="HairALabel/Left" to="." method="_on_Sprite_Selection_button_up" binds= [ -1.0, "HairA" ]]
-[connection signal="button_up" from="HairALabel/Right" to="." method="_on_Sprite_Selection_button_up" binds= [ 1, "HairA" ]]
-[connection signal="button_up" from="HairBLabel/Left" to="." method="_on_Sprite_Selection_button_up" binds= [ -1, "HairB" ]]
-[connection signal="button_up" from="HairBLabel/Right" to="." method="_on_Sprite_Selection_button_up" binds= [ 1, "HairB" ]]
-[connection signal="button_up" from="HairCLabel/Left" to="." method="_on_Sprite_Selection_button_up" binds= [ -1, "HairC" ]]
-[connection signal="button_up" from="HairCLabel/Right" to="." method="_on_Sprite_Selection_button_up" binds= [ 1, "HairC" ]]
-[connection signal="button_up" from="EyesLabel/Left" to="." method="_on_Sprite_Selection_button_up" binds= [ -1, "Eyes" ]]
-[connection signal="button_up" from="EyesLabel/Right" to="." method="_on_Sprite_Selection_button_up" binds= [ 1, "Eyes" ]]
-[connection signal="button_up" from="HairColorLabel/Left" to="." method="_on_Color_Selection_button_up" binds= [ -1, "Hair" ]]
-[connection signal="button_up" from="HairColorLabel/Right" to="." method="_on_Color_Selection_button_up" binds= [ 1, "Hair" ]]
-[connection signal="button_up" from="EyeColorLabel/Left" to="." method="_on_Color_Selection_button_up" binds= [ -1, "Eye" ]]
-[connection signal="button_up" from="EyeColorLabel/Right" to="." method="_on_Color_Selection_button_up" binds= [ 1, "Eye" ]]
-[connection signal="button_up" from="PantsColorLabel/Left" to="." method="_on_Color_Selection_button_up" binds= [ -1, "Bottom" ]]
-[connection signal="button_up" from="PantsColorLabel/Right" to="." method="_on_Color_Selection_button_up" binds= [ 1, "Bottom" ]]
-[connection signal="button_up" from="ShirtColorLabel/Left" to="." method="_on_Color_Selection_button_up" binds= [ -1, "Top" ]]
-[connection signal="button_up" from="ShirtColorLabel/Right" to="." method="_on_Color_Selection_button_up" binds= [ 1, "Top" ]]
-[connection signal="button_up" from="Accessory1Label/Left" to="." method="_on_Sprite_Selection_button_up" binds= [ -1, "Accessory1" ]]
-[connection signal="button_up" from="Accessory1Label/Right" to="." method="_on_Sprite_Selection_button_up" binds= [ 1, "Accessory1" ]]
-[connection signal="button_up" from="Accessory2Label/Left" to="." method="_on_Sprite_Selection_button_up" binds= [ -1, "Accessory2" ]]
-[connection signal="button_up" from="Accessory2Label/Right" to="." method="_on_Sprite_Selection_button_up" binds= [ 1, "Accessory2" ]]
-[connection signal="button_up" from="Accessory3Label/Left" to="." method="_on_Sprite_Selection_button_up" binds= [ -1, "Accessory3" ]]
-[connection signal="button_up" from="Accessory3Label/Right" to="." method="_on_Sprite_Selection_button_up" binds= [ 1, "Accessory3" ]]
-[connection signal="button_up" from="ShoesLabel/Left" to="." method="_on_Sprite_Selection_button_up" binds= [ 1, "Shoes" ]]
-[connection signal="button_up" from="ShoesLabel/Right" to="." method="_on_Sprite_Selection_button_up" binds= [ 1, "Shoes" ]]
-[connection signal="button_up" from="ShoesColorLabel/Left" to="." method="_on_Color_Selection_button_up" binds= [ -1, "Shoe" ]]
-[connection signal="button_up" from="ShoesColorLabel/Right" to="." method="_on_Color_Selection_button_up" binds= [ 1, "Shoe" ]]
+[connection signal="text_changed" from="TabContainer/Character/NameLabel/Name" to="." method="_on_Name_text_changed"]
+[connection signal="button_up" from="TabContainer/Character/SkinToneLabel/Left" to="." method="_on_Color_Selection_button_up" binds= [ -1, "Skintone" ]]
+[connection signal="button_up" from="TabContainer/Character/SkinToneLabel/Right" to="." method="_on_Color_Selection_button_up" binds= [ 1, "Skintone" ]]
+[connection signal="button_up" from="TabContainer/Character/BodyLabel/Left" to="." method="_on_Sprite_Selection_button_up" binds= [ -1, "Body" ]]
+[connection signal="button_up" from="TabContainer/Character/BodyLabel/Right" to="." method="_on_Sprite_Selection_button_up" binds= [ 1, "Body" ]]
+[connection signal="button_up" from="TabContainer/Character/FemaleButton" to="." method="_on_GenderButton_button_up" binds= [ "Female" ]]
+[connection signal="button_up" from="TabContainer/Character/MaleButton" to="." method="_on_GenderButton_button_up" binds= [ "Male" ]]
+[connection signal="button_up" from="TabContainer/Head/HairALabel/Left" to="." method="_on_Sprite_Selection_button_up" binds= [ -1.0, "HairA" ]]
+[connection signal="button_up" from="TabContainer/Head/HairALabel/Right" to="." method="_on_Sprite_Selection_button_up" binds= [ 1, "HairA" ]]
+[connection signal="button_up" from="TabContainer/Head/HairBLabel/Left" to="." method="_on_Sprite_Selection_button_up" binds= [ -1, "HairB" ]]
+[connection signal="button_up" from="TabContainer/Head/HairBLabel/Right" to="." method="_on_Sprite_Selection_button_up" binds= [ 1, "HairB" ]]
+[connection signal="button_up" from="TabContainer/Head/HairCLabel/Left" to="." method="_on_Sprite_Selection_button_up" binds= [ -1, "HairC" ]]
+[connection signal="button_up" from="TabContainer/Head/HairCLabel/Right" to="." method="_on_Sprite_Selection_button_up" binds= [ 1, "HairC" ]]
+[connection signal="button_up" from="TabContainer/Head/EyesLabel/Left" to="." method="_on_Sprite_Selection_button_up" binds= [ -1, "Eyes" ]]
+[connection signal="button_up" from="TabContainer/Head/EyesLabel/Right" to="." method="_on_Sprite_Selection_button_up" binds= [ 1, "Eyes" ]]
+[connection signal="button_up" from="TabContainer/Head/HairColorLabel/Left" to="." method="_on_Color_Selection_button_up" binds= [ -1, "Hair" ]]
+[connection signal="button_up" from="TabContainer/Head/HairColorLabel/Right" to="." method="_on_Color_Selection_button_up" binds= [ 1, "Hair" ]]
+[connection signal="button_up" from="TabContainer/Head/EyeColorLabel/Left" to="." method="_on_Color_Selection_button_up" binds= [ -1, "Eye" ]]
+[connection signal="button_up" from="TabContainer/Head/EyeColorLabel/Right" to="." method="_on_Color_Selection_button_up" binds= [ 1, "Eye" ]]
+[connection signal="button_up" from="TabContainer/Top/ShirtColorLabel/Left" to="." method="_on_Color_Selection_button_up" binds= [ -1, "Top" ]]
+[connection signal="button_up" from="TabContainer/Top/ShirtColorLabel/Right" to="." method="_on_Color_Selection_button_up" binds= [ 1, "Top" ]]
+[connection signal="button_up" from="TabContainer/Bottom/PantsColorLabel/Left" to="." method="_on_Color_Selection_button_up" binds= [ -1, "Bottom" ]]
+[connection signal="button_up" from="TabContainer/Bottom/PantsColorLabel/Right" to="." method="_on_Color_Selection_button_up" binds= [ 1, "Bottom" ]]
+[connection signal="button_up" from="TabContainer/Bottom/ShoesLabel/Left" to="." method="_on_Sprite_Selection_button_up" binds= [ 1, "Shoes" ]]
+[connection signal="button_up" from="TabContainer/Bottom/ShoesLabel/Right" to="." method="_on_Sprite_Selection_button_up" binds= [ 1, "Shoes" ]]
+[connection signal="button_up" from="TabContainer/Bottom/ShoesColorLabel/Left" to="." method="_on_Color_Selection_button_up" binds= [ -1, "Shoe" ]]
+[connection signal="button_up" from="TabContainer/Bottom/ShoesColorLabel/Right" to="." method="_on_Color_Selection_button_up" binds= [ 1, "Shoe" ]]
+[connection signal="button_up" from="TabContainer/Acc/Accessory1Label/Left" to="." method="_on_Sprite_Selection_button_up" binds= [ -1, "Accessory1" ]]
+[connection signal="button_up" from="TabContainer/Acc/Accessory1Label/Right" to="." method="_on_Sprite_Selection_button_up" binds= [ 1, "Accessory1" ]]
+[connection signal="button_up" from="TabContainer/Acc/Accessory2Label/Left" to="." method="_on_Sprite_Selection_button_up" binds= [ -1, "Accessory2" ]]
+[connection signal="button_up" from="TabContainer/Acc/Accessory2Label/Right" to="." method="_on_Sprite_Selection_button_up" binds= [ 1, "Accessory2" ]]
+[connection signal="button_up" from="TabContainer/Acc/Accessory3Label/Left" to="." method="_on_Sprite_Selection_button_up" binds= [ -1, "Accessory3" ]]
+[connection signal="button_up" from="TabContainer/Acc/Accessory3Label/Right" to="." method="_on_Sprite_Selection_button_up" binds= [ 1, "Accessory3" ]]
 [connection signal="button_up" from="Random" to="." method="_on_Random_button_up"]
 [connection signal="button_up" from="TurnLeft" to="." method="_on_Turn_button_up" binds= [ -1 ]]
 [connection signal="button_up" from="TurnRight" to="." method="_on_Turn_button_up" binds= [ 1 ]]
