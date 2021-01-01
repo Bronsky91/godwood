@@ -176,3 +176,7 @@ func _on_Back_button_up():
 
 func _on_Left_button_up():
 	pass # Replace with function body.
+
+
+func _on_Right_button_up(extra_arg_0, extra_arg_1):
+	pass # Replace with function body.

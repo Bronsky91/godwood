@@ -157,6 +157,7 @@ margin_right = -4.0
 margin_bottom = -4.0
 
 [node name="HairALabel" type="Label" parent="TabContainer/Head"]
+editor/display_folded = true
 margin_left = 135.831
 margin_top = 27.4483
 margin_right = 196.83
@@ -188,6 +189,7 @@ __meta__ = {
 }
 
 [node name="HairBLabel" type="Label" parent="TabContainer/Head"]
+editor/display_folded = true
 margin_left = 135.824
 margin_top = 52.2476
 margin_right = 196.824
@@ -219,6 +221,7 @@ __meta__ = {
 }
 
 [node name="HairCLabel" type="Label" parent="TabContainer/Head"]
+editor/display_folded = true
 margin_left = 134.948
 margin_top = 77.8677
 margin_right = 195.949
@@ -250,6 +253,7 @@ __meta__ = {
 }
 
 [node name="EyesLabel" type="Label" parent="TabContainer/Head"]
+editor/display_folded = true
 margin_left = 135.824
 margin_top = 127.753
 margin_right = 196.823
@@ -281,6 +285,7 @@ __meta__ = {
 }
 
 [node name="HairColorLabel" type="Label" parent="TabContainer/Head"]
+editor/display_folded = true
 margin_left = 135.824
 margin_top = 103.488
 margin_right = 198.824
@@ -303,6 +308,7 @@ margin_bottom = 16.2574
 text = "Right"
 
 [node name="EyeColorLabel" type="Label" parent="TabContainer/Head"]
+editor/display_folded = true
 margin_left = 137.284
 margin_top = 152.831
 margin_right = 200.284
@@ -325,7 +331,6 @@ margin_bottom = 16.7854
 text = "Right"
 
 [node name="Top" type="Tabs" parent="TabContainer"]
-editor/display_folded = true
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -366,6 +371,7 @@ __meta__ = {
 }
 
 [node name="ShirtColorLabel" type="Label" parent="TabContainer/Top"]
+editor/display_folded = true
 margin_left = 127.073
 margin_top = 76.2866
 margin_right = 199.074
@@ -409,6 +415,7 @@ margin_bottom = 16.8802
 text = "Right"
 
 [node name="JacketLabel" type="Label" parent="TabContainer/Top"]
+editor/display_folded = true
 margin_left = 128.571
 margin_top = 102.888
 margin_right = 199.571
@@ -431,6 +438,7 @@ margin_bottom = 17.0
 text = "Right"
 
 [node name="JacketBLabel" type="Label" parent="TabContainer/Top"]
+editor/display_folded = true
 margin_left = 122.086
 margin_top = 126.778
 margin_right = 202.086
@@ -452,6 +460,7 @@ margin_bottom = 18.2006
 text = "Right"
 
 [node name="JacketColorLabel" type="Label" parent="TabContainer/Top"]
+editor/display_folded = true
 margin_left = 114.958
 margin_top = 153.277
 margin_right = 218.958
@@ -474,7 +483,6 @@ margin_bottom = 16.5599
 text = "Right"
 
 [node name="Bottom" type="Tabs" parent="TabContainer"]
-editor/display_folded = true
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -519,7 +527,7 @@ margin_left = 126.922
 margin_top = 51.5292
 margin_right = 189.922
 margin_bottom = 65.5292
-text = "Belt"
+text = "Pants B"
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false
@@ -602,6 +610,7 @@ __meta__ = {
 }
 
 [node name="ShoesColorLabel" type="Label" parent="TabContainer/Bottom"]
+editor/display_folded = true
 margin_left = 125.051
 margin_top = 128.871
 margin_right = 200.051
@@ -709,6 +718,7 @@ margin_bottom = 15.0972
 text = "Right"
 
 [node name="Accessory1ColorLabel" type="Label" parent="TabContainer/Acc"]
+editor/display_folded = true
 margin_left = 95.4865
 margin_top = 51.362
 margin_right = 235.487
@@ -731,6 +741,7 @@ margin_bottom = 18.2774
 text = "Right"
 
 [node name="Accessory2ColorLabel" type="Label" parent="TabContainer/Acc"]
+editor/display_folded = true
 margin_left = 97.2172
 margin_top = 102.613
 margin_right = 237.217
@@ -837,10 +848,22 @@ __meta__ = {
 [connection signal="button_up" from="TabContainer/Head/HairColorLabel/Right" to="." method="_on_Color_Selection_button_up" binds= [ 1, "Hair" ]]
 [connection signal="button_up" from="TabContainer/Head/EyeColorLabel/Left" to="." method="_on_Color_Selection_button_up" binds= [ -1, "Eye" ]]
 [connection signal="button_up" from="TabContainer/Head/EyeColorLabel/Right" to="." method="_on_Color_Selection_button_up" binds= [ 1, "Eye" ]]
+[connection signal="button_up" from="TabContainer/Top/ShirtLabel/Left" to="." method="_on_Sprite_Selection_button_up" binds= [ -1, "TopA" ]]
+[connection signal="button_up" from="TabContainer/Top/ShirtLabel/Right" to="." method="_on_Sprite_Selection_button_up" binds= [ 1, "TopA" ]]
 [connection signal="button_up" from="TabContainer/Top/ShirtColorLabel/Left" to="." method="_on_Color_Selection_button_up" binds= [ -1, "Top" ]]
 [connection signal="button_up" from="TabContainer/Top/ShirtColorLabel/Right" to="." method="_on_Color_Selection_button_up" binds= [ 1, "Top" ]]
-[connection signal="button_up" from="TabContainer/Top/JacketColorLabel/Left" to="." method="_on_Color_Selection_button_up"]
-[connection signal="button_up" from="TabContainer/Top/JacketColorLabel/Right" to="." method="_on_Color_Selection_button_up"]
+[connection signal="button_up" from="TabContainer/Top/ShirtBLabel/Left" to="." method="_on_Sprite_Selection_button_up" binds= [ -1, "TopB" ]]
+[connection signal="button_up" from="TabContainer/Top/ShirtBLabel/Right" to="." method="_on_Sprite_Selection_button_up" binds= [ 1, "TopB" ]]
+[connection signal="button_up" from="TabContainer/Top/JacketLabel/Left" to="." method="_on_Sprite_Selection_button_up" binds= [ -1, "JacketA" ]]
+[connection signal="button_up" from="TabContainer/Top/JacketLabel/Right" to="." method="_on_Sprite_Selection_button_up" binds= [ 1, "JacketA" ]]
+[connection signal="button_up" from="TabContainer/Top/JacketBLabel/Left" to="." method="_on_Sprite_Selection_button_up" binds= [ -1, "JacketB" ]]
+[connection signal="button_up" from="TabContainer/Top/JacketBLabel/Right" to="." method="_on_Sprite_Selection_button_up" binds= [ 1, "JacketB" ]]
+[connection signal="button_up" from="TabContainer/Top/JacketColorLabel/Left" to="." method="_on_Color_Selection_button_up" binds= [ -1, "Jacket" ]]
+[connection signal="button_up" from="TabContainer/Top/JacketColorLabel/Right" to="." method="_on_Color_Selection_button_up" binds= [ 1, "Jacket" ]]
+[connection signal="button_up" from="TabContainer/Bottom/PantsLabel/Left" to="." method="_on_Sprite_Selection_button_up" binds= [ -1, "BottomA" ]]
+[connection signal="button_up" from="TabContainer/Bottom/PantsLabel/Right" to="." method="_on_Sprite_Selection_button_up" binds= [ 1, "BottomA" ]]
+[connection signal="button_up" from="TabContainer/Bottom/PantsBLabel/Left" to="." method="_on_Sprite_Selection_button_up" binds= [ -1, "BottomB" ]]
+[connection signal="button_up" from="TabContainer/Bottom/PantsBLabel/Right" to="." method="_on_Right_button_up" binds= [ 1, "BottomB" ]]
 [connection signal="button_up" from="TabContainer/Bottom/PantsColorLabel/Left" to="." method="_on_Color_Selection_button_up" binds= [ -1, "Bottom" ]]
 [connection signal="button_up" from="TabContainer/Bottom/PantsColorLabel/Right" to="." method="_on_Color_Selection_button_up" binds= [ 1, "Bottom" ]]
 [connection signal="button_up" from="TabContainer/Bottom/ShoesLabel/Left" to="." method="_on_Sprite_Selection_button_up" binds= [ 1, "Shoes" ]]
@@ -853,12 +876,12 @@ __meta__ = {
 [connection signal="button_up" from="TabContainer/Acc/Accessory2Label/Right" to="." method="_on_Sprite_Selection_button_up" binds= [ 1, "Accessory2" ]]
 [connection signal="button_up" from="TabContainer/Acc/Accessory3Label/Left" to="." method="_on_Sprite_Selection_button_up" binds= [ -1, "Accessory3" ]]
 [connection signal="button_up" from="TabContainer/Acc/Accessory3Label/Right" to="." method="_on_Sprite_Selection_button_up" binds= [ 1, "Accessory3" ]]
-[connection signal="button_up" from="TabContainer/Acc/Accessory1ColorLabel/Left" to="." method="_on_Color_Selection_button_up"]
-[connection signal="button_up" from="TabContainer/Acc/Accessory1ColorLabel/Right" to="." method="_on_Color_Selection_button_up"]
-[connection signal="button_up" from="TabContainer/Acc/Accessory2ColorLabel/Left" to="." method="_on_Color_Selection_button_up"]
-[connection signal="button_up" from="TabContainer/Acc/Accessory2ColorLabel/Right" to="." method="_on_Color_Selection_button_up"]
-[connection signal="button_up" from="TabContainer/Acc/Accesory3ColorLabel/Left" to="." method="_on_Color_Selection_button_up"]
-[connection signal="button_up" from="TabContainer/Acc/Accesory3ColorLabel/Right" to="." method="_on_Color_Selection_button_up"]
+[connection signal="button_up" from="TabContainer/Acc/Accessory1ColorLabel/Left" to="." method="_on_Color_Selection_button_up" binds= [ -1, "Accessory1" ]]
+[connection signal="button_up" from="TabContainer/Acc/Accessory1ColorLabel/Right" to="." method="_on_Color_Selection_button_up" binds= [ 1, "Accessory1" ]]
+[connection signal="button_up" from="TabContainer/Acc/Accessory2ColorLabel/Left" to="." method="_on_Color_Selection_button_up" binds= [ -1, "Accessory2" ]]
+[connection signal="button_up" from="TabContainer/Acc/Accessory2ColorLabel/Right" to="." method="_on_Color_Selection_button_up" binds= [ 1, "Accessory2" ]]
+[connection signal="button_up" from="TabContainer/Acc/Accesory3ColorLabel/Left" to="." method="_on_Color_Selection_button_up" binds= [ -1, "Accessory3" ]]
+[connection signal="button_up" from="TabContainer/Acc/Accesory3ColorLabel/Right" to="." method="_on_Color_Selection_button_up" binds= [ 1, "Accessory3" ]]
 [connection signal="button_up" from="Random" to="." method="_on_Random_button_up"]
 [connection signal="button_up" from="TurnLeft" to="." method="_on_Turn_button_up" binds= [ -1 ]]
 [connection signal="button_up" from="TurnRight" to="." method="_on_Turn_button_up" binds= [ 1 ]]
