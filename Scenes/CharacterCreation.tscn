@@ -17,9 +17,11 @@ margin_top = 89.0
 margin_right = 617.0
 margin_bottom = 397.0
 tab_align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Character" type="Tabs" parent="TabContainer"]
-editor/display_folded = true
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
@@ -147,7 +149,6 @@ margin_right = 212.651
 margin_bottom = 19.0
 
 [node name="Head" type="Tabs" parent="TabContainer"]
-editor/display_folded = true
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -325,7 +326,6 @@ margin_bottom = 16.7854
 text = "Right"
 
 [node name="Top" type="Tabs" parent="TabContainer"]
-editor/display_folded = true
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -474,7 +474,6 @@ margin_bottom = 16.5599
 text = "Right"
 
 [node name="Bottom" type="Tabs" parent="TabContainer"]
-editor/display_folded = true
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -624,7 +623,6 @@ margin_bottom = 16.4053
 text = "Right"
 
 [node name="Acc" type="Tabs" parent="TabContainer"]
-editor/display_folded = true
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
