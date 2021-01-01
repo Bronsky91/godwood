@@ -52,7 +52,26 @@ onready var palette_sprite_dict: Dictionary = {
 }
 
 var pallete_sprite_state: Dictionary
-var sprite_state: Dictionary
+var sprite_state: Dictionary = {
+	'Accessory1': '',
+	'Accessory2': '',
+	'Accessory3': '',
+	'Arms': '',
+	'Body': '',
+	'BottomA': '',
+	'BottomB': '',
+	'Eyes': '',
+	'HairA': '',
+	'HairB': '',
+	'HairC': '',
+	'HairD': '',
+	'Head': '',
+	'JacketA': '',
+	'JacketB': '',
+	'Shoes': '',
+	'TopA': '',
+	'TopB': ''
+}
 
 var player_name: String
 var farm_name: String
