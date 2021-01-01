@@ -17,11 +17,9 @@ margin_top = 89.0
 margin_right = 617.0
 margin_bottom = 397.0
 tab_align = 0
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Character" type="Tabs" parent="TabContainer"]
+editor/display_folded = true
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
@@ -149,6 +147,7 @@ margin_right = 212.651
 margin_bottom = 19.0
 
 [node name="Head" type="Tabs" parent="TabContainer"]
+editor/display_folded = true
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -634,6 +633,7 @@ margin_bottom = 16.4053
 text = "Right"
 
 [node name="Acc" type="Tabs" parent="TabContainer"]
+editor/display_folded = true
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -863,7 +863,7 @@ __meta__ = {
 [connection signal="button_up" from="TabContainer/Bottom/PantsLabel/Left" to="." method="_on_Sprite_Selection_button_up" binds= [ -1, "BottomA" ]]
 [connection signal="button_up" from="TabContainer/Bottom/PantsLabel/Right" to="." method="_on_Sprite_Selection_button_up" binds= [ 1, "BottomA" ]]
 [connection signal="button_up" from="TabContainer/Bottom/PantsBLabel/Left" to="." method="_on_Sprite_Selection_button_up" binds= [ -1, "BottomB" ]]
-[connection signal="button_up" from="TabContainer/Bottom/PantsBLabel/Right" to="." method="_on_Right_button_up" binds= [ 1, "BottomB" ]]
+[connection signal="button_up" from="TabContainer/Bottom/PantsBLabel/Right" to="." method="_on_Sprite_Selection_button_up" binds= [ 1, "BottomB" ]]
 [connection signal="button_up" from="TabContainer/Bottom/PantsColorLabel/Left" to="." method="_on_Color_Selection_button_up" binds= [ -1, "Bottom" ]]
 [connection signal="button_up" from="TabContainer/Bottom/PantsColorLabel/Right" to="." method="_on_Color_Selection_button_up" binds= [ 1, "Bottom" ]]
 [connection signal="button_up" from="TabContainer/Bottom/ShoesLabel/Left" to="." method="_on_Sprite_Selection_button_up" binds= [ 1, "Shoes" ]]
