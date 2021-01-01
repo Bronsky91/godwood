@@ -171,7 +171,7 @@ func _on_Color_Selection_button_up(direction: int, palette_sprite: String):
 		pallete_sprite_state[palette_sprite] = color_num
 
 func _on_Save_button_up():
-	var player_name = $NameLabel/Name.text
+	var player_name = $TabContainer/Character/NameLabel/Name.text
 	if player_name == "":
 		$NameLabel/Error.text = "Name is Required"
 		$NameLabel/Error.show()
@@ -185,7 +185,7 @@ func _on_Save_button_up():
 
 func _on_Name_text_changed(new_text):
 	if new_text != "":
-		$NameLabel/Error.hide()
+		$TabContainer/Character/NameLabel/Error.hide()
 
 func _on_Back_button_up():
 	hide()

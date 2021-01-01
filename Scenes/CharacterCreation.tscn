@@ -331,6 +331,7 @@ margin_bottom = 16.7854
 text = "Right"
 
 [node name="Top" type="Tabs" parent="TabContainer"]
+editor/display_folded = true
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -483,6 +484,7 @@ margin_bottom = 16.5599
 text = "Right"
 
 [node name="Bottom" type="Tabs" parent="TabContainer"]
+editor/display_folded = true
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
