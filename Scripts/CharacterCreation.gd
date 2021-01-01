@@ -172,3 +172,7 @@ func _on_Back_button_up():
 	hide()
 	get_node('../Main').show()
 
+
+
+func _on_Left_button_up():
+	pass # Replace with function body.

@@ -7,7 +7,7 @@
 [node name="CharacterCreation" type="Node2D"]
 script = ExtResource( 1 )
 __meta__ = {
-"_edit_horizontal_guides_": [ 145.0, 165.756, 170.0, 190.767, 195.158, 215.844, 220.245, 240.491, 245.773, 265.578, 270.42, 290.666, 295.067, 315.313, 320.293, 398.225 ],
+"_edit_horizontal_guides_": [ 145.0, 165.756, 170.0, 190.767, 195.158, 215.844, 220.245, 240.491, 245.773, 265.578, 270.42, 290.666, 295.067, 315.313, 320.293, 398.225, 437.766 ],
 "_edit_vertical_guides_": [ 420.0, 320.0, 520.0, 139.001, 127.286, 149.686 ]
 }
 
@@ -47,7 +47,6 @@ __meta__ = {
 }
 
 [node name="Error" type="Label" parent="TabContainer/Character/NameLabel"]
-visible = false
 margin_left = 57.0
 margin_top = 24.0
 margin_right = 171.0
@@ -149,12 +148,13 @@ margin_bottom = 19.0
 
 [node name="Head" type="Tabs" parent="TabContainer"]
 editor/display_folded = true
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
 margin_top = 32.0
-margin_right = -321.0
-margin_bottom = -252.0
+margin_right = -4.0
+margin_bottom = -4.0
 
 [node name="HairALabel" type="Label" parent="TabContainer/Head"]
 margin_left = 135.831
@@ -326,12 +326,13 @@ text = "Right"
 
 [node name="Top" type="Tabs" parent="TabContainer"]
 editor/display_folded = true
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
 margin_top = 32.0
-margin_right = -321.0
-margin_bottom = -252.0
+margin_right = -4.0
+margin_bottom = -4.0
 
 [node name="ShirtLabel" type="Label" parent="TabContainer/Top"]
 margin_left = 128.177
@@ -345,19 +346,19 @@ __meta__ = {
 }
 
 [node name="Left" type="Button" parent="TabContainer/Top/ShirtLabel"]
-margin_left = -52.5775
-margin_top = -1.89023
-margin_right = -16.5775
-margin_bottom = 18.1098
+margin_left = -58.7393
+margin_top = -1.45011
+margin_right = -22.7393
+margin_bottom = 18.5499
 text = "Left"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Right" type="Button" parent="TabContainer/Top/ShirtLabel"]
-margin_left = 78.4494
+margin_left = 85.0514
 margin_top = -2.88035
-margin_right = 122.45
+margin_right = 129.052
 margin_bottom = 17.1196
 text = "Right"
 __meta__ = {
@@ -365,63 +366,122 @@ __meta__ = {
 }
 
 [node name="ShirtColorLabel" type="Label" parent="TabContainer/Top"]
-margin_left = 129.714
+margin_left = 127.073
 margin_top = 76.2866
-margin_right = 201.715
+margin_right = 199.074
 margin_bottom = 90.2866
 text = "Shirt Color"
 align = 1
 
 [node name="Left" type="Button" parent="TabContainer/Top/ShirtColorLabel"]
-margin_left = -54.957
-margin_top = -1.16736
-margin_right = -18.957
-margin_bottom = 18.8327
+margin_left = -57.5978
+margin_top = -2.04762
+margin_right = -21.5978
+margin_bottom = 17.9524
 text = "Left"
 
 [node name="Right" type="Button" parent="TabContainer/Top/ShirtColorLabel"]
-margin_left = 77.0221
-margin_top = -1.33906
-margin_right = 121.022
-margin_bottom = 18.6609
+margin_left = 87.145
+margin_top = -1.77917
+margin_right = 131.145
+margin_bottom = 18.2208
 text = "Right"
 
 [node name="ShirtBLabel" type="Label" parent="TabContainer/Top"]
-margin_left = 131.092
-margin_top = 52.941
-margin_right = 203.092
-margin_bottom = 66.941
-text = "ShirtBLabel"
+margin_left = 124.93
+margin_top = 52.5009
+margin_right = 196.93
+margin_bottom = 66.5009
+text = "Shirt Sleeve"
+
+[node name="Left" type="Button" parent="TabContainer/Top/ShirtBLabel"]
+margin_left = -56.3204
+margin_top = -3.55988
+margin_right = -20.3204
+margin_bottom = 16.4401
+text = "Left"
+
+[node name="Right" type="Button" parent="TabContainer/Top/ShirtBLabel"]
+margin_left = 88.8835
+margin_top = -3.11975
+margin_right = 132.883
+margin_bottom = 16.8802
+text = "Right"
 
 [node name="JacketLabel" type="Label" parent="TabContainer/Top"]
 margin_left = 128.571
 margin_top = 102.888
 margin_right = 199.571
 margin_bottom = 116.888
-text = "JacketLabel"
+text = "Jacket"
+align = 1
+
+[node name="Left" type="Button" parent="TabContainer/Top/JacketLabel"]
+margin_left = -60.2427
+margin_top = -4.44012
+margin_right = -24.2427
+margin_bottom = 15.5599
+text = "Left"
+
+[node name="Right" type="Button" parent="TabContainer/Top/JacketLabel"]
+margin_left = 85.3624
+margin_top = -3.0
+margin_right = 129.362
+margin_bottom = 17.0
+text = "Right"
 
 [node name="JacketBLabel" type="Label" parent="TabContainer/Top"]
-margin_left = 124.727
-margin_top = 128.098
-margin_right = 204.727
-margin_bottom = 142.098
-text = "JacketBLabel"
+margin_left = 122.086
+margin_top = 126.778
+margin_right = 202.086
+margin_bottom = 140.778
+text = "Jacket Sleeve"
+
+[node name="Left" type="Button" parent="TabContainer/Top/JacketBLabel"]
+margin_left = -53.7217
+margin_top = -3.0
+margin_right = -17.7217
+margin_bottom = 17.0
+text = "Left"
+
+[node name="Right" type="Button" parent="TabContainer/Top/JacketBLabel"]
+margin_left = 91.7605
+margin_top = -1.79936
+margin_right = 135.76
+margin_bottom = 18.2006
+text = "Right"
 
 [node name="JacketColorLabel" type="Label" parent="TabContainer/Top"]
 margin_left = 114.958
 margin_top = 153.277
 margin_right = 218.958
 margin_bottom = 167.277
-text = "JacketColorLabel"
+text = "Jacket Color"
+align = 1
+
+[node name="Left" type="Button" parent="TabContainer/Top/JacketColorLabel"]
+margin_left = -46.6019
+margin_top = -3.44012
+margin_right = -10.6019
+margin_bottom = 16.5599
+text = "Left"
+
+[node name="Right" type="Button" parent="TabContainer/Top/JacketColorLabel"]
+margin_left = 98.6407
+margin_top = -3.44012
+margin_right = 142.641
+margin_bottom = 16.5599
+text = "Right"
 
 [node name="Bottom" type="Tabs" parent="TabContainer"]
 editor/display_folded = true
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
 margin_top = 32.0
-margin_right = -321.0
-margin_bottom = -252.0
+margin_right = -4.0
+margin_bottom = -4.0
 
 [node name="PantsLabel" type="Label" parent="TabContainer/Bottom"]
 margin_left = 130.464
@@ -564,19 +624,21 @@ margin_bottom = 16.4053
 text = "Right"
 
 [node name="Acc" type="Tabs" parent="TabContainer"]
+editor/display_folded = true
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
 margin_top = 32.0
-margin_right = -321.0
-margin_bottom = -252.0
+margin_right = -4.0
+margin_bottom = -4.0
 
 [node name="Accessory1Label" type="Label" parent="TabContainer/Acc"]
 margin_left = 127.424
 margin_top = 27.386
 margin_right = 200.424
 margin_bottom = 41.386
-text = "Face"
+text = "Neck"
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false
@@ -607,7 +669,7 @@ margin_left = 121.77
 margin_top = 76.714
 margin_right = 194.77
 margin_bottom = 90.714
-text = "Neck"
+text = "Face"
 align = 1
 
 [node name="Left" type="Button" parent="TabContainer/Acc/Accessory2Label"]
@@ -647,35 +709,80 @@ margin_bottom = 15.0972
 text = "Right"
 
 [node name="Accessory1ColorLabel" type="Label" parent="TabContainer/Acc"]
-margin_left = 99.9247
-margin_top = 51.0846
-margin_right = 239.925
-margin_bottom = 65.0846
-text = "Accessory1ColorLabel"
+margin_left = 95.4865
+margin_top = 51.362
+margin_right = 235.487
+margin_bottom = 65.362
+text = "Neck Color"
+align = 1
+
+[node name="Left" type="Button" parent="TabContainer/Acc/Accessory1ColorLabel"]
+margin_left = -20.3939
+margin_top = -1.38695
+margin_right = 15.6061
+margin_bottom = 18.6131
+text = "Left"
+
+[node name="Right" type="Button" parent="TabContainer/Acc/Accessory1ColorLabel"]
+margin_left = 111.161
+margin_top = -1.7226
+margin_right = 155.161
+margin_bottom = 18.2774
+text = "Right"
 
 [node name="Accessory2ColorLabel" type="Label" parent="TabContainer/Acc"]
 margin_left = 97.2172
 margin_top = 102.613
 margin_right = 237.217
 margin_bottom = 116.613
-text = "Accessory2ColorLabel"
+text = "Face Color"
+align = 1
+
+[node name="Left" type="Button" parent="TabContainer/Acc/Accessory2ColorLabel"]
+margin_left = -21.9417
+margin_top = -4.0
+margin_right = 14.0583
+margin_bottom = 16.0
+text = "Left"
+
+[node name="Right" type="Button" parent="TabContainer/Acc/Accessory2ColorLabel"]
+margin_left = 109.613
+margin_top = -3.7226
+margin_right = 153.613
+margin_bottom = 16.2774
+text = "Right"
 
 [node name="Accesory3ColorLabel" type="Label" parent="TabContainer/Acc"]
 margin_left = 95.3066
 margin_top = 152.708
 margin_right = 228.307
 margin_bottom = 166.708
-text = "Accesory3ColorLabel"
+text = "Head Color"
+align = 1
+
+[node name="Left" type="Button" parent="TabContainer/Acc/Accesory3ColorLabel"]
+margin_left = -19.0
+margin_top = -4.0
+margin_right = 16.0
+margin_bottom = 16.0
+text = "Left"
+
+[node name="Right" type="Button" parent="TabContainer/Acc/Accesory3ColorLabel"]
+margin_left = 112.676
+margin_top = -4.02939
+margin_right = 155.676
+margin_bottom = 15.9706
+text = "Right"
 
 [node name="PlayerSprites" parent="." instance=ExtResource( 3 )]
 position = Vector2( 140.825, 249.723 )
 scale = Vector2( 4, 4 )
 
 [node name="Random" type="Button" parent="."]
-margin_left = 19.95
-margin_top = 444.6
-margin_right = 83.95
-margin_bottom = 464.6
+margin_left = 265.431
+margin_top = 440.741
+margin_right = 329.431
+margin_bottom = 460.741
 text = "Random"
 
 [node name="TurnLeft" type="Button" parent="."]
@@ -732,6 +839,8 @@ __meta__ = {
 [connection signal="button_up" from="TabContainer/Head/EyeColorLabel/Right" to="." method="_on_Color_Selection_button_up" binds= [ 1, "Eye" ]]
 [connection signal="button_up" from="TabContainer/Top/ShirtColorLabel/Left" to="." method="_on_Color_Selection_button_up" binds= [ -1, "Top" ]]
 [connection signal="button_up" from="TabContainer/Top/ShirtColorLabel/Right" to="." method="_on_Color_Selection_button_up" binds= [ 1, "Top" ]]
+[connection signal="button_up" from="TabContainer/Top/JacketColorLabel/Left" to="." method="_on_Color_Selection_button_up"]
+[connection signal="button_up" from="TabContainer/Top/JacketColorLabel/Right" to="." method="_on_Color_Selection_button_up"]
 [connection signal="button_up" from="TabContainer/Bottom/PantsColorLabel/Left" to="." method="_on_Color_Selection_button_up" binds= [ -1, "Bottom" ]]
 [connection signal="button_up" from="TabContainer/Bottom/PantsColorLabel/Right" to="." method="_on_Color_Selection_button_up" binds= [ 1, "Bottom" ]]
 [connection signal="button_up" from="TabContainer/Bottom/ShoesLabel/Left" to="." method="_on_Sprite_Selection_button_up" binds= [ 1, "Shoes" ]]
@@ -744,6 +853,12 @@ __meta__ = {
 [connection signal="button_up" from="TabContainer/Acc/Accessory2Label/Right" to="." method="_on_Sprite_Selection_button_up" binds= [ 1, "Accessory2" ]]
 [connection signal="button_up" from="TabContainer/Acc/Accessory3Label/Left" to="." method="_on_Sprite_Selection_button_up" binds= [ -1, "Accessory3" ]]
 [connection signal="button_up" from="TabContainer/Acc/Accessory3Label/Right" to="." method="_on_Sprite_Selection_button_up" binds= [ 1, "Accessory3" ]]
+[connection signal="button_up" from="TabContainer/Acc/Accessory1ColorLabel/Left" to="." method="_on_Color_Selection_button_up"]
+[connection signal="button_up" from="TabContainer/Acc/Accessory1ColorLabel/Right" to="." method="_on_Color_Selection_button_up"]
+[connection signal="button_up" from="TabContainer/Acc/Accessory2ColorLabel/Left" to="." method="_on_Color_Selection_button_up"]
+[connection signal="button_up" from="TabContainer/Acc/Accessory2ColorLabel/Right" to="." method="_on_Color_Selection_button_up"]
+[connection signal="button_up" from="TabContainer/Acc/Accesory3ColorLabel/Left" to="." method="_on_Color_Selection_button_up"]
+[connection signal="button_up" from="TabContainer/Acc/Accesory3ColorLabel/Right" to="." method="_on_Color_Selection_button_up"]
 [connection signal="button_up" from="Random" to="." method="_on_Random_button_up"]
 [connection signal="button_up" from="TurnLeft" to="." method="_on_Turn_button_up" binds= [ -1 ]]
 [connection signal="button_up" from="TurnRight" to="." method="_on_Turn_button_up" binds= [ 1 ]]
