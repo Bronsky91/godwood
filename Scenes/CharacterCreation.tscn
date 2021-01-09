@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scripts/CharacterCreation.gd" type="Script" id=1]
 [ext_resource path="res://Resources/ButtonGroups/genderButtonGroup.tres" type="ButtonGroup" id=2]
 [ext_resource path="res://Scenes/PlayerSprites.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Assets/DressUp/Female.png" type="Texture" id=4]
+[ext_resource path="res://Assets/DressUp/Male.png" type="Texture" id=5]
 
 [node name="CharacterCreation" type="Node2D"]
 script = ExtResource( 1 )
@@ -17,10 +19,11 @@ margin_top = 89.0
 margin_right = 617.0
 margin_bottom = 397.0
 tab_align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Character" type="Tabs" parent="TabContainer"]
-editor/display_folded = true
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
@@ -48,6 +51,7 @@ __meta__ = {
 }
 
 [node name="Error" type="Label" parent="TabContainer/Character/NameLabel"]
+visible = false
 margin_left = 57.0
 margin_top = 24.0
 margin_right = 171.0
@@ -114,24 +118,31 @@ __meta__ = {
 [node name="FemaleButton" type="Button" parent="TabContainer/Character"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 264.144
-margin_top = 25.2544
-margin_right = -59.8564
-margin_bottom = -226.746
+margin_left = 264.0
+margin_top = 23.6652
+margin_right = -65.0
+margin_bottom = -226.335
 group = ExtResource( 2 )
-text = "G"
+icon = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="MaleButton" type="Button" parent="TabContainer/Character"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 300.781
-margin_top = 25.2544
-margin_right = -23.219
-margin_bottom = -226.746
+margin_left = 299.0
+margin_top = 24.5
+margin_right = -30.0
+margin_bottom = -225.5
 group = ExtResource( 2 )
-text = "B"
+icon = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="FarmNameLabel" type="Label" parent="TabContainer/Character"]
+visible = false
 margin_left = 28.3566
 margin_top = 52.8882
 margin_right = 106.357
@@ -413,7 +424,6 @@ margin_bottom = 16.7854
 text = "Right"
 
 [node name="Top" type="Tabs" parent="TabContainer"]
-editor/display_folded = true
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -507,7 +517,6 @@ __meta__ = {
 }
 
 [node name="ShirtColorLabel" type="Label" parent="TabContainer/Top"]
-editor/display_folded = true
 margin_left = 127.073
 margin_top = 76.2866
 margin_right = 199.074
@@ -552,7 +561,6 @@ margin_bottom = 16.8802
 text = "Right"
 
 [node name="JacketLabel" type="Label" parent="TabContainer/Top"]
-editor/display_folded = true
 margin_left = 128.571
 margin_top = 102.888
 margin_right = 199.571
@@ -575,7 +583,6 @@ margin_bottom = 17.0
 text = "Right"
 
 [node name="JacketBLabel" type="Label" parent="TabContainer/Top"]
-editor/display_folded = true
 margin_left = 122.086
 margin_top = 126.778
 margin_right = 202.086
@@ -598,7 +605,6 @@ margin_bottom = 18.2006
 text = "Right"
 
 [node name="JacketColorLabel" type="Label" parent="TabContainer/Top"]
-editor/display_folded = true
 margin_left = 114.958
 margin_top = 153.277
 margin_right = 218.958
@@ -621,7 +627,7 @@ margin_bottom = 16.5599
 text = "Right"
 
 [node name="Bottom" type="Tabs" parent="TabContainer"]
-editor/display_folded = true
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
@@ -748,7 +754,6 @@ __meta__ = {
 }
 
 [node name="ShoesColorLabel" type="Label" parent="TabContainer/Bottom"]
-editor/display_folded = true
 margin_left = 125.051
 margin_top = 128.871
 margin_right = 200.051
