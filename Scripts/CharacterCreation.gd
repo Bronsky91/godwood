@@ -92,6 +92,7 @@ func load_character_from_save():
 func set_sprite_texture(sprite_name: String, texture_path: String) -> void:
 	player_sprite[sprite_name].set_texture(load(texture_path))
 	sprite_state[sprite_name] = texture_path
+	cover_sleeve_with_jacket_sleeve()
 	
 func random_asset(folder: String, keyword: String = "") -> String:
 	var files: Array
@@ -127,6 +128,10 @@ func create_random_character() -> void:
 			var color_num = random_color.substr(len(random_color)-7, 3)
 			g.set_sprite_color(folder, sprite, color_num)
 			pallete_sprite_state[folder] = color_num
+
+func cover_sleeve_with_jacket_sleeve():
+	if not '000' in sprite_state['JacketB']:
+		player_sprite['TopB'].set_texture(null)
 
 func _on_GenderButton_button_up(_gender):
 	gender = _gender
