@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=2]
+[gd_scene load_steps=47 format=2]
 
 [ext_resource path="res://Scripts/PlayerSprites.gd" type="Script" id=1]
 [ext_resource path="res://Resources/Shaders/PaletteSwap.shader" type="Shader" id=2]
@@ -18,11 +18,12 @@
 [ext_resource path="res://Assets/Character/Female/AvThn/Eyes/Female_AvThn_Eyes_001.png" type="Texture" id=16]
 [ext_resource path="res://Assets/Character/Female/AvThn/HairA/Female_AvThn_HairA_001.png" type="Texture" id=17]
 [ext_resource path="res://Assets/Character/Female/AvThn/HairC/Female_AvThn_HairC_001.png" type="Texture" id=18]
-[ext_resource path="res://Assets/Character/Female/AvThn/Accessory3/Female_AvThn_Accessory3_001.png" type="Texture" id=19]
-[ext_resource path="res://Resources/Animations/idle_back.tres" type="Animation" id=20]
-[ext_resource path="res://Resources/Animations/idle_front.tres" type="Animation" id=21]
-[ext_resource path="res://Resources/Animations/idle_left.tres" type="Animation" id=22]
-[ext_resource path="res://Resources/Animations/idle_right.tres" type="Animation" id=23]
+[ext_resource path="res://Assets/Character/Female/AvThn/HairD/Female_AvThn_HairD_001.png" type="Texture" id=19]
+[ext_resource path="res://Assets/Character/Female/AvThn/Accessory3/Female_AvThn_Accessory3_001.png" type="Texture" id=20]
+[ext_resource path="res://Resources/Animations/idle_back.tres" type="Animation" id=21]
+[ext_resource path="res://Resources/Animations/idle_front.tres" type="Animation" id=22]
+[ext_resource path="res://Resources/Animations/idle_left.tres" type="Animation" id=23]
+[ext_resource path="res://Resources/Animations/idle_right.tres" type="Animation" id=24]
 
 [sub_resource type="ShaderMaterial" id=1]
 shader = ExtResource( 2 )
@@ -974,126 +975,128 @@ material = SubResource( 1 )
 texture = ExtResource( 5 )
 vframes = 10
 hframes = 8
-frame = 4
+frame = 31
 
 [node name="Body" type="Sprite" parent="SpriteHolder"]
 material = SubResource( 2 )
 texture = ExtResource( 8 )
 vframes = 10
 hframes = 8
-frame = 4
+frame = 31
 
 [node name="BottomA" type="Sprite" parent="SpriteHolder"]
 material = SubResource( 3 )
 texture = ExtResource( 9 )
 vframes = 10
 hframes = 8
-frame = 4
+frame = 31
 
 [node name="Shoes" type="Sprite" parent="SpriteHolder"]
 material = SubResource( 4 )
 texture = ExtResource( 10 )
 vframes = 10
 hframes = 8
-frame = 4
+frame = 31
 
 [node name="TopA" type="Sprite" parent="SpriteHolder"]
 material = SubResource( 5 )
 texture = ExtResource( 11 )
 vframes = 10
 hframes = 8
-frame = 4
+frame = 31
 
 [node name="BottomB" type="Sprite" parent="SpriteHolder"]
 material = SubResource( 6 )
 texture = ExtResource( 12 )
 vframes = 10
 hframes = 8
-frame = 4
+frame = 31
 
 [node name="Arms" type="Sprite" parent="SpriteHolder"]
 material = SubResource( 7 )
 texture = ExtResource( 13 )
 vframes = 10
 hframes = 8
-frame = 4
+frame = 31
 
 [node name="JacketA" type="Sprite" parent="SpriteHolder"]
 material = SubResource( 8 )
 vframes = 10
 hframes = 8
-frame = 4
+frame = 31
 
 [node name="TopB" type="Sprite" parent="SpriteHolder"]
 material = SubResource( 9 )
 texture = ExtResource( 14 )
 vframes = 10
 hframes = 8
-frame = 4
+frame = 31
 
 [node name="JacketB" type="Sprite" parent="SpriteHolder"]
 material = SubResource( 10 )
 vframes = 10
 hframes = 8
-frame = 4
+frame = 31
 
 [node name="Head" type="Sprite" parent="SpriteHolder"]
 material = SubResource( 11 )
 texture = ExtResource( 15 )
 vframes = 10
 hframes = 8
-frame = 4
+frame = 31
 
 [node name="Eyes" type="Sprite" parent="SpriteHolder"]
 material = SubResource( 12 )
 texture = ExtResource( 16 )
 vframes = 10
 hframes = 8
+frame = 31
 
 [node name="Accessory2" type="Sprite" parent="SpriteHolder"]
 material = SubResource( 13 )
 vframes = 10
 hframes = 8
-frame = 4
+frame = 31
 
 [node name="HairA" type="Sprite" parent="SpriteHolder"]
 material = SubResource( 14 )
 texture = ExtResource( 17 )
 vframes = 10
 hframes = 8
-frame = 4
+frame = 31
 
 [node name="Accessory1" type="Sprite" parent="SpriteHolder"]
 material = SubResource( 15 )
 vframes = 10
 hframes = 8
-frame = 4
+frame = 31
 
 [node name="HairC" type="Sprite" parent="SpriteHolder"]
 material = SubResource( 16 )
 texture = ExtResource( 18 )
 vframes = 10
 hframes = 8
-frame = 4
+frame = 31
 
 [node name="HairD" type="Sprite" parent="SpriteHolder"]
 material = SubResource( 17 )
-vframes = 10
-hframes = 8
-frame = 4
-
-[node name="Accessory3" type="Sprite" parent="SpriteHolder"]
-material = SubResource( 18 )
 texture = ExtResource( 19 )
 vframes = 10
 hframes = 8
-frame = 4
+frame = 31
+
+[node name="Accessory3" type="Sprite" parent="SpriteHolder"]
+material = SubResource( 18 )
+texture = ExtResource( 20 )
+vframes = 10
+hframes = 8
+frame = 31
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/idle_back = ExtResource( 20 )
-anims/idle_front = ExtResource( 21 )
-anims/idle_left = ExtResource( 22 )
-anims/idle_right = ExtResource( 23 )
+anims/idle_back = ExtResource( 21 )
+anims/idle_front = ExtResource( 22 )
+anims/idle_left = ExtResource( 23 )
+anims/idle_right = ExtResource( 24 )
 anims/walk_back = SubResource( 19 )
 anims/walk_front = SubResource( 20 )
 anims/walk_left = SubResource( 21 )

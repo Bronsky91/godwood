@@ -156,7 +156,7 @@ tracks/12/loop_wrap = true
 tracks/12/imported = false
 tracks/12/enabled = true
 tracks/12/keys = {
-"times": PoolRealArray( 0, 2, 2.5, 3.25 ),
+"times": PoolRealArray( 0, 2.25, 2.5, 3.25 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 1,
 "values": [ 12, 13, 14, 15 ]
@@ -168,7 +168,7 @@ tracks/13/loop_wrap = true
 tracks/13/imported = false
 tracks/13/enabled = true
 tracks/13/keys = {
-"times": PoolRealArray( 0, 2, 2.5, 3.25 ),
+"times": PoolRealArray( 0, 2.25, 2.5, 3.25 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 1,
 "values": [ 12, 13, 14, 15 ]
@@ -180,7 +180,7 @@ tracks/14/loop_wrap = true
 tracks/14/imported = false
 tracks/14/enabled = true
 tracks/14/keys = {
-"times": PoolRealArray( 0, 2, 2.5, 3.25 ),
+"times": PoolRealArray( 0, 2.25, 2.5, 3.25 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 1,
 "values": [ 12, 13, 14, 15 ]
@@ -192,7 +192,7 @@ tracks/15/loop_wrap = true
 tracks/15/imported = false
 tracks/15/enabled = true
 tracks/15/keys = {
-"times": PoolRealArray( 0, 2, 2.5, 3.25 ),
+"times": PoolRealArray( 0, 2.25, 2.5, 3.25 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 1,
 "values": [ 12, 13, 14, 15 ]
@@ -204,7 +204,7 @@ tracks/16/loop_wrap = true
 tracks/16/imported = false
 tracks/16/enabled = true
 tracks/16/keys = {
-"times": PoolRealArray( 0, 2, 2.5, 3.25 ),
+"times": PoolRealArray( 0, 2.25, 2.5, 3.25 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 1,
 "values": [ 12, 13, 14, 15 ]
@@ -216,7 +216,7 @@ tracks/17/loop_wrap = true
 tracks/17/imported = false
 tracks/17/enabled = true
 tracks/17/keys = {
-"times": PoolRealArray( 0, 2, 2.5, 3.25 ),
+"times": PoolRealArray( 0, 2.25, 2.5, 3.25 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 1,
 "values": [ 12, 13, 14, 15 ]
