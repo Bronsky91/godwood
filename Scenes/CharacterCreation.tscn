@@ -24,6 +24,7 @@ __meta__ = {
 }
 
 [node name="Character" type="Tabs" parent="TabContainer"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
@@ -158,6 +159,16 @@ margin_top = -5.0
 margin_right = 212.651
 margin_bottom = 19.0
 
+[node name="CharacterTabRandom" type="Button" parent="TabContainer/Character"]
+margin_left = 270.464
+margin_top = 231.826
+margin_right = 334.464
+margin_bottom = 251.826
+text = "Random"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Head" type="Tabs" parent="TabContainer"]
 visible = false
 anchor_right = 1.0
@@ -188,6 +199,9 @@ margin_top = -4.02939
 margin_right = 156.061
 margin_bottom = 15.9706
 text = "Right"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Accessory3Label" type="Label" parent="TabContainer/Head"]
 margin_left = 120.647
@@ -423,6 +437,16 @@ margin_right = 114.292
 margin_bottom = 16.7854
 text = "Right"
 
+[node name="HeadTabRandom" type="Button" parent="TabContainer/Head"]
+margin_left = 290.206
+margin_top = 249.094
+margin_right = 354.206
+margin_bottom = 269.094
+text = "Random"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Top" type="Tabs" parent="TabContainer"]
 visible = false
 anchor_right = 1.0
@@ -626,8 +650,17 @@ margin_right = 142.641
 margin_bottom = 16.5599
 text = "Right"
 
+[node name="TopTabRandom" type="Button" parent="TabContainer/Top"]
+margin_left = 277.785
+margin_top = 241.587
+margin_right = 341.785
+margin_bottom = 261.587
+text = "Random"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Bottom" type="Tabs" parent="TabContainer"]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
@@ -775,6 +808,16 @@ margin_right = 126.066
 margin_bottom = 16.4053
 text = "Right"
 
+[node name="BottomTabRandom" type="Button" parent="TabContainer/Bottom"]
+margin_left = 282.258
+margin_top = 240.367
+margin_right = 346.258
+margin_bottom = 260.367
+text = "Random"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="PlayerSprites" parent="." instance=ExtResource( 3 )]
 position = Vector2( 140.825, 249.723 )
 scale = Vector2( 4, 4 )
@@ -785,6 +828,9 @@ margin_top = 440.741
 margin_right = 329.431
 margin_bottom = 460.741
 text = "Random"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="TurnLeft" type="Button" parent="."]
 margin_left = 59.3481

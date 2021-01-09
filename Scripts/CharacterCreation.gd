@@ -78,9 +78,17 @@ var farm_name: String
 var gender: String = "Female" # Temp hardcoded
 var body: String = "AvThn" # Temp hardcoded
 
+var sprite_folder_path = "res://Assets/Character/{gender}/{body}".format({"gender": gender, "body": body})
+var palette_folder_path = "res://Assets/Palettes"
+
 var current_animation = 0
 
 func _ready():
+	$TabContainer/Character/CharacterTabRandom.connect('button_up', self, '_on_Random_Tab_button_up', [[],['Skintone']])
+	$TabContainer/Head/HeadTabRandom.connect('button_up', self, '_on_Random_Tab_button_up', [['HairA', 'HairB', 'HairC', 'HairD', 'Eyes', 'Head', 'Accessory2', 'Accessory3'],['Hair', 'Eye', 'Accessory2', 'Accessory3']])
+	$TabContainer/Top/TopTabRandom.connect('button_up', self, '_on_Random_Tab_button_up', [['Accessory1', 'JacketA', 'JacketB', 'TopA', 'TopB'],['Accessory1', 'Jacket', 'Top']])
+	$TabContainer/Bottom/BottomTabRandom.connect('button_up', self, '_on_Random_Tab_button_up', [['BottomA', 'BottomB', 'Shoes'], ['Bottom', 'Shoe']])
+	
 	$PlayerSprites/AnimationPlayer.play("idle_front")
 	
 func _process(delta):
@@ -92,7 +100,7 @@ func load_character_from_save():
 func set_sprite_texture(sprite_name: String, texture_path: String) -> void:
 	player_sprite[sprite_name].set_texture(load(texture_path))
 	sprite_state[sprite_name] = texture_path
-	cover_sleeve_with_jacket_sleeve()
+	ensure_jacket_state()
 	
 func random_asset(folder: String, keyword: String = "") -> String:
 	var files: Array
@@ -105,33 +113,39 @@ func random_asset(folder: String, keyword: String = "") -> String:
 	var random_index = randi() % len(files)
 	return folder+"/"+files[random_index]
 	
+func set_random_color(palette_type: String) -> void:
+	var random_color = random_asset(palette_folder_path+"/"+palette_type)
+	if random_color == "" or "000" in random_color:
+		random_color = random_color.replace("000", "001")
+	for sprite in palette_sprite_dict[palette_type]:
+		var color_num = random_color.substr(len(random_color)-7, 3)
+		g.set_sprite_color(palette_type, sprite, color_num)
+		pallete_sprite_state[palette_type] = color_num
+		
+func set_random_texture(sprite_name: String) -> void:
+	var random_sprite = random_asset(sprite_folder_path+"/"+sprite_name)
+	if random_sprite == "": # No assets in the folder yet continue to next folder
+		return
+	if "000" in random_sprite and not "Accessory" in random_sprite: # Prevent some empty sprite sheets
+		if sprite_name == "HairA" and "Hair" in random_sprite: # If main hair is bald, leave rest of hair
+			return
+		if "Top" in sprite_name or "Bottom" in sprite_name: # If no top or no bottom was returned, dont set the texture
+			return
+	set_sprite_texture(sprite_name, random_sprite)
+
 func create_random_character() -> void:
-	var sprite_folder_path = "res://Assets/Character/{gender}/{body}".format({"gender": gender, "body": body})
-	var palette_folder_path = "res://Assets/Palettes"
 	var sprite_folders = g.files_in_dir(sprite_folder_path)
 	var palette_folders = g.files_in_dir(palette_folder_path)
 	for folder in sprite_folders:
-		var random_sprite = random_asset(sprite_folder_path+"/"+folder)
-		if random_sprite == "": # No assets in the folder yet continue to next folder
-			continue
-		if "000" in random_sprite and not "Accessory" in random_sprite: # Prevent some empty sprite sheets
-			if folder == "HairA" and "Hair" in random_sprite: # If main hair is bald, leave rest of hair
-				continue
-			if "Top" in folder or "Bottom" in folder: # If no top or no bottom was returned, dont set the texture
-				continue
-		set_sprite_texture(folder, random_sprite)
+		set_random_texture(folder)
 	for folder in palette_folders:
-		var random_color = random_asset(palette_folder_path+"/"+folder)
-		if random_color == "" or "000" in random_color:
-			random_color = random_color.replace("000", "001")
-		for sprite in palette_sprite_dict[folder]:
-			var color_num = random_color.substr(len(random_color)-7, 3)
-			g.set_sprite_color(folder, sprite, color_num)
-			pallete_sprite_state[folder] = color_num
+		set_random_color(folder)
 
-func cover_sleeve_with_jacket_sleeve():
+func ensure_jacket_state():
 	if not '000' in sprite_state['JacketB']:
 		player_sprite['TopB'].set_texture(null)
+	if '000' in sprite_state['JacketA']:
+		player_sprite['JacketB'].set_texture(null)
 
 func _on_GenderButton_button_up(_gender):
 	gender = _gender
@@ -196,11 +210,8 @@ func _on_Back_button_up():
 	hide()
 	get_node('../Main').show()
 
-
-
-func _on_Left_button_up():
-	pass # Replace with function body.
-
-
-func _on_Right_button_up(extra_arg_0, extra_arg_1):
-	pass # Replace with function body.
+func _on_Random_Tab_button_up(sprites, palettes):
+	for sprite in sprites:
+		set_random_texture(str(sprite))
+	for palette in palettes:
+		set_random_color(str(palette))
