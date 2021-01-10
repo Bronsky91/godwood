@@ -101,6 +101,7 @@ func set_sprite_texture(sprite_name: String, texture_path: String) -> void:
 	player_sprite[sprite_name].set_texture(load(texture_path))
 	sprite_state[sprite_name] = texture_path
 	ensure_jacket_state()
+	ensure_hair(sprite_name)
 	
 func random_asset(folder: String, keyword: String = "") -> String:
 	var files: Array
@@ -137,6 +138,8 @@ func create_random_character() -> void:
 	var sprite_folders = g.files_in_dir(sprite_folder_path)
 	var palette_folders = g.files_in_dir(palette_folder_path)
 	for folder in sprite_folders:
+		if folder == 'HairD':
+			continue
 		set_random_texture(folder)
 	for folder in palette_folders:
 		set_random_color(folder)
@@ -146,6 +149,13 @@ func ensure_jacket_state():
 		player_sprite['TopB'].set_texture(null)
 	if '000' in sprite_state['JacketA']:
 		player_sprite['JacketB'].set_texture(null)
+
+func ensure_hair(sprite_name):
+	if sprite_name == 'HairB':
+		var matching_hair_d_number = sprite_state['HairB'].substr(len(sprite_state['HairB']) - 7, 3)
+		var hair_d_texture = sprite_folder_path + '/HairD/' + gender + "_" + body + '_' + 'HairD_' + matching_hair_d_number + '.png'
+		print(hair_d_texture)
+		player_sprite['HairD'].set_texture(load(hair_d_texture))
 
 func _on_GenderButton_button_up(_gender):
 	gender = _gender
@@ -192,6 +202,7 @@ func _on_Color_Selection_button_up(direction: int, palette_sprite: String):
 func _on_Save_button_up():
 	var player_name = $TabContainer/Character/NameLabel/Name.text
 	if player_name == "":
+		# TODO: if this is true move to character tab and show error
 		$NameLabel/Error.text = "Name is Required"
 		$NameLabel/Error.show()
 	elif g.character_name_exists(player_name):

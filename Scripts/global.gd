@@ -157,11 +157,13 @@ func remove_character_by_name(character_array: Array, character_name: String):
 	
 func character_name_exists(p_name):
 	var f = File.new()
-	f.open("user://characters.save", File.READ)
+	f.open("user://characters.save", File.READ_WRITE)
 	var json = JSON.parse(f.get_as_text())
 	f.close()
-	var character_array: Array = json.result
-	for character in character_array:
-		if character.name == p_name:
-			return true
+	if json.result:
+		var character_array: Array = json.result
+		for character in character_array:
+			if character.name == p_name:
+				return true
+		return false
 	return false
