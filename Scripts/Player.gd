@@ -19,7 +19,6 @@ var animation_directions = {
 	Vector2.LEFT + Vector2.UP: "back",
 	Vector2.UP: "back",
 	Vector2.RIGHT + Vector2.UP: "back",
-	Vector2(0, 0): "front"
 }
 
 signal direction_change
@@ -42,19 +41,20 @@ func get_input():
 		emit_signal('direction_change', velocity.round())
 
 	velocity = velocity.normalized() * speed
-	stopped = velocity == Vector2(0,0)
+
 	
 func _physics_process(delta):
 	get_input()
 	velocity = move_and_slide(velocity)
 
+
 func _on_direction_change(new_direction):
-	if new_direction != last_direction:
+	if new_direction == Vector2(0, 0):
+		play_stopped_animation()
+	elif new_direction != last_direction:
 		var animation_direction = animation_directions[new_direction]
 		animation_player.play("walk_"+animation_direction)
-	if stopped:
-		play_stopped_animation()
-	last_direction = new_direction
+		last_direction = new_direction
 
 func play_stopped_animation():
 	var animation_direction = animation_directions[last_direction]
