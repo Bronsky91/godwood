@@ -21,7 +21,7 @@ func _on_Create_button_up():
 
 
 func _on_View_button_up():
-	get_tree().change_scene("res://Scenes/World.tscn")
+	get_tree().change_scene("res://DressUp/WorldDressUp.tscn")
 
 
 func _on_Exit_button_up():

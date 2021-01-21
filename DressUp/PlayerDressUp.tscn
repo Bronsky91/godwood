@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Scripts/Player.gd" type="Script" id=1]
+[ext_resource path="res://DressUp/PlayerDressUp.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/PlayerSprites.tscn" type="PackedScene" id=2]
 
 [sub_resource type="CapsuleShape2D" id=1]
@@ -26,3 +26,19 @@ shape = SubResource( 2 )
 
 [node name="PlayerSprites" parent="." instance=ExtResource( 2 )]
 position = Vector2( 4.15091, 19.9998 )
+
+[node name="ChangePosTimer" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
+[node name="Name" type="Label" parent="."]
+visible = false
+margin_left = -37.8883
+margin_top = -29.0
+margin_right = 43.1117
+margin_bottom = -15.0
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="timeout" from="ChangePosTimer" to="." method="_on_ChangePosTimer_timeout"]

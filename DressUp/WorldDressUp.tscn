@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://Scripts/World.gd" type="Script" id=1]
+[ext_resource path="res://DressUp/WorldDressUp.gd" type="Script" id=1]
 [ext_resource path="res://Scripts/Clock.gd" type="Script" id=2]
-[ext_resource path="res://Scenes/Farm.tscn" type="PackedScene" id=3]
+[ext_resource path="res://DressUp/FarmDressUp.tscn" type="PackedScene" id=3]
 
 [node name="World" type="Node2D"]
 script = ExtResource( 1 )
@@ -26,7 +26,27 @@ script = ExtResource( 2 )
 [node name="YSort" type="YSort" parent="Navigation2D"]
 
 [node name="Farm" parent="Navigation2D/YSort" instance=ExtResource( 3 )]
-position = Vector2( 321, 110.975 )
+position = Vector2( 321, 111 )
 
 [node name="UI" type="CanvasLayer" parent="."]
+
+[node name="Leave" type="Button" parent="UI"]
+margin_left = 526.904
+margin_top = 11.6295
+margin_right = 627.904
+margin_bottom = 40.6295
+text = "Back To Menu"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CharacterNames" type="VBoxContainer" parent="UI"]
+margin_left = 531.888
+margin_top = 53.1684
+margin_right = 632.888
+margin_bottom = 456.168
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="timeout" from="Clock" to="Clock" method="_on_Clock_timeout"]
+[connection signal="button_up" from="UI/Leave" to="." method="_on_Leave_button_up"]

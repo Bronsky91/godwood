@@ -142,7 +142,6 @@ func find_character_by_name(character_array: Array, character_name: String):
 
 func remove_characters_with_no_name(character_array: Array):
 	for character in character_array:
-		print(character.name)
 		if character.name == '':
 			character_array.erase(character)
 	return character_array
