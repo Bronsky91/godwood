@@ -31,24 +31,18 @@ func get_input():
 	velocity = Vector2()
 	if Input.is_action_pressed('right'):
 		velocity.x += 1
-		stopped = false
-	elif Input.is_action_pressed('left'):
+	if Input.is_action_pressed('left'):
 		velocity.x -= 1
-		stopped = false
-	elif Input.is_action_pressed('down'):
+	if Input.is_action_pressed('down'):
 		velocity.y += 1
-		stopped = false
-	elif Input.is_action_pressed('up'):
+	if Input.is_action_pressed('up'):
 		velocity.y -= 1
-		stopped = false
-	else:
-		stopped = true
 		
 	if velocity.round() != last_direction:
 		emit_signal('direction_change', velocity.round())
 
 	velocity = velocity.normalized() * speed
-	last_direction = velocity.round()
+	stopped = velocity == Vector2(0,0)
 	
 func _physics_process(delta):
 	get_input()
@@ -60,6 +54,7 @@ func _on_direction_change(new_direction):
 		animation_player.play("walk_"+animation_direction)
 	if stopped:
 		play_stopped_animation()
+	last_direction = new_direction
 
 func play_stopped_animation():
 	var animation_direction = animation_directions[last_direction]
