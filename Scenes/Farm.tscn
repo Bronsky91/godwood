@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Assets/Environment/Grasss_001.png" type="Texture" id=1]
 [ext_resource path="res://Tiles/flower_tileset.tres" type="TileSet" id=2]
@@ -6,13 +6,15 @@
 [ext_resource path="res://Assets/Environment/Farmhouse_001.png" type="Texture" id=4]
 [ext_resource path="res://Assets/Environment/Farmhouse_Door_001.png" type="Texture" id=5]
 [ext_resource path="res://Assets/Environment/Farmhouse_Stairs_001.png" type="Texture" id=6]
+[ext_resource path="res://Scripts/Farm.gd" type="Script" id=7]
+[ext_resource path="res://Scenes/TileHover.tscn" type="PackedScene" id=8]
 
 [sub_resource type="NavigationPolygon" id=1]
 vertices = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 
 [sub_resource type="TileSet" id=2]
-0/name = "Grasss_001.png 0"
+0/name = "dirt"
 0/texture = ExtResource( 1 )
 0/tex_offset = Vector2( 0, 0 )
 0/modulate = Color( 1, 1, 1, 1 )
@@ -122,6 +124,7 @@ polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 extents = Vector2( 106.949, 59.6704 )
 
 [node name="Farm" type="Node2D"]
+script = ExtResource( 7 )
 
 [node name="TileSheet" type="Node2D" parent="."]
 position = Vector2( -1, 1 )
@@ -165,3 +168,6 @@ shape = SubResource( 3 )
 
 [node name="StartPosition" type="Position2D" parent="."]
 position = Vector2( 18.6701, 181.941 )
+
+[node name="TileHover" parent="." instance=ExtResource( 8 )]
+position = Vector2( -1, 1 )
