@@ -23,8 +23,7 @@ func _physics_process(delta):
 
 func _input(event):
 	if event.is_action_pressed('click'):
-		print(tile_pos_infront_of_player)
-		print(tile_map.get_cell(tile_pos_infront_of_player.x, tile_pos_infront_of_player.y))
+	
 		if tile_map.get_cellv(tile_pos_infront_of_player) == c.DIRT_ID:
 			tile_map.set_cellv(tile_pos_infront_of_player, tile_map.tile_set.find_tile_by_name(c.TILLED_DIRT_NAME))
 			
