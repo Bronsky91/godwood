@@ -21,6 +21,8 @@ var animation_directions = {
 	Vector2.RIGHT + Vector2.UP: "back",
 }
 
+var current_direction
+
 signal direction_change
 
 func _ready():
@@ -52,10 +54,10 @@ func _on_direction_change(new_direction):
 	if new_direction == Vector2(0, 0):
 		play_stopped_animation()
 	elif new_direction != last_direction:
-		var animation_direction = animation_directions[new_direction]
-		animation_player.play("walk_"+animation_direction)
+		current_direction = animation_directions[new_direction]
+		animation_player.play("walk_"+current_direction)
 		last_direction = new_direction
 
 func play_stopped_animation():
-	var animation_direction = animation_directions[last_direction]
-	animation_player.play("idle_"+animation_direction)
+	current_direction = animation_directions[last_direction]
+	animation_player.play("idle_"+current_direction)

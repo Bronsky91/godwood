@@ -1,32 +1,30 @@
 extends Node2D
 
-onready var tile_map = $TileSheet/GroundTiles
-onready var tile_hover_node = $TileHover
+onready var tile_map: TileMap = $TileSheet/GroundTiles
+onready var grid_helper = get_node('../GridHelper')
 
-var cursor_cell
-var mouse_pos
+var player: KinematicBody2D
 
-var cursor_tile_x
-var cursor_tile_y
-var cursor_tile_pos
-
-var previous_tile_name
-
+var tile_pos_infront_of_player
 
 func _ready():
 	pass
+	
+func set_player(new_player):
+	player = new_player
 
-func _process(delta):
-	mouse_pos = get_local_mouse_position()
-	
-	var loc = tile_map.world_to_map(mouse_pos)
-	var cell = tile_map.get_cell(loc.x,loc.y)
-	
-	var tile_name = tile_map.tile_set.tile_get_name(cell)
-	if tile_name == "dirt":
-		tile_map.tile_set.tile_set_modulate(cell, Color.aqua)
-		tile_hover_node.show()
-		tile_hover_node.position = mouse_pos.snapped(Vector2(16,16))
-	else:
-		tile_hover_node.hide()
-		
+func _physics_process(delta):
+	if player:
+		var player_pos = player.global_position
+		var tile_pos_player_is_on = tile_map.world_to_map(player_pos) + Vector2(0, 2)
+		# Use face direction to determine where to put grid helper
+		tile_pos_infront_of_player = tile_pos_player_is_on + player.last_direction
+		grid_helper.global_position = tile_pos_infront_of_player * 16 # tile size
+
+func _input(event):
+	if event.is_action_pressed('click'):
+		print(tile_pos_infront_of_player)
+		print(tile_map.get_cell(tile_pos_infront_of_player.x, tile_pos_infront_of_player.y))
+		if tile_map.get_cellv(tile_pos_infront_of_player) == c.DIRT_ID:
+			tile_map.set_cellv(tile_pos_infront_of_player, tile_map.tile_set.find_tile_by_name(c.TILLED_DIRT_NAME))
+			

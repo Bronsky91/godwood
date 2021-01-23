@@ -18,6 +18,7 @@ func _ready():
 			g.load_player(new_player.get_node("PlayerSprites/SpriteHolder"), player.name)
 			new_player.position = farm.get_node("StartPosition").global_position
 			ysort.add_child(new_player)
+			farm.set_player(new_player)
 			player_node = new_player
 		else:
 			new_player.queue_free()
