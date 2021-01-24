@@ -24,4 +24,4 @@ func _ready():
 			new_player.queue_free()
 
 func _process(delta):
-	pass
+	$UI/TimeLabel.text = "Year: {year} \nMonth: {month}\nSeason: {season} \nDay: {day} \nHour: {hour} {meridiem} \nMinute: {min}".format({"year":t.year, "month": t.month, "season": t.season, "day": t.day, "hour": t.hour_show, "meridiem": t.meridiem, "min": t.minute_interval})

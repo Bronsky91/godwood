@@ -3,9 +3,7 @@ extends Timer
 var time: int setget set_time, get_time
 
 func _ready():
-	pass
-	# Disabling for Dress Up
-	# set_time(g.load_time())
+	set_time(g.load_time())
 
 func _process(delta):
 	pass

@@ -1,25 +1,10 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://DressUp/WorldDressUp.gd" type="Script" id=1]
-[ext_resource path="res://Scripts/Clock.gd" type="Script" id=2]
 [ext_resource path="res://DressUp/FarmDressUp.tscn" type="PackedScene" id=3]
 
 [node name="World" type="Node2D"]
 script = ExtResource( 1 )
-
-[node name="Time Label" type="Label" parent="."]
-visible = false
-margin_left = 19.0
-margin_top = 19.0
-margin_right = 132.0
-margin_bottom = 55.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Clock" type="Timer" parent="."]
-wait_time = 0.01
-script = ExtResource( 2 )
 
 [node name="Navigation2D" type="Navigation2D" parent="."]
 
@@ -48,5 +33,4 @@ margin_bottom = 456.168
 __meta__ = {
 "_edit_use_anchors_": false
 }
-[connection signal="timeout" from="Clock" to="Clock" method="_on_Clock_timeout"]
 [connection signal="button_up" from="UI/Leave" to="." method="_on_Leave_button_up"]
