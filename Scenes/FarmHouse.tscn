@@ -7,7 +7,7 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 107, 59.6704 )
 
-[node name="StaticBody2D" type="StaticBody2D"]
+[node name="FarmHouse" type="StaticBody2D"]
 position = Vector2( -3.09515, 23.2135 )
 
 [node name="Farmhouse_001" type="Sprite" parent="."]

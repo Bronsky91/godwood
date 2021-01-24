@@ -1,7 +1,7 @@
 extends Node2D
 
 onready var tile_map: TileMap = $TileSheet/GroundTiles
-onready var grid_helper = get_node('../GridHelper')
+onready var grid_helper = get_node('../YSort/GridHelper')
 
 var player: KinematicBody2D
 

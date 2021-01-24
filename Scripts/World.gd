@@ -2,7 +2,7 @@ extends Node2D
 
 const player_scene = preload("res://Scenes/Player.tscn")
 
-onready var farm = get_node("Navigation2D/YSort/Farm")
+onready var farm = get_node("Navigation2D/Farm")
 onready var ysort = get_node("Navigation2D/YSort")
 
 var player_array: Array
