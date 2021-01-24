@@ -24,7 +24,6 @@ var day_processed = true
 func _ready():
 	pass
 	
-	
 func _on_TimeSystem_timeout():
 	if hour == 6 and not day_processed:
 		start_new_day()

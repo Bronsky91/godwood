@@ -2,7 +2,6 @@ extends Node
 
 func _ready():
 	pass # Replace with function body.
-
 	
 func files_in_dir(path: String, keyword: String = "") -> Array:
 	var files = []
