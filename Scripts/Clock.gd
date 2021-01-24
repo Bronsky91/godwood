@@ -3,17 +3,42 @@ extends Timer
 var time: int setget set_time, get_time
 
 func _ready():
-	set_time(g.load_time())
+	set_time(load_time())
 
 func _process(delta):
 	pass
 
 func _on_Clock_timeout():
 	add_time(1)
-	update_ui()
 	var current_time = get_time() % 86400
-	if current_time / 3600 == 3: # Time is 3am
+	if current_time / 3600 == 5: # Time is 5am
 		new_day()
+
+func save_time(time: Dictionary) -> void:
+	var f: File = File.new()
+	f.open("user://time.save", File.READ)
+	var json: JSONParseResult = JSON.parse(f.get_as_text())
+	f.close()
+	var data: Dictionary = json.result
+	data = {
+		"time": time
+	}
+	# Save
+	f = File.new()
+	f.open("user://time.save", File.WRITE)
+	f.store_string(JSON.print(data, "  ", true))
+	f.close()
+	
+func load_time() -> int:
+	var save_time: File = File.new()
+	var new_game = !save_time.file_exists("user://time.save")
+	if new_game:
+		return 3600 * 6 # 6am
+	save_time.open("user://time.save", File.READ_WRITE)
+	var text: String = save_time.get_as_text()
+	var data: Dictionary = parse_json(text)
+	save_time.close()
+	return data.time
 
 func add_time(value: int) -> void:
 	var new_time: int = value + time 
@@ -52,5 +77,5 @@ func new_day() -> void:
 	else:
 		add_time(((6-current_hour) * 3600) - minutes * 60)
 	
-func update_ui() -> void:
-	get_parent().get_node("Label").text = get_time_formatted(get_time())
+func update_time_ui():
+	return get_time_formatted(get_time())
