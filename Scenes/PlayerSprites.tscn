@@ -965,7 +965,7 @@ tracks/17/keys = {
 "values": [ 32, 33, 34, 35, 36, 37, 38, 39 ]
 }
 
-[node name="PlayerSprites" type="Node2D"]
+[node name="PlayerSprites" type="Sprite"]
 script = ExtResource( 1 )
 
 [node name="SpriteHolder" type="Node2D" parent="."]

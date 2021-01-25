@@ -5,7 +5,7 @@
 [ext_resource path="res://Assets/Environment/Farmhouse_Stairs_001.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 107, 59.6704 )
+extents = Vector2( 120.035, 59.6704 )
 
 [node name="FarmHouse" type="StaticBody2D"]
 position = Vector2( -3.09515, 23.2135 )
@@ -23,5 +23,5 @@ position = Vector2( 8, 120 )
 texture = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 3.09515, 19.7865 )
+position = Vector2( 2.1513, 10.3477 )
 shape = SubResource( 1 )

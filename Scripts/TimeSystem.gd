@@ -21,6 +21,9 @@ export (String) var minute_interval = '00'
 
 var day_processed = true
 
+signal new_day_start
+signal new_day_start_plants
+
 func _ready():
 	pass
 	
@@ -31,7 +34,7 @@ func _on_TimeSystem_timeout():
 	if hour == 5:
 		day_processed = false
 		
-	second += 60 
+	second += 60 * 30
 	minute = (int(second) / 60) % 60 # Using modulo returns the number of mins
 	hour = (int(second) / 3600 ) % 24
 	meridiem = am_pm[hour / 12]
@@ -49,6 +52,8 @@ func start_new_day():
 	day += 1
 	weekday
 	day_processed = true
+	emit_signal("new_day_start_plants")
+	emit_signal("new_day_start")
 	# Current Month should end below
 	if day == 29: 
 		month += 1

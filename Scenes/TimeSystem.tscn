@@ -3,6 +3,7 @@
 [ext_resource path="res://Scripts/TimeSystem.gd" type="Script" id=1]
 
 [node name="TimeSystem" type="Timer"]
+wait_time = 0.1
 autostart = true
 script = ExtResource( 1 )
 [connection signal="timeout" from="." to="." method="_on_TimeSystem_timeout"]
