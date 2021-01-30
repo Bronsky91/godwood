@@ -78,7 +78,7 @@ var farm_name: String
 var gender: String = "Female" # Temp hardcoded
 var body: String = "AvThn" # Temp hardcoded
 
-var sprite_folder_path = "res://Assets/Character/{gender}/{body}".format({"gender": gender, "body": body})
+var sprite_folder_path = "res://Assets/Character/"
 var palette_folder_path = "res://Assets/Palettes"
 
 var current_animation = 0
@@ -124,7 +124,7 @@ func set_random_color(palette_type: String) -> void:
 		pallete_sprite_state[palette_type] = color_num
 		
 func set_random_texture(sprite_name: String) -> void:
-	var random_sprite = random_asset(sprite_folder_path+"/"+sprite_name)
+	var random_sprite = random_asset(sprite_folder_path + "{gender}/{body}".format({"gender": gender, "body": body}) +"/"+sprite_name)
 	if random_sprite == "": # No assets in the folder yet continue to next folder
 		return
 	if "000" in random_sprite and not "Accessory" in random_sprite: # Prevent some empty sprite sheets
@@ -135,7 +135,7 @@ func set_random_texture(sprite_name: String) -> void:
 	set_sprite_texture(sprite_name, random_sprite)
 
 func create_random_character() -> void:
-	var sprite_folders = g.files_in_dir(sprite_folder_path)
+	var sprite_folders = g.files_in_dir(sprite_folder_path + "{gender}/{body}".format({"gender": gender, "body": body}))
 	var palette_folders = g.files_in_dir(palette_folder_path)
 	for folder in sprite_folders:
 		if folder == 'HairD':
@@ -152,7 +152,7 @@ func ensure_jacket_state():
 
 func ensure_hair(sprite_name):
 	if sprite_name == 'HairB':
-		var hair_d_texture = sprite_folder_path + '/HairD/' + gender + "_" + body + '_' + 'HairD_' + get_sprite_number_from_name(sprite_name) + '.png'
+		var hair_d_texture = sprite_folder_path + "{gender}/{body}".format({"gender": gender, "body": body}) + '/HairD/' + gender + "_" + body + '_' + 'HairD_' + get_sprite_number_from_name(sprite_name) + '.png'
 		player_sprite['HairD'].set_texture(load(hair_d_texture))
 	if sprite_name == 'HairC' and get_sprite_number_from_name("HairA") == '001':
 		player_sprite['HairC'].set_texture(null)
