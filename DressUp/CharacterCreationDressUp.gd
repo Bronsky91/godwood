@@ -152,10 +152,13 @@ func ensure_jacket_state():
 
 func ensure_hair(sprite_name):
 	if sprite_name == 'HairB':
-		var matching_hair_d_number = sprite_state['HairB'].substr(len(sprite_state['HairB']) - 7, 3)
-		var hair_d_texture = sprite_folder_path + '/HairD/' + gender + "_" + body + '_' + 'HairD_' + matching_hair_d_number + '.png'
-		print(hair_d_texture)
+		var hair_d_texture = sprite_folder_path + '/HairD/' + gender + "_" + body + '_' + 'HairD_' + get_sprite_number_from_name(sprite_name) + '.png'
 		player_sprite['HairD'].set_texture(load(hair_d_texture))
+	if sprite_name == 'HairC' and get_sprite_number_from_name("HairA") == '001':
+		player_sprite['HairC'].set_texture(null)
+
+func get_sprite_number_from_name(sprite_name):
+	return sprite_state[sprite_name].substr(len(sprite_state[sprite_name]) - 7, 3)
 
 func _on_GenderButton_button_up(_gender):
 	gender = _gender
