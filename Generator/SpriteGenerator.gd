@@ -1,20 +1,9 @@
 extends Node2D
 
-const player_scene = preload("res://Scenes/Player.tscn")
+const player_sprites_scene = preload("res://Scenes/PlayerSprites.tscn")
 
 func _ready():
-	var player_array = g.load_dress_up_players()
-	var test_sprite = player_array[0]
-	var new_player = player_scene.instance()
-	new_player.p_name = test_sprite.name
-	g.load_player(new_player.get_node("PlayerSprites/SpriteHolder"), test_sprite.name)
-	new_player.position = $Position2D.global_position
-	$ViewportContainer/Viewport.add_child(new_player)
-
-func _input(event):
-	if event.is_action_released("hoe"):
-		save_img()
-
+	pass
 
 func save_img():
 	var image = $ViewportContainer/Viewport.get_texture().get_data()

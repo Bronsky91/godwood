@@ -1,6 +1,6 @@
 [gd_scene load_steps=47 format=2]
 
-[ext_resource path="res://Scripts/PlayerSprites.gd" type="Script" id=1]
+[ext_resource path="res://Generator/PlayerSpritesGenerator.gd" type="Script" id=1]
 [ext_resource path="res://Resources/Shaders/PaletteSwap.shader" type="Shader" id=2]
 [ext_resource path="res://Assets/Palettes/Hair/Haircolor_000.png" type="Texture" id=3]
 [ext_resource path="res://Assets/Palettes/Hair/Haircolor_005.png" type="Texture" id=4]
@@ -987,9 +987,9 @@ frame = 31
 [node name="BottomA" type="Sprite" parent="SpriteHolder"]
 material = SubResource( 3 )
 texture = ExtResource( 9 )
-hframes = 8
+hframes = 2
 vframes = 10
-frame = 31
+frame = 2
 
 [node name="Shoes" type="Sprite" parent="SpriteHolder"]
 material = SubResource( 4 )

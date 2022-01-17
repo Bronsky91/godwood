@@ -39,10 +39,10 @@ func get_input():
 	if Input.is_action_pressed('up'):
 		velocity.y -= 1
 		
-	if velocity.round() != last_direction:
-		emit_signal('direction_change', velocity.round())
+	#if velocity.round() != last_direction:
+		#emit_signal('direction_change', velocity.round())
 
-	velocity = velocity.normalized() * speed
+	#velocity = velocity.normalized() * speed
 
 	
 func _physics_process(delta):

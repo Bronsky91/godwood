@@ -69,7 +69,19 @@ func load_player(parent_node: Node2D, player_name: String):
 		var folder = get_palette_folder_name_from_sprite(part)
 		var number = player_character.palette_state[folder]
 		set_sprite_color(folder, part, number)
-			
+
+func load_sprites(sprite_holder: Node2D, character_state: Dictionary):
+	for part in sprite_holder.get_children():
+		if part.name == "JacketB":
+			continue
+		if part.name in character_state.sprite_state.keys():
+			part.texture = load(character_state.sprite_state[part.name])
+		else:
+			continue
+		var folder = get_palette_folder_name_from_sprite(part)
+		var number = character_state.palette_state[folder]
+		set_sprite_color(folder, part, number)
+
 func get_palette_folder_name_from_sprite(sprite: Sprite):
 	var reverse_palette_dictionary = {
 		'Accessory1': 'Accessory1',
