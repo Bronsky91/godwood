@@ -1,11 +1,16 @@
 extends Node2D
 
-export(int) var frame = 0
-export(int) var vframes = 1
-export(int) var hframes = 1
-export(String, 'front', 'back', 'right', 'left') onready var sprite_direction = 'front'
-
 var z_index_library: Dictionary
+var frame
+var vframes
+var hframes
+var sprite_direction
+
+func init(_frame, _vframes, _hframes, _direction):
+	frame = _frame
+	vframes = _vframes
+	hframes = _hframes
+	sprite_direction = _direction
 
 func _ready():
 	z_index_library = load_json("res://Resources/JSON/z_index_player_library.json")
@@ -27,10 +32,7 @@ func load_json(file_path: String) -> Dictionary:
 func set_node_indices(direction):
 	# Sort the sprites in proper draw order based on direction
 	for sprite in $SpriteHolder.get_children():
-		print(z_index_library[sprite.name])
-		print(direction)
 		var new_sprite_index = z_index_library[sprite.name][direction]-1
-		print(new_sprite_index)
 		$SpriteHolder.move_child(sprite, new_sprite_index)
 	# Resort if any are out of place from the first sorting
 	for sprite in $SpriteHolder.get_children():

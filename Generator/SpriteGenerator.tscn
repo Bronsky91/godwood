@@ -1,13 +1,11 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=2 format=2]
 
 [ext_resource path="res://Generator/SpriteGenerator.gd" type="Script" id=1]
-[ext_resource path="res://Generator/PlayerSprites.tscn" type="PackedScene" id=2]
 
 [node name="Generator" type="Node2D"]
 script = ExtResource( 1 )
 
 [node name="ViewportContainer" type="ViewportContainer" parent="."]
-visible = false
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -25,18 +23,8 @@ __meta__ = {
 size = Vector2( 1024, 1280 )
 transparent_bg = true
 handle_input_locally = false
-render_target_update_mode = 0
+render_target_update_mode = 3
 
-[node name="BackPlayerSprites" parent="." instance=ExtResource( 2 )]
-visible = false
-position = Vector2( -512, -640 )
+[node name="Timer" type="Timer" parent="."]
 
-[node name="RightPlayerSprites" parent="." instance=ExtResource( 2 )]
-visible = false
-position = Vector2( 307.627, 236.644 )
-
-[node name="PlayerSprites" parent="." instance=ExtResource( 2 )]
-position = Vector2( 228.492, 64 )
-
-[node name="FrontPlayerSprites" parent="." instance=ExtResource( 2 )]
-visible = false
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

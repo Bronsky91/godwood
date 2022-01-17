@@ -75,6 +75,9 @@ func load_sprites(sprite_holder: Node2D, character_state: Dictionary):
 		if part.name == "JacketB":
 			continue
 		if part.name in character_state.sprite_state.keys():
+			#if not part.name in character_state.sprite_state.keys():
+			print(part.name)
+			print(character_state.sprite_state[part.name])
 			part.texture = load(character_state.sprite_state[part.name])
 		else:
 			continue

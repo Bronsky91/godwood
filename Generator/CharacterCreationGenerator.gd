@@ -192,7 +192,6 @@ func _on_Sprite_Selection_button_up(direction: int, sprite: String):
 		set_sprite_texture(sprite, new_sprite_path)
 
 func _on_Color_Selection_button_up(direction: int, palette_sprite: String):
-	print(pallete_sprite_state)
 	var folder_path = "res://Assets/Palettes/"+palette_sprite
 	var files = g.files_in_dir(folder_path)
 	var new_color = int(pallete_sprite_state[palette_sprite]) + direction
@@ -234,7 +233,5 @@ func _on_Random_Tab_button_up(sprites, palettes):
 		set_random_color(str(palette))
 
 func _on_Export_button_up():
-	var state = {'sprite_state': sprite_state, 'palette_state':pallete_sprite_state}
-	var sprite_holder = sprite_generator.get_node('ViewportContainer/Viewport/PlayerSprites/SpriteHolder')
-	g.load_sprites(sprite_holder, state)
-	sprite_generator.save_img()
+	var state = {'sprite_state': sprite_state, 'palette_state': pallete_sprite_state}
+	sprite_generator.export_spritesheet(state)

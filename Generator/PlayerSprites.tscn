@@ -1036,7 +1036,6 @@ frame = 31
 material = SubResource( 10 )
 hframes = 8
 vframes = 10
-frame = 31
 
 [node name="Head" type="Sprite" parent="SpriteHolder"]
 material = SubResource( 11 )
