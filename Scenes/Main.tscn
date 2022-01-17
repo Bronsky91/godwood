@@ -62,8 +62,8 @@ margin_left = 149.797
 margin_top = 33.4506
 margin_right = 476.797
 margin_bottom = 164.451
-custom_fonts/font = ExtResource( 2 )
 custom_colors/font_color = Color( 0.768627, 0.615686, 0.345098, 1 )
+custom_fonts/font = ExtResource( 2 )
 text = "Godwood"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -79,8 +79,8 @@ margin_left = 382.292
 margin_top = 143.957
 margin_right = 567.292
 margin_bottom = 221.957
-custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0.768627, 0.615686, 0.345098, 1 )
+custom_fonts/font = SubResource( 2 )
 text = "Dress up!"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -91,10 +91,10 @@ margin_left = 257.603
 margin_top = 241.078
 margin_right = 373.603
 margin_bottom = 276.078
-custom_fonts/font = ExtResource( 4 )
 custom_colors/font_color = Color( 0.768627, 0.615686, 0.345098, 1 )
 custom_colors/font_color_hover = Color( 0.415686, 0.745098, 0.188235, 1 )
 custom_colors/font_color_pressed = Color( 0.294118, 0.411765, 0.184314, 1 )
+custom_fonts/font = ExtResource( 4 )
 text = "Create"
 flat = true
 __meta__ = {
@@ -106,10 +106,10 @@ margin_left = 273.031
 margin_top = 288.825
 margin_right = 355.031
 margin_bottom = 323.825
-custom_fonts/font = ExtResource( 4 )
 custom_colors/font_color = Color( 0.768627, 0.615686, 0.345098, 1 )
 custom_colors/font_color_hover = Color( 0.415686, 0.745098, 0.188235, 1 )
 custom_colors/font_color_pressed = Color( 0.294118, 0.411765, 0.184314, 1 )
+custom_fonts/font = ExtResource( 4 )
 text = "View"
 flat = true
 __meta__ = {
@@ -121,15 +121,16 @@ margin_left = 275.051
 margin_top = 338.203
 margin_right = 354.051
 margin_bottom = 373.203
-custom_fonts/font = ExtResource( 4 )
 custom_colors/font_color = Color( 0.768627, 0.615686, 0.345098, 1 )
 custom_colors/font_color_hover = Color( 0.415686, 0.745098, 0.188235, 1 )
 custom_colors/font_color_pressed = Color( 0.294118, 0.411765, 0.184314, 1 )
+custom_fonts/font = ExtResource( 4 )
 text = "Exit"
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
 [connection signal="button_up" from="Create" to="." method="_on_Create_button_up"]
 [connection signal="button_up" from="View" to="." method="_on_View_button_up"]
 [connection signal="button_up" from="Exit" to="." method="_on_Exit_button_up"]

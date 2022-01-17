@@ -190,6 +190,7 @@ func _on_Sprite_Selection_button_up(direction: int, sprite: String):
 		set_sprite_texture(sprite, new_sprite_path)
 
 func _on_Color_Selection_button_up(direction: int, palette_sprite: String):
+	print(pallete_sprite_state)
 	var folder_path = "res://Assets/Palettes/"+palette_sprite
 	var files = g.files_in_dir(folder_path)
 	var new_color = int(pallete_sprite_state[palette_sprite]) + direction

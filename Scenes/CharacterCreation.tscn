@@ -24,6 +24,7 @@ __meta__ = {
 }
 
 [node name="Character" type="Tabs" parent="TabContainer"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
@@ -169,7 +170,6 @@ __meta__ = {
 }
 
 [node name="Head" type="Tabs" parent="TabContainer"]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
@@ -865,6 +865,7 @@ text = "Back"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
 [connection signal="text_changed" from="TabContainer/Character/NameLabel/Name" to="." method="_on_Name_text_changed"]
 [connection signal="button_up" from="TabContainer/Character/SkinToneLabel/Left" to="." method="_on_Color_Selection_button_up" binds= [ -1, "Skintone" ]]
 [connection signal="button_up" from="TabContainer/Character/SkinToneLabel/Right" to="." method="_on_Color_Selection_button_up" binds= [ 1, "Skintone" ]]

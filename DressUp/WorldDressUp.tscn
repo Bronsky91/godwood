@@ -33,4 +33,5 @@ margin_bottom = 456.168
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
 [connection signal="button_up" from="UI/Leave" to="." method="_on_Leave_button_up"]

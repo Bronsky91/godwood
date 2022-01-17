@@ -3,7 +3,7 @@ extends KinematicBody2D
 export (int) var speed = 100
 
 onready var animation_player = get_node("PlayerSprites/AnimationPlayer")
-onready var farm = get_node('../Farm')
+# onready var farm = get_node('../Farm')
 
 var velocity = Vector2()
 var stopped: bool = false
@@ -39,8 +39,8 @@ func get_input():
 	if Input.is_action_pressed('up'):
 		velocity.y -= 1
 		
-#	if velocity.round() != last_direction:
-	emit_signal('direction_change', velocity.round())
+	if velocity.round() != last_direction:
+		emit_signal('direction_change', velocity.round())
 
 	velocity = velocity.normalized() * speed
 

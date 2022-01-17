@@ -11,17 +11,16 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="."]
-margin_top = 18.0
+margin_top = 17.0
 margin_right = 54.0
-margin_bottom = 32.0
+margin_bottom = 31.0
 rect_min_size = Vector2( 54, 0 )
 autowrap = true
-percent_visible = 2.5
 
 [node name="Button" type="Button" parent="."]
 margin_left = 64.0
 margin_right = 100.0
-margin_bottom = 50.0
+margin_bottom = 49.0
 mouse_filter = 1
 text = "Bye"
 align = 2

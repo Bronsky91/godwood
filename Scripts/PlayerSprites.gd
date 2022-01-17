@@ -4,7 +4,9 @@ var z_index_library: Dictionary
 
 func _ready():
 	z_index_library = load_json("res://Resources/JSON/z_index_player_library.json")
-	$AnimationPlayer.play("idle_front")
+	#$AnimationPlayer.play("idle_front")
+	#for sprite in $SpriteHolder.get_children():
+		#sprite.vframes = 5
 	# Load character state
 
 func _process(delta):
